@@ -4,7 +4,7 @@
   "main": "dist/index.js",
   "module": "dist/index.js",
   "files": [
-    "dist"
+    "src"
   ],
   "devDependencies": {
     "babel-cli": "^6.26.0",
