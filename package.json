@@ -6,13 +6,6 @@
   "files": [
     "src"
   ],
-  "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "react": "^16.3.2",
-    "react-dom": "^16.3.2",
-    "react-scripts": "1.1.4",
-    "react-test-renderer": "^16.3.2"
-  },
   "peerDependencies": {
     "react": "^16.3.2",
     "react-dom": "^16.3.2"
@@ -22,6 +15,7 @@
     "install": "npm run build"
   },
   "dependencies": {
-    "icgc-js-common": "git+https://github.com/geostarters/icgc-js-common.git"
+    "icgc-js-common": "git+https://github.com/geostarters/icgc-js-common.git",
+    "babel-cli": "^6.26.0"
   }
 }
