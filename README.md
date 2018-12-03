@@ -1,9 +1,9 @@
 # icgc-react-components
 
-ICGC lib
+A lib of React Components
 
 ## Installation
 
 ```
-npm install icgc-react-components
+npm install --save icgc-react-components
 ```
