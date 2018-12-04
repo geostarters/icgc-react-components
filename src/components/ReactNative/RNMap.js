@@ -19,7 +19,7 @@ export default class RNMap extends React.Component {
 
 	getObjectLayerType(layerType, props) {
 
-		const res;
+		let res;
 
 		switch(layerType) {
 
@@ -92,7 +92,7 @@ export default class RNMap extends React.Component {
 		switch(source.type) {
 
 			case CONSTANTS.SOURCE_TYPE_VECTOR:
-				res = <MapboxGL.VectorSource id={index} url={source.url} onPress={} hitbox={}>{layers}</MapboxGL.VectorSource>;
+				res = <MapboxGL.VectorSource id={index} url={source.url}>{layers}</MapboxGL.VectorSource>;
 				break;
 				
 			case CONSTANTS.SOURCE_TYPE_RASTER:
@@ -109,7 +109,7 @@ export default class RNMap extends React.Component {
 				break;
 
 			case CONSTANTS.SOURCE_TYPE_GEOJSON:
-				const rasterProps = {
+				const geojsonProps = {
 					id: index,
 					url: source.data,
 					shape: source.data,
@@ -120,7 +120,7 @@ export default class RNMap extends React.Component {
 					buffer: source.buffer,
 					tolerance: source.tolerance
 				};
-				res = <MapboxGL.ShapeSource id={index} url={source.data} shape={source.data}>{layers}</MapboxGL.ShapeSource>;
+				res = <MapboxGL.ShapeSource {...geojsonProps}>{layers}</MapboxGL.ShapeSource>;
 				break;
 
 			default:
