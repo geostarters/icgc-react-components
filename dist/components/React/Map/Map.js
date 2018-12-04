@@ -14,8 +14,6 @@ import React from "react";
 import { Utils as IcgcUtils, MapboxMap } from "icgc-js-common";
 import PropTypes from "prop-types";
 
-import "./Map.css";
-
 var Map = function (_React$Component) {
 		_inherits(Map, _React$Component);
 
@@ -248,8 +246,8 @@ var Map = function (_React$Component) {
 				key: "render",
 				value: function render() {
 
-						//const style = { width: "100%", height: "100%"};
-						return React.createElement("div", { id: this.container, className: "container-map" });
+						var style = { width: "100%", height: "100%" };
+						return React.createElement("div", { id: this.container, className: style });
 				}
 		}]);
 

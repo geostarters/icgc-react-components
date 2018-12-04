@@ -15,6 +15,7 @@
     "react-dom": "^16.3.2"
   },
   "scripts": {
+    "preinstall": "npm run build",
     "build": "NODE_ENV=production babel src --out-dir dist --copy-files"
   },
   "dependencies": {
