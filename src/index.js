@@ -1,4 +1,4 @@
-import TextInput from "./components/TextInput/TextInput";
-import Map from "./components/Map/Map";
+import * as ICGCReact from "./components/React/index";
+import * as ICGCReactNative from "./components/ReactNative/index";
 
-export { TextInput, Map };
+export { ICGCReact, ICGCReactNative };

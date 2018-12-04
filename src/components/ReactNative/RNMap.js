@@ -1,178 +1,169 @@
 //@flow
 
 import React from "react";
+//import { StyleSheet, View, Button, Dimensions } from 'react-native';
 import MapboxGL from '@mapbox/react-native-mapbox-gl';
 import PropTypes from "prop-types";
+
+import * as CONSTANTS from "../../constants";
 
 
 export default class RNMap extends React.Component {
 
+	constructor(props) {
 
-	async componentDidMount() {
+		super(props);
+		MapboxGL.setAccessToken(this.props.mapboxToken || '');
 
-		await this.map.create();
+	}
 
-		if (this.props.mapData) {
+	getObjectLayerType(layerType, props) {
 
-			this.setData(this.props.mapData);
+		const res;
 
+		switch(layerType) {
+
+			case CONSTANTS.LAYER_TYPE_BACKGROUND :
+				res = <MapboxGL.BackgroundLayer {...props} />;
+				break;
+				
+			case CONSTANTS.LAYER_TYPE_CIRCLE:
+				res = <MapboxGL.CircleLayer {...props} />;
+				break;
+
+			case CONSTANTS.LAYER_TYPE_FILL:
+				res = <MapboxGL.FillLayer {...props} />;
+				break;
+
+			case CONSTANTS.LAYER_TYPE_FILL_EXTRUSION:
+				res = <MapboxGL.FillExtrusionLayer {...props} />;
+				break;
+
+			case CONSTANTS.LAYER_TYPE_RASTER:
+				res = <MapboxGL.RasterLayer {...props} />;
+				break;
+
+			case CONSTANTS.LAYER_TYPE_LINE:
+				res = <MapboxGL.LineLayer {...props} />;
+				break;
+
+			case CONSTANTS.LAYER_TYPE_SYMBOL:
+				res = <MapboxGL.SymbolLayer {...props} />;
+				break;
+
+			default:
+				res = <MapboxGL.BackgroundLayer {...props} />;
 		}
 
-		if (this.props.showAttribution) {
-
-			this.map.addControlMap(MapboxMap.ATTRIBUTION_CONTROL);
-
-		}
+		return res;
 
 	}
 
-	componentDidUpdate(prevProps) {
+	createRNLayers(layers) {
 
-		if (prevProps.options.style !== this.props.options.style) {
+		const objLayers = {};
 
-			this.refreshStyleMap();
+		layers.forEach((layer, index) => {
 
-		} else {
+			const layerProps = {
+				id: layer.id,
+				sourceID:  layer.source,
+				sourceLayerID: layer["source-layer"],
+				layerIndex: index,
+				filter: layer.filter,
+				minZoomLevel: layer.minzoom,
+				maxZoomLevel: layer.maxzoom,
+				style: {
+					...layer.paint,
+					...layer.layout
+				}
+			};
 
-			this.updateSources(this.props.mapData.sources, prevProps.mapData.sources);
-			this.updateLayers(this.props.mapData.layers, prevProps.mapData.layers);
-
-		}
-
-	}
-
-	componentWillUnmount() {
-
-		this.map.remove();
-
-	}
-
-	updateSources(currentSources, prevSources) {
-
-		const newSources = IcgcUtils.arrayDifference(currentSources, prevSources);
-		const deletedSources = IcgcUtils.arrayDifference(prevSources, currentSources);
-
-		newSources.forEach(source => {
-
-			this.map.addSource(source.name, source);
-
-		});
-
-		deletedSources.forEach(source => {
-
-			this.map.removeSource(source.name);
-
-		});
-
-	}
-
-	updateLayers(currentLayers, prevLayers) {
-
-		const layersToAdd = IcgcUtils.arrayDifference(currentLayers, prevLayers);
-		const layersToDelete = IcgcUtils.arrayDifference(prevLayers, currentLayers);
-		const layersToUpdate = IcgcUtils.arrayDifference(currentLayers, layersToAdd);
-
-		layersToAdd.forEach(layer => {
-
-			this.map.addLayer(layer);
-
-		});
-
-		layersToDelete.forEach(layer => {
-
-			this.map.removeLayer(layer.id);
-
-		});
-
-		layersToUpdate.forEach(layer => {
-
-			this.updateLayerPaintProperties(layer.id, layer.paint);
-			this.updateLayerLayoutProperties(layer.id, layer.layout);
+			objLayers[layer.source].push(	
+				this.getObjectLayerType(layer.type, layerProps)
+			);
 
 		});
 
 	}
 
-	updateLayerPaintProperties(layerId, paintProps: Object) {
+	getObjectSourceType(source, layes, index) {
 
-		for (const prop of paintProps) {
+		switch(source.type) {
 
-			this.map.setPaintProperty(layerId, prop, paintProps[prop]);
+			case CONSTANTS.SOURCE_TYPE_VECTOR:
+				res = <MapboxGL.VectorSource id={index} url={source.url} onPress={} hitbox={}>{layers}</MapboxGL.VectorSource>;
+				break;
+				
+			case CONSTANTS.SOURCE_TYPE_RASTER:
+				const rasterProps = {
+					id: index,
+					url: source.url,
+					minZoomLevel: source.minzoom,
+					maxZoomLevel: source.maxzoom,
+					tileSize: source.tileSize,
+					tms: (source.scheme === CONSTANTS.SCHEME_TMS),
+					//attribution: this.props.showAttribution
+				};
+				res = <MapboxGL.RasterSource  {...rasterProps}>{layers}</MapboxGL.RasterSource>;
+				break;
 
+			case CONSTANTS.SOURCE_TYPE_GEOJSON:
+				const rasterProps = {
+					id: index,
+					url: source.data,
+					shape: source.data,
+					cluster: source.cluster,
+					clusterRadius: source.clusterRadius,
+					clusterMaxZoomLevel: source.clusterMaxZoom,				
+					maxZoomLevel: source.maxzoom,
+					buffer: source.buffer,
+					tolerance: source.tolerance
+				};
+				res = <MapboxGL.ShapeSource id={index} url={source.data} shape={source.data}>{layers}</MapboxGL.ShapeSource>;
+				break;
+
+			default:
+			res = <MapboxGL.VectorSource id={index} url={source.url}>{layers}</MapboxGL.VectorSource>;
 		}
 
-	}
-
-	updateLayerLayoutProperties(layerId, layoutProps: Object) {
-
-		for (const prop of layoutProps) {
-
-			this.map.setLayoutProperty(layerId, prop, layerId[prop]);
-
-		}
+		return res;		
 
 	}
 
+	renderMapData(mapData) {
 
-	async refreshStyleMap() {
+		const renderSources = [];
+		let id = 0;
 
-		await this.map.setMapBaseLayer(this.props.options.style);
-		this.setData(this.props.mapData);
+		const RNLayers = this.createRNLayers(mapData.layers);
 
-	}
+		mapData.sources.forEach((source, index) => {
 
-	setData(data) {
+			renderSources.push(
+				this.getObjectSourceType(source, RNLayers[source.id], index)
+			);
 
-		this.map.setData(data);
-
-		this.addEventsToLayers();
-
-	}
-
-	addEventsToLayers() {
-
-		if (!this.props.layerEvents) {
-
-			return;
-
-		}
-
-		this.props.layerEvents.forEach((eventData) => this.map.subscribe(eventData.event, eventData.layerId, eventData.subscriber));
-
-	}
-
-	renderMapData() {
-
-		/*
-		<MapboxGL.VectorSource>
-			<MapboxGL.FillExtrusionLayer
-			id="building3d"
-			sourceLayerID="building"
-			style={layerStyles.building}
-			/>
-
-			<MapboxGL.LineLayer
-			id="streetLineColor"
-			sourceLayerID="road"
-			minZoomLevel={14}
-			belowLayerID="building3d"
-			style={layerStyles.streets}
-			/>
-		</MapboxGL.VectorSource>
-		*/
+		});
 
 	}
 
 	render() {
 
-		return (<MapboxGL.MapView
-			zoomLevel={16}
-			pitch={45}
-			centerCoordinate={FlyTo.SF_OFFICE_LOCATION}
+		const mapOptions = {
+			...this.props.options,
+			attributionEnabled: this.props.showAttribution
+		};
+
+		return (
+		<MapboxGL.MapView
+			{...mapOptions}
 			ref={(ref) => (this.map = ref)}
-			style={sheet.matchParent}>
-			{ this.renderMapData() }
-		  </MapboxGL.MapView>);
+			style={sheet.matchParent}>			
+				
+				{ this.renderMapData(this.props.mapData) }
+		  
+		</MapboxGL.MapView>);
 
 	}
 
@@ -180,8 +171,7 @@ export default class RNMap extends React.Component {
 
 
 Map.propTypes = {
-	options: PropTypes.object,				//Has to be MapOptions from flow-typed
-	container: PropTypes.string,
+	options: PropTypes.object,//Has to be MapView options, defined in Mapbox RN docs: https://github.com/mapbox/react-native-mapbox-gl/blob/master/docs/MapView.md
 	mapboxToken: PropTypes.string,
 	mapData: PropTypes.object,
 	showAttribution: PropTypes.bool,
