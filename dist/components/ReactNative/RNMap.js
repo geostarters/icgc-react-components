@@ -7,11 +7,12 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 import React from "react";
-//import { StyleSheet, View, Button, Dimensions } from 'react-native';
+import { StyleSheet } from 'react-native';
 import MapboxGL from '@mapbox/react-native-mapbox-gl';
 import PropTypes from "prop-types";
 
 import * as CONSTANTS from "../../constants";
+import sheet from './styles/sheet';
 
 var RNMap = function (_React$Component) {
 	_inherits(RNMap, _React$Component);
@@ -27,7 +28,7 @@ var RNMap = function (_React$Component) {
 	}
 
 	_createClass(RNMap, [{
-		key: "getObjectLayerType",
+		key: 'getObjectLayerType',
 		value: function getObjectLayerType(layerType, props) {
 
 			var res = void 0;
@@ -69,7 +70,7 @@ var RNMap = function (_React$Component) {
 			return res;
 		}
 	}, {
-		key: "createRNLayers",
+		key: 'createRNLayers',
 		value: function createRNLayers(layers) {
 			var _this2 = this;
 
@@ -92,7 +93,7 @@ var RNMap = function (_React$Component) {
 			});
 		}
 	}, {
-		key: "getObjectSourceType",
+		key: 'getObjectSourceType',
 		value: function getObjectSourceType(source, layes, index) {
 
 			switch (source.type) {
@@ -152,7 +153,7 @@ var RNMap = function (_React$Component) {
 			return res;
 		}
 	}, {
-		key: "renderMapData",
+		key: 'renderMapData',
 		value: function renderMapData(mapData) {
 			var _this3 = this;
 
@@ -167,7 +168,7 @@ var RNMap = function (_React$Component) {
 			});
 		}
 	}, {
-		key: "render",
+		key: 'render',
 		value: function render() {
 			var _this4 = this;
 

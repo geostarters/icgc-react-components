@@ -1,12 +1,12 @@
 //@flow
 
 import React from "react";
-//import { StyleSheet, View, Button, Dimensions } from 'react-native';
+import { StyleSheet } from 'react-native';
 import MapboxGL from '@mapbox/react-native-mapbox-gl';
 import PropTypes from "prop-types";
 
 import * as CONSTANTS from "../../constants";
-
+import sheet from './styles/sheet';
 
 export default class RNMap extends React.Component {
 
