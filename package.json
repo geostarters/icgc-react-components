@@ -16,8 +16,8 @@
     "react-dom": "^16.3.2"
   },
   "scripts": {
-    "postinstall": "npm run build",
-    "build": "NODE_ENV=production babel src --out-dir dist --copy-files"
+    "prepare": "npm run build",
+    "build": "NODE_ENV=production babel ./src --out-dir dist --copy-files"
   },
   "dependencies": {
     "@mapbox/react-native-mapbox-gl": "^6.1.3",
