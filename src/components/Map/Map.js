@@ -4,7 +4,6 @@ import React from "react";
 import { Utils as IcgcUtils, MapboxMap } from "icgc-js-common";
 import PropTypes from "prop-types";
 
-
 export default class Map extends React.Component {
 
 	map;
