@@ -3,6 +3,7 @@
 import React from "react";
 import { Utils as IcgcUtils, MapboxMap } from "icgc-js-common";
 import PropTypes from "prop-types";
+import mapboxgl from "mapbox-gl";
 
 export default class Map extends React.Component {
 
@@ -20,7 +21,7 @@ export default class Map extends React.Component {
 			...this.props.options
 		};
 
-		this.map = new MapboxMap(this.props.mapboxToken || "", options);
+		this.map = new MapboxMap(mapboxgl, this.props.mapboxToken || "", options);
 
 	}
 
