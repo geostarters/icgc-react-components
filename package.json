@@ -1,6 +1,6 @@
 {
   "name": "icgc-react-components",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "files": [
@@ -15,10 +15,11 @@
     "react-dom": "^16.3.2"
   },
   "scripts": {
-    "build": "NODE_ENV=production babel src --out-dir dist --copy-files"
+    "build": "NODE_ENV=production babel ./src --out-dir dist --copy-files"
   },
   "dependencies": {
+    "babel-cli": "^6.26.0",
     "icgc-js-common": "git+https://github.com/geostarters/icgc-js-common.git",
-    "babel-cli": "^6.26.0"
+    "mapbox-gl": "^0.52.0-beta.1"
   }
 }

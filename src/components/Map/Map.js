@@ -3,8 +3,7 @@
 import React from "react";
 import { Utils as IcgcUtils, MapboxMap } from "icgc-js-common";
 import PropTypes from "prop-types";
-
-import "./Map.css";
+import mapboxgl from "mapbox-gl";
 
 export default class Map extends React.Component {
 
@@ -22,7 +21,7 @@ export default class Map extends React.Component {
 			...this.props.options
 		};
 
-		this.map = new MapboxMap(this.props.mapboxToken || "", options);
+		this.map = new MapboxMap(mapboxgl, this.props.mapboxToken || "", options);
 
 	}
 
@@ -162,8 +161,8 @@ export default class Map extends React.Component {
 
 	render() {
 
-		//const style = { width: "100%", height: "100%"};
-		return (<div id={this.container} className="container-map"/>);
+		const style = { width: "100%", height: "100%"};
+		return (<div id={this.container} className={style}/>);
 
 	}
 

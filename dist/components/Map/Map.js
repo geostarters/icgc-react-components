@@ -13,8 +13,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 import React from "react";
 import { Utils as IcgcUtils, MapboxMap } from "icgc-js-common";
 import PropTypes from "prop-types";
-
-import "./Map.css";
+import mapboxgl from "mapbox-gl";
 
 var Map = function (_React$Component) {
 		_inherits(Map, _React$Component);
@@ -30,7 +29,7 @@ var Map = function (_React$Component) {
 						"container": _this.container
 				}, _this.props.options);
 
-				_this.map = new MapboxMap(_this.props.mapboxToken || "", options);
+				_this.map = new MapboxMap(mapboxgl, _this.props.mapboxToken || "", options);
 
 				return _this;
 		}
@@ -248,8 +247,8 @@ var Map = function (_React$Component) {
 				key: "render",
 				value: function render() {
 
-						//const style = { width: "100%", height: "100%"};
-						return React.createElement("div", { id: this.container, className: "container-map" });
+						var style = { width: "100%", height: "100%" };
+						return React.createElement("div", { id: this.container, className: style });
 				}
 		}]);
 
