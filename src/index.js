@@ -1,4 +1,3 @@
-import * as ICGCReact from "./components/React/index";
-import * as ICGCReactNative from "./components/ReactNative/index";
+import Map from "./Map/Map";
 
-export { ICGCReact, ICGCReactNative };
+export { Map };
