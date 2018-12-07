@@ -7,8 +7,10 @@ import mapboxgl from "mapbox-gl";
 
 export default class Map extends React.Component {
 
-	map;
-	container;
+	// eslint-disable-next-line no-undef
+	map: MapboxMap;
+	// eslint-disable-next-line no-undef
+	container: string;
 
 	constructor(props) {
 

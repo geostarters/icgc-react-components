@@ -1,0 +1,9 @@
+{
+	"extends": [
+	  "geostart"
+	],
+	"parserOptions": {
+		"sourceType": "module"
+	  }
+  }
+  

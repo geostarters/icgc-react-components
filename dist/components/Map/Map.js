@@ -18,6 +18,7 @@ import mapboxgl from "mapbox-gl";
 var Map = function (_React$Component) {
 		_inherits(Map, _React$Component);
 
+		// eslint-disable-next-line no-undef
 		function Map(props) {
 				_classCallCheck(this, Map);
 
@@ -33,6 +34,8 @@ var Map = function (_React$Component) {
 
 				return _this;
 		}
+		// eslint-disable-next-line no-undef
+
 
 		_createClass(Map, [{
 				key: "componentDidMount",
