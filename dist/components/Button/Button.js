@@ -1,4 +1,4 @@
-//@flow
+
 
 // eslint-disable-next-line no-unused-vars
 import React from "react";
@@ -9,12 +9,12 @@ export default function Button(props) {
 
 	console.log(props);
 
-	const buttonProps = {
+	var buttonProps = Object.assign({
 		color: "yellow",
-		onClick: ()=>console.log("click"),
-		...props
-	};
+		onClick: function onClick() {
+			return console.log("click");
+		}
+	}, props);
 
-	return (<ButtonSUI primary {...buttonProps}></ButtonSUI>);
-
+	return React.createElement(ButtonSUI, Object.assign({ primary: true }, buttonProps));
 }
