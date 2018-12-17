@@ -1,12 +1,16 @@
 //@flow
 // src/stories/index.js
 
+// eslint-disable-next-line no-unused-vars
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import { withInfo } from '@storybook/addon-info';
+import { withInfo } from "@storybook/addon-info";
 
+// eslint-disable-next-line no-unused-vars
 import Map from "../components/Map/Map";
+// eslint-disable-next-line no-unused-vars
 import Button from "../components/Button/Button";
+// eslint-disable-next-line no-unused-vars
 import NavButtons from "../components/NavButtons/NavButtons";
 
 import "semantic-ui-css/semantic.min.css";
@@ -15,16 +19,19 @@ storiesOf("Button", module)
 	.addDecorator(withInfo)
 	.add("Ok button", () => (<Button content="OK"/>))
 
+	.add("Icon button", () => (<Button icon="sign-in"/>))
+
 	.add("Cancel button", () => (
-		<Button color="teal" content="Cancel"/>
-	));
+		<Button color="red" content="Cancel"/>
+	)
+	);
 
 storiesOf("NavButtons", module)
 	.addDecorator(withInfo)
 	.add("Anterior i Seguent", () => (
-		<NavButtons color="yellow" goPrevStep={()=>console.log("goPrevStep")} goNextStep={()=>console.log("goPrevStep")} content="OK"/>
+		<NavButtons color="teal" goPrevStep={()=>console.log("goPrevStep")} goNextStep={()=>console.log("goPrevStep")} content="OK"/>
 	)
-);
+	);
 
 storiesOf("Map", module)
 	.addDecorator(withInfo)
