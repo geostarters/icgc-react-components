@@ -1,5 +1,5 @@
 //@flow
-// eslint-disable-next-line no-unused-vars
+
 import React from "react";
 import PropTypes from "prop-types";
 // eslint-disable-next-line no-unused-vars
@@ -19,7 +19,7 @@ export default function LogoICGC(props) {
 
 	return (
 		<div className={logoProps.position} >
-			<a className={logoProps.logoType} target="_blank"  href={logoProps.url} aria-label="Icgc" rel="noopener noreferer"></a>
+			<a className={logoProps.logoType} target="_blank" rel="noopener noreferrer" href={logoProps.url} aria-label="Icgc" ></a>
 			{logoProps.addText &&  <div className="logo-text">{logoProps.addText}</div>}
 		</div>
 	);
