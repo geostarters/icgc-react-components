@@ -12,7 +12,7 @@ import React, { Component } from "react";
 import { Button as ButtonSUI } from "semantic-ui-react";
 import PropTypes from "prop-types";
 
-//import * as CONSTANTS from "../../utils/constants";
+// eslint-disable-next-line no-unused-vars
 import styles from "./NavButtons.css";
 
 var NavButtons = function (_Component) {
@@ -30,7 +30,7 @@ var NavButtons = function (_Component) {
 
 			return React.createElement(
 				ButtonSUI.Group,
-				{ className: styles.myNavButtons },
+				{ className: this.props.fullWidth ? "full-width" : "" },
 				React.createElement(ButtonSUI, { basic: true, color: this.props.color ? this.props.color : "yellow", disabled: this.props.disabledPrev, floated: "left", labelPosition: "left", icon: "left chevron", content: "Anterior", onClick: this.props.goPrevStep }),
 				React.createElement(ButtonSUI, { color: this.props.color ? this.props.color : "yellow", disabled: this.props.disabledNext, floated: "right", labelPosition: "right", icon: "right chevron", content: "Seg\xFCent", onClick: this.props.goNextStep })
 			);
@@ -48,5 +48,6 @@ NavButtons.propTypes = {
 	goNextStep: PropTypes.func,
 	disabledPrev: PropTypes.bool,
 	disabledNext: PropTypes.bool,
-	color: PropTypes.string
+	color: PropTypes.string,
+	fullWidth: PropTypes.bool
 };
