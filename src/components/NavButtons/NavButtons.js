@@ -1,8 +1,6 @@
 //@flow
 
-// eslint-disable-next-line no-unused-vars
 import React, { Component } from "react";
-// eslint-disable-next-line no-unused-vars
 import { Button as ButtonSUI } from "semantic-ui-react";
 import PropTypes from "prop-types";
 
