@@ -6,7 +6,7 @@ A lib of React Components
 ## Installation
 
 ```
-npm install --save icgc-react-components
+npm install --save @geostarters/react-components
 ```
 
 ##Semantic UI React personalization
