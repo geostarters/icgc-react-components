@@ -1,7 +1,7 @@
 //@flow
 
 import React from "react";
-import { Utils as IcgcUtils, MapboxMap } from "icgc-js-common";
+import { Utils as IcgcUtils, MapboxMap } from "@geostarters/common";
 import PropTypes from "prop-types";
 import mapboxgl from "mapbox-gl";
 
