@@ -1,4 +1,5 @@
-# icgc-react-components
+# @geostarters/react-components
+[![npm version](https://badge.fury.io/js/%40geostarters%2Freact-components.svg)](https://badge.fury.io/js/%40geostarters%2Freact-components)
 
 A lib of React Components
 
