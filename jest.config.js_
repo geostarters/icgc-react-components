@@ -1,0 +1,9 @@
+{
+  "name": "@geostarters/react-components",
+  "jest": {
+    "verbose": true,
+    "transformIgnorePatterns": [
+      "/node_modules/(?!test-component).+\\.js$"
+    ]
+  }
+}

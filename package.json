@@ -7,15 +7,20 @@
     "dist"
   ],
   "devDependencies": {
+    "@geostarters/common": "0.0.5",
     "@geostarters/eslint-config": "^0.0.1",
     "@storybook/addon-info": "^4.1.2",
     "@storybook/react": "^4.1.1",
     "@storybook/storybook-deployer": "^2.8.1",
+    "babel-jest": "^24.1.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+    "enzyme": "^3.8.0",
+    "enzyme-adapter-react-16": "^1.9.1",
     "eslint-plugin-react": "^7.11.1",
     "mini-css-extract-plugin": "^0.5.0",
     "npm-run-all": "^4.1.5",
     "react-scripts": "1.1.4",
-    "react-test-renderer": "^16.3.2"
+    "react-test-renderer": "^16.8.1"
   },
   "peerDependencies": {
     "react": "^16.3.2",
@@ -27,10 +32,12 @@
     "build": "run-s lint copy",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "deploy-storybook": "storybook-to-ghpages -o docs",
-    "build-storybook": "build-storybook -s docs"
+    "build-storybook": "build-storybook -s docs",
+    "test-original": "react-scripts test --env=jsdom",
+    "test": "node scripts/test test --env=jsdom",
+    "eject": "react-scripts eject"
   },
   "dependencies": {
-    "@geostarters/common": "^0.0.5",
     "babel-cli": "^6.26.0",
     "mapbox-gl": "^0.52.0-beta.1",
     "semantic-ui-css": "^2.4.1",
