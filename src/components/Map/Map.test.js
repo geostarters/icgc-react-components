@@ -14,3 +14,6 @@ it("Expect to ", ()=> {
 	expect(shallow(<Map></Map>)).toMatchSnapshot();
 
 });
+
+//Mocking Mapbox gl js needed
+//https://github.com/mapbox/mapbox-gl-js/issues/5026

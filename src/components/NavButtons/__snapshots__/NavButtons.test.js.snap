@@ -1,0 +1,184 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Expect to  1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <NavButtons />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "children": Array [
+        <Button
+          as="button"
+          basic={true}
+          color="yellow"
+          content="Anterior"
+          disabled={undefined}
+          floated="left"
+          icon="left chevron"
+          labelPosition="left"
+          onClick={undefined}
+/>,
+        <Button
+          as="button"
+          color="yellow"
+          content="Següent"
+          disabled={undefined}
+          floated="right"
+          icon="right chevron"
+          labelPosition="right"
+          onClick={undefined}
+/>,
+      ],
+      "className": "",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "as": "button",
+          "basic": true,
+          "color": "yellow",
+          "content": "Anterior",
+          "disabled": undefined,
+          "floated": "left",
+          "icon": "left chevron",
+          "labelPosition": "left",
+          "onClick": undefined,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "as": "button",
+          "color": "yellow",
+          "content": "Següent",
+          "disabled": undefined,
+          "floated": "right",
+          "icon": "right chevron",
+          "labelPosition": "right",
+          "onClick": undefined,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": Array [
+          <Button
+            as="button"
+            basic={true}
+            color="yellow"
+            content="Anterior"
+            disabled={undefined}
+            floated="left"
+            icon="left chevron"
+            labelPosition="left"
+            onClick={undefined}
+/>,
+          <Button
+            as="button"
+            color="yellow"
+            content="Següent"
+            disabled={undefined}
+            floated="right"
+            icon="right chevron"
+            labelPosition="right"
+            onClick={undefined}
+/>,
+        ],
+        "className": "",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "as": "button",
+            "basic": true,
+            "color": "yellow",
+            "content": "Anterior",
+            "disabled": undefined,
+            "floated": "left",
+            "icon": "left chevron",
+            "labelPosition": "left",
+            "onClick": undefined,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "as": "button",
+            "color": "yellow",
+            "content": "Següent",
+            "disabled": undefined,
+            "floated": "right",
+            "icon": "right chevron",
+            "labelPosition": "right",
+            "onClick": undefined,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

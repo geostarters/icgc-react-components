@@ -7,7 +7,13 @@ import "../../setupTests";
 
 it("Expect to ", ()=> {
 
-	expect(shallow(<Button></Button>).length).toMatchSnapshot();
+	const mockProps = {
+		color: "teal"
+	};
+
+	const wrapper = shallow(<Button color="teal"></Button>);
+	expect(wrapper.props().color).toEqual("teal");
+
 
 });
 
