@@ -30,7 +30,10 @@
     "build": "run-s lint copy",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "deploy-storybook": "storybook-to-ghpages -o docs",
-    "build-storybook": "build-storybook -s docs"
+    "build-storybook": "build-storybook -s docs",
+    "test-original": "node scripts/test.js --env=jsdom",
+    "test2": "node scripts/test test --env=jsdom",
+    "test": "react-scripts test"
   },
   "dependencies": {
     "@geostarters/common": "^0.0.5",
