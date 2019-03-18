@@ -62,6 +62,15 @@ storiesOf("Map", module)
 			}
 
 		}
+	).add(
+		"Mapa Orto",
+		() => <Map options={{"style": CONSTANTS.DEFAULT_ICGC_BACKGROUNDS[1].style}}></Map>,
+		{
+			info:{
+				text: "Cal afegir l'import de mapbox-gl.css",
+			}
+
+		}
 	);
 
 storiesOf("Logo ICGC", module)

@@ -61,6 +61,13 @@ storiesOf("Map", module).addDecorator(withInfo)
 		text: "Cal afegir l'import de mapbox-gl.css"
 	}
 
+}).add("Mapa Orto", function () {
+	return React.createElement(Map, { options: { "style": CONSTANTS.DEFAULT_ICGC_BACKGROUNDS[1].style } });
+}, {
+	info: {
+		text: "Cal afegir l'import de mapbox-gl.css"
+	}
+
 });
 
 storiesOf("Logo ICGC", module).addDecorator(withInfo).add("Logo ICGC", function () {
