@@ -251,7 +251,7 @@ var Map = function (_React$Component) {
 				value: function render() {
 
 						var style = { width: "100%", height: "100%" };
-						return React.createElement("div", { id: this.container, className: style });
+						return React.createElement("div", { id: this.container, style: style });
 				}
 		}]);
 

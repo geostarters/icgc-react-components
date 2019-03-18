@@ -23,7 +23,7 @@
   },
   "scripts": {
     "lint": "eslint --fix --cache --ignore-path .gitignore src",
-    "copy": "NODE_ENV=production babel ./src --out-dir dist --copy-files",
+    "copy": "set NODE_ENV=production&babel ./src --out-dir dist --copy-files",
     "build": "run-s lint copy",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "deploy-storybook": "storybook-to-ghpages -o docs",
