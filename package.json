@@ -14,7 +14,9 @@
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.11.2",
     "enzyme-to-json": "^3.3.5",
+    "eslint-plugin-jest": "^22.4.1",
     "eslint-plugin-react": "^7.11.1",
+    "husky": "^1.3.1",
     "mini-css-extract-plugin": "^0.5.0",
     "npm-run-all": "^4.1.5",
     "react-scripts": "1.1.4",
@@ -26,14 +28,15 @@
   },
   "scripts": {
     "lint": "eslint --fix --cache --ignore-path .gitignore src",
-    "copy": "set NODE_ENV=production&babel ./src --out-dir dist --copy-files",
+    "copy": "set NODE_ENV=production&babel ./src --ignore ./src/stories/,./src/components/*/__snapshots__/,./src/components/*/*test.js,./src/setupTests.js  --out-dir dist --copy-files",
     "build": "run-s lint copy",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "deploy-storybook": "storybook-to-ghpages -o docs",
     "build-storybook": "build-storybook -s docs",
     "test-original": "node scripts/test.js --env=jsdom",
-    "test2": "node scripts/test test --env=jsdom",
-    "test": "react-scripts test"
+    "test": "react-scripts test",
+    "prepush": "npm run lint & npm run test",
+    "precommit": "npm run lint"
   },
   "dependencies": {
     "@geostarters/common": "^0.1.20",
@@ -42,7 +45,5 @@
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^0.84.0"
   },
-  "jest": {
-
-  }
+  "jest": {}
 }

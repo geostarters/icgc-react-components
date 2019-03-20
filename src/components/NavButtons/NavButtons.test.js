@@ -2,8 +2,7 @@
 
 import { shallow } from "enzyme";
 import React from "react";
-import Button from "./Button";
-//import "../../setupTests";
+import NavButtons from "./NavButtons";
 
 describe("NavButtons", () => {
 
@@ -13,9 +12,9 @@ describe("NavButtons", () => {
 			color: "teal"
 		};
 
-		const component = shallow(<Button {...mockProps}>OK</Button>);
+		const component = shallow(<NavButtons {...mockProps}></NavButtons>);
 		expect(component).toMatchSnapshot();
-		expect(component.props().color).toEqual("teal");
+
 
 	});
 

@@ -19,8 +19,8 @@ describe("Button", () => {
 
 	});
 
-	it("button click should call Onclick Method", () => {
-		
+	/* it("button click should call Onclick Method", () => {
+
 		const clickFn = jest.fn();
 
 		const component = shallow(<Button onClick={clickFn} />);
@@ -28,6 +28,6 @@ describe("Button", () => {
 		  .find('button#my-button-two')
 		  .simulate('click');
 		expect(clickFn).toHaveBeenCalled();
-	  });	
+	  }); */
 
 });
