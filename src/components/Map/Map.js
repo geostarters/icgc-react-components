@@ -164,7 +164,7 @@ export default class Map extends React.Component {
 	render() {
 
 		const style = { width: "100%", height: "100%"};
-		return (<div id={this.container} className={style}/>);
+		return (<div id={this.container} style={style}/>);
 
 	}
 
