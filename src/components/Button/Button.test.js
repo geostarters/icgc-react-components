@@ -5,8 +5,6 @@ import React from "react";
 import Button from "./Button";
 //import "../../setupTests";
 
-
-
 describe("Button", () => {
 
 	it("Expect to ", ()=> {

@@ -43,6 +43,6 @@
     "semantic-ui-react": "^0.84.0"
   },
   "jest": {
-    "snapshotSerializers": ["enzyme-to-json/serializer"]
+
   }
 }
