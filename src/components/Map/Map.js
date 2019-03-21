@@ -16,7 +16,7 @@ export default class Map extends React.Component {
 
 		super(props);
 
-		this.container = `${Date.now()}`;
+		this.container = `${Date.now()}${Math.random()}`;
 
 		const options = {
 			"container": this.container,
@@ -163,7 +163,11 @@ export default class Map extends React.Component {
 
 	render() {
 
-		const style = { width: "100%", height: "100%"};
+		const style = {
+			"width": "100%",
+			"height": "100%",
+			...this.props.style
+		};
 		return (<div id={this.container} style={style}/>);
 
 	}
@@ -173,6 +177,7 @@ export default class Map extends React.Component {
 
 Map.propTypes = {
 	options: PropTypes.object,				//Has to be MapOptions from flow-typed
+	style: PropTypes.object,
 	container: PropTypes.string,
 	mapboxToken: PropTypes.string,
 	mapData: PropTypes.object,
