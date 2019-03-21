@@ -16,7 +16,7 @@ export default class Map extends React.Component {
 
 		super(props);
 
-		this.container = `${Date.now()}` + `${Math.random()}`;
+		this.container = `${Date.now()}${Math.random()}`;
 
 		const options = {
 			"container": this.container,
