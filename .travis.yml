@@ -10,7 +10,6 @@ branches:
 before_script:
 - npm install
 script:
-- npm test
 - npm run build
 before_install:
   # Create a git tag of the new version to use
