@@ -10,7 +10,8 @@ branches:
 before_script:
 - npm install
 script:
-- npm run lint
+- npm test
+- npm run build
 before_install:
   # Create a git tag of the new version to use
   # If package.json major and minor versions match last tag, then increment last tag. Else use package.json major.minor.0.
