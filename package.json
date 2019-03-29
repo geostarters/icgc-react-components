@@ -28,7 +28,9 @@
   },
   "scripts": {
     "lint": "eslint --fix --cache --ignore-path .gitignore src",
-    "copy": "set NODE_ENV=production&babel ./src --ignore ./src/stories/,./src/components/*/__snapshots__/,./src/components/*/*test.js,./src/setupTests.js  --out-dir dist --copy-files",
+    "copy:dev": "set NODE_ENV=production&babel ./src --ignore ./src/stories/,./src/components/*/__snapshots__/,./src/components/*/*test.js,./src/setupTests.js  --out-dir dist --copy-files",
+    "copy": "NODE_ENV=production babel ./src --ignore ./src/stories/,./src/components/*/__snapshots__/,./src/components/*/*test.js,./src/setupTests.js  --out-dir dist --copy-files",
+    "build:dev": "run-s lint copy:dev",
     "build": "run-s lint copy",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "deploy-storybook": "storybook-to-ghpages -o docs",
