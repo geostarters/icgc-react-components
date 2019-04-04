@@ -16,8 +16,7 @@ import NavButtons from "../components/NavButtons/NavButtons";
 // eslint-disable-next-line no-unused-vars
 import LogoICGC from "../components/LogoICGC/LogoICGC";
 
-/* import "./ICGC_logo.svg";
-import "./ICGC.svg"; */
+import mapData from "./mapData.json";
 
 import "semantic-ui-css/semantic.min.css";
 
@@ -43,10 +42,9 @@ storiesOf("NavButtons", module)
 
 storiesOf("Map", module)
 	.addDecorator(withInfo)
-	//.addDecorator(withStorySource("import React from 'react'\nimport { storiesOf } from '@storybook/react';\nimport { withStorySource } from '@storybook/addon-storysource'\n\nstoriesOf('Button', module)\n  .add('with some emoji', () => (\n    <Button>😀 😎 👍 💯</Button>\n  ));"))
 	.add(
 		"Mapa Fosc",
-		() => <Map ></Map>,
+		() => <Map style={{"height": "100vh"}} ></Map>,
 		{
 			info:{
 				text: "Cal afegir l'import de mapbox-gl.css",
@@ -55,7 +53,7 @@ storiesOf("Map", module)
 		}
 	).add(
 		"Mapa Clar",
-		() => <Map options={{"style": CONSTANTS.DEFAULT_ICGC_BACKGROUNDS[0].style}}></Map>,
+		() => <Map style={{"height": "100vh"}} options={{"style": CONSTANTS.DEFAULT_ICGC_BACKGROUNDS[0].style}}></Map>,
 		{
 			info:{
 				text: "Cal afegir l'import de mapbox-gl.css",
@@ -64,7 +62,16 @@ storiesOf("Map", module)
 		}
 	).add(
 		"Mapa Orto",
-		() => <Map options={{"style": CONSTANTS.DEFAULT_ICGC_BACKGROUNDS[1].style}}></Map>,
+		() => <Map style={{"height": "100vh"}} options={{"style": CONSTANTS.DEFAULT_ICGC_BACKGROUNDS[1].style}}></Map>,
+		{
+			info:{
+				text: "Cal afegir l'import de mapbox-gl.css",
+			}
+
+		}
+	).add(
+		"Mapa Sostenibilitat",
+		() => <Map style={{"height": "100vh"}} mapData={mapData} options={{"style": CONSTANTS.DEFAULT_ICGC_BACKGROUNDS[0].style, "center": [2.28773, 41.60797], "zoom": 12}}></Map>,
 		{
 			info:{
 				text: "Cal afegir l'import de mapbox-gl.css",

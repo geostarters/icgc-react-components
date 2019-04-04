@@ -7,10 +7,9 @@ import mapboxgl from "mapbox-gl";
 
 export default class Map extends React.Component {
 
-	// eslint-disable-next-line no-undef
-	map: MapboxMap;
-	// eslint-disable-next-line no-undef
-	container: string;
+	// eslint-disable-next-line no-unused-vars
+	/* map: MapboxMap;
+	container: string; */
 
 	constructor(props) {
 
@@ -45,6 +44,12 @@ export default class Map extends React.Component {
 
 	}
 
+	componentWillUnmount() {
+
+		this.map.remove();
+
+	}
+
 	componentDidUpdate(prevProps) {
 
 		if (prevProps.options.style !== this.props.options.style) {
@@ -53,64 +58,107 @@ export default class Map extends React.Component {
 
 		} else {
 
-			this.updateSources(this.props.mapData.sources, prevProps.mapData.sources);
-			this.updateLayers(this.props.mapData.layers, prevProps.mapData.layers);
+			const newObjectWithLayers = this.getNewObjectWithLayers(this.props.mapData.layers, prevProps.mapData.layers);
+			const newObjectWithSources = this.getNewObjectWithSources(this.props.mapData.sources, prevProps.mapData.sources);
+
+			this.doUpdateMapData(newObjectWithLayers, newObjectWithSources);
 
 		}
 
 	}
 
-	componentWillUnmount() {
-
-		this.map.remove();
-
-	}
-
-	updateSources(currentSources, prevSources) {
-
-		const newSources = IcgcUtils.arrayDifference(currentSources, prevSources);
-		const deletedSources = IcgcUtils.arrayDifference(prevSources, currentSources);
-
-		newSources.forEach(source => {
-
-			this.map.addSource(source.name, source);
-
-		});
-
-		deletedSources.forEach(source => {
-
-			this.map.removeSource(source.name);
-
-		});
-
-	}
-
-	updateLayers(currentLayers, prevLayers) {
+	getNewObjectWithLayers(currentLayers, prevLayers) {
 
 		const layersToAdd = IcgcUtils.arrayDifference(currentLayers, prevLayers);
 		const layersToDelete = IcgcUtils.arrayDifference(prevLayers, currentLayers);
 		const layersToUpdate = IcgcUtils.arrayDifference(currentLayers, layersToAdd);
 
-		layersToAdd.forEach(layer => {
+		return {
+			layersToAdd,
+			layersToDelete,
+			layersToUpdate
+		};
 
-			this.map.addLayer(layer);
+	}
 
-		});
+	getNewObjectWithSources(currentSources, prevSources) {
 
-		layersToDelete.forEach(layer => {
+		const newSources = IcgcUtils.arrayDifference(currentSources, prevSources);
+		const deletedSources = IcgcUtils.arrayDifference(prevSources, currentSources);
+
+		return {
+			newSources,
+			deletedSources
+		};
+
+	}
+
+	async doUpdateMapData(objLayers: NewObjectLayers, objSources: NewObjectSources) {
+
+
+		//add Sources
+		for (const source of objSources.newSources) {
+
+			this.map.addSource(source.name, source);
+
+		}
+
+		//remove Layers
+		for (const layer of objLayers.layersToDelete) {
 
 			this.map.removeLayer(layer.id);
 
-		});
+		}
 
-		layersToUpdate.forEach(layer => {
+		//delete Sources
+		for (const source of objSources.deletedSources) {
 
-			this.updateLayerPaintProperties(layer.id, layer.paint);
-			this.updateLayerLayoutProperties(layer.id, layer.layout);
+			this.map.removeSource(source.name);
+
+		}
+
+		//add Layers
+		for (const layer of objLayers.layersToAdd) {
+
+			this.map.addLayer(layer);
+
+		}
+
+		//updates
+		objLayers.layersToUpdate.forEach(layer => {
+
+			if (layer.paint) {
+
+				this.updateLayerPaintProperties(layer.id, layer.paint);
+
+			}
+			if (layer.layout) {
+
+				this.updateLayerLayoutProperties(layer.id, layer.layout);
+
+			}
 
 		});
 
 	}
+
+
+	removeDataArray(arr, fn, idPropName = "") {
+
+		return new Promise((resolve) =>{
+
+			for (const item of arr) {
+
+				fn((idPropName !== "" ? item[idPropName] : item));
+
+			}
+
+			resolve();
+
+		});
+
+	}
+
 
 	updateLayerPaintProperties(layerId, paintProps: Object) {
 
@@ -164,8 +212,8 @@ export default class Map extends React.Component {
 	render() {
 
 		const style = {
-			"width": "100%",
-			"height": "100%",
+			width: "100%",
+			height: "100%",
 			...this.props.style
 		};
 		return (<div id={this.container} style={style}/>);
@@ -176,11 +224,11 @@ export default class Map extends React.Component {
 
 
 Map.propTypes = {
-	options: PropTypes.object,				//Has to be MapOptions from flow-typed
-	style: PropTypes.object,
+	options: PropTypes.object, //Has to be MapOptions from flow-typed
 	container: PropTypes.string,
 	mapboxToken: PropTypes.string,
 	mapData: PropTypes.object,
 	showAttribution: PropTypes.bool,
-	layerEvents: PropTypes.array 			//Has to be Array<EventData> from flow-typed
+	layerEvents: PropTypes.array, //Has to be Array<EventData> from flow-typed
+	style: PropTypes.object
 };
