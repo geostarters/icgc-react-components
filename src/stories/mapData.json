@@ -1,0 +1,27 @@
+{
+    "sources":[{
+        "name":"sostenibilitat_source",
+        "data":{
+            "type": "vector",
+            "tiles": ["https://tilemaps.icgc.cat/tileserver/tileserver.php/granollers-12-20/{z}/{x}/{y}.pbf"],
+            "maxzoom": 20
+        },
+        "type": "vector"
+    }],
+    "layers":[{
+        "id": "edificis_sostenibilitat_line",
+        "type": "line",
+        "source": "sostenibilitat_source",
+        "source-layer": "edificis_sostenibilitat",
+        "minzoom": 12,
+        "maxzoom": 20,
+        "layout":{
+            "visibility":"visible"
+        },
+        "paint": {
+            "line-color": "#0000FF",
+            "line-width": 1.5
+        }
+
+    }]
+}

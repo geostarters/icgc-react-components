@@ -1,3 +1,5 @@
+//@flow
+
 declare type MapOptions = {
 
     container: string,

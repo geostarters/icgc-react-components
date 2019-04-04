@@ -1,3 +1,5 @@
+//@flow
+
 declare type MapData = {
 
     layers: Array<Object>,
@@ -8,4 +10,15 @@ declare type MapData = {
 declare type MapDatasource = {
 	name: string,
 	data: Object
+}
+
+declare type NewObjectLayers = {
+    layersToAdd: Array<Object>,
+    layersToDelete: Array<Object>,
+    layersToUpdate: Array<Object>
+}
+
+declare type NewObjectSources = {
+    newSources: Array<Object>,
+    deletedSources: Array<Object>
 }
