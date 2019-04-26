@@ -38,6 +38,7 @@ export default class Map extends React.Component {
 
 		if (this.props.showAttribution) {
 
+			console.log("showAttribution");
 			this.map.addControlMap(new mapboxgl.AttributionControl({
 				compact: true
 			}));

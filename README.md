@@ -13,6 +13,25 @@ A lib of React Components
 npm install --save @geostarters/react-components
 ```
 
+## Provided scripts
+
+**lint**: Checks the code linting
+
+**build:dev**: 
+
+**build**: Creates de dist file of each component
+
+**build:dev**: Creates de dist file of each component (using working windows commands)
+
+**storybook**: Run storybook locally
+
+**deploy-storybook**: Deploy torybook to github pages
+
+**build-storybook**:
+
+**test**: Runs the static type checker and runs the tests
+
+
 ## Semantic UI React personalization
 
 https://jsramblings.com/2018/03/04/how-to-use-semantic-ui-with-a-custom-theme-in-your-CRA-app.html

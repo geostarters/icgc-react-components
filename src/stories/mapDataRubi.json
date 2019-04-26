@@ -1,0 +1,184 @@
+{
+    "sources": [{
+            "id": "WMSSostenibilitatIrradiacio",        
+            "tiles": ["http://geoserveis.icgc.cat/sostenibilitat/rubi/wms?layers=rad_global_roofs&bbox={bbox-epsg-3857}&format=image/png&service=WMS&version=1.1.1&request=GetMap&srs=EPSG:3857&transparent=true&width=256&height=256&"],
+            "maxzoom": 20,
+            "type": "raster"
+       
+    }, {
+           "id": "WMSSostenibilitatIdoneitatFV",         
+            "tiles": ["http://geoserveis.icgc.cat/sostenibilitat/rubi/wms?layers=idoFV_RGB&bbox={bbox-epsg-3857}&format=image/png&service=WMS&version=1.1.1&request=GetMap&srs=EPSG:3857&transparent=true&width=256&height=256&"],
+            "maxzoom": 20,
+            "type": "raster"
+      
+    }, {
+           "id": "WMSSostenibilitatIdoneitatSTA",          
+            "tiles": ["http://geoserveis.icgc.cat/sostenibilitat/rubi/wms?layers=idoTS_RGB&bbox={bbox-epsg-3857}&format=image/png&service=WMS&version=1.1.1&request=GetMap&srs=EPSG:3857&transparent=true&width=256&height=256&"],
+            "maxzoom": 20,
+            "type": "raster"
+        
+    }, {
+            "id": "sostenibilitat_source",         
+            "tiles": ["https://tilemaps.icgc.cat/tileserver/tileserver.php/rubi-12-20/{z}/{x}/{y}.pbf"],
+            "maxzoom": 20,
+            "type": "vector"
+        
+    }],
+    "layers": [{
+        "id": "WMSSostenibilitatIrradiacio",
+        "type": "raster",
+        "source": "WMSSostenibilitatIrradiacio",
+        "minzoom": 12,
+        "maxzoom": 20,
+        "layout": {
+            "visibility": "none"
+        }
+    }, {
+        "id": "WMSSostenibilitatIdoneitatFV",
+        "type": "raster",
+        "source": "WMSSostenibilitatIdoneitatFV",
+        "minzoom": 12,
+        "maxzoom": 20,
+        "layout": {
+            "visibility": "none"
+        }
+    }, 
+     {
+        "id": "WMSSostenibilitatIdoneitatSTA",
+        "type": "raster",
+        "source": "WMSSostenibilitatIdoneitatSTA",
+        "minzoom": 12,
+        "maxzoom": 20,
+        "layout": {
+            "visibility": "none"
+        }
+    },
+    {
+        "id": "VectorSostenibilitatIdoneitatFV",
+        "type": "fill",
+        "source": "sostenibilitat_source",
+        "source-layer": "edificis_sostenibilitat",
+        "minzoom": 12,
+        "maxzoom": 22,
+        "layout": {
+            "visibility": "visible"
+        },
+        "paint": {
+            "fill-color": ["case", ["==", ["all", [">=", ["get", "sfv4"],
+                    ["get", "sfv1"]
+                ],
+                [">=", ["get", "sfv4"],
+                    ["get", "sfv2"]
+                ],
+                [">=", ["get", "sfv4"],
+                    ["get", "sfv3"]
+                ]
+            ], true], "#FFFF00", ["==", ["all", [">=", ["get", "sfv3"],
+                    ["get", "sfv1"]
+                ],
+                [">=", ["get", "sfv3"],
+                    ["get", "sfv2"]
+                ],
+                [">=", ["get", "sfv3"],
+                    ["get", "sfv4"]
+                ]
+            ], true], "#FFB002", ["==", ["all", [">=", ["get", "sfv2"],
+                    ["get", "sfv1"]
+                ],
+                [">=", ["get", "sfv2"],
+                    ["get", "sfv3"]
+                ],
+                [">=", ["get", "sfv2"],
+                    ["get", "sfv4"]
+                ]
+            ], true], "#BB6910", ["==", ["all", [">=", ["get", "sfv1"],
+                    ["get", "sfv2"]
+                ],
+                [">=", ["get", "sfv1"],
+                    ["get", "sfv3"]
+                ],
+                [">=", ["get", "sfv1"],
+                    ["get", "sfv4"]
+                ]
+            ], true], "#3B1B00", "red"],
+            "fill-opacity": 0.9,
+            "fill-antialias": true
+        }
+    }, {
+        "id": "VectorSostenibilitatIdoneitatSTA",
+        "type": "fill",
+        "source": "sostenibilitat_source",
+        "source-layer": "edificis_sostenibilitat",
+        "minzoom": 12,
+        "maxzoom": 22,
+        "layout": {
+            "visibility": "none"
+        },
+        "paint": {
+            "fill-color": ["case", ["==", ["all", [">=", ["get", "sts3"],
+                    ["get", "sts1"]
+                ],
+                [">=", ["get", "sts3"],
+                    ["get", "sts2"]
+                ]
+            ], true], "#FFFF00", ["==", ["all", [">=", ["get", "sts2"],
+                    ["get", "sts1"]
+                ],
+                [">=", ["get", "sts2"],
+                    ["get", "sts3"]
+                ]
+            ], true], "#FFB002", ["==", ["all", [">=", ["get", "sts1"],
+                    ["get", "sts2"]
+                ],
+                [">=", ["get", "sts1"],
+                    ["get", "sts3"]
+                ]
+            ], true], "#3B1B00", "red"],
+            "fill-opacity": 0.9,
+            "fill-antialias": true
+        }
+    }, {
+        "id": "EdificisSostenibilitatPol",
+        "type": "fill",
+        "source": "sostenibilitat_source",
+        "source-layer": "edificis_sostenibilitat",
+        "minzoom": 12,
+        "maxzoom": 22,
+        "layout": {
+            "visibility": "visible"
+        },
+        "paint": {
+            "fill-color": "#0000FF",
+            "fill-opacity": 0
+        }
+    }, {
+        "id": "EdificisSostenibilitatContorn",
+        "type": "line",
+        "source": "sostenibilitat_source",
+        "source-layer": "edificis_sostenibilitat",
+        "minzoom": 17,
+        "maxzoom": 22,
+        "layout": {
+            "visibility": "visible"
+        },
+        "paint": {
+            "line-color": "#0000FF",
+            "line-width": 1.5
+        }
+    }, {
+        "id": "EdificisSostenibilitatSeleccio",
+        "type": "line",
+        "source": "sostenibilitat_source",
+        "source-layer": "edificis_sostenibilitat",
+        "minzoom": 12,
+        "maxzoom": 22,
+        "layout": {
+            "visibility": "visible"
+        },
+        "paint": {
+            "line-color": "#ff00ee",
+            "line-width": 2.5
+        },
+        "filter": ["==", "cat", 0]
+    }]
+}
