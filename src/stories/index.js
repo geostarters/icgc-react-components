@@ -16,7 +16,8 @@ import NavButtons from "../components/NavButtons/NavButtons";
 // eslint-disable-next-line no-unused-vars
 import LogoICGC from "../components/LogoICGC/LogoICGC";
 
-import mapData from "./mapData.json";
+//import mapData from "./mapData.json";
+import mapDataRubi from "./mapDataRubi.json";
 
 import "semantic-ui-css/semantic.min.css";
 
@@ -62,7 +63,7 @@ storiesOf("Map", module)
 		}
 	).add(
 		"Mapa Orto",
-		() => <Map style={{"height": "100vh"}} options={{"style": CONSTANTS.DEFAULT_ICGC_BACKGROUNDS[1].style}}></Map>,
+		() => <Map showAttribution={true} style={{"height": "100vh"}} options={{"style": CONSTANTS.DEFAULT_ICGC_BACKGROUNDS[1].style}}></Map>,
 		{
 			info:{
 				text: "Cal afegir l'import de mapbox-gl.css",
@@ -71,7 +72,7 @@ storiesOf("Map", module)
 		}
 	).add(
 		"Mapa Sostenibilitat",
-		() => <Map style={{"height": "100vh"}} mapData={mapData} options={{"style": CONSTANTS.DEFAULT_ICGC_BACKGROUNDS[0].style, "center": [2.28773, 41.60797], "zoom": 12}}></Map>,
+		() => <Map showAttribution={true} style={{"height": "100vh"}} mapData={mapDataRubi} options={{"style": CONSTANTS.DEFAULT_ICGC_BACKGROUNDS[0].style, "center": [2.0349243,  41.4971174], "zoom": 12, "attributionControl": false}}></Map>,
 		{
 			info:{
 				text: "Cal afegir l'import de mapbox-gl.css",
