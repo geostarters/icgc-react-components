@@ -13,6 +13,11 @@ A lib of React Components
 npm install --save @geostarters/react-components
 ```
 
-##Semantic UI React personalization
+## Semantic UI React personalization
 
 https://jsramblings.com/2018/03/04/how-to-use-semantic-ui-with-a-custom-theme-in-your-CRA-app.html
+
+
+## License
+
+Copyright (c) 2019 - Geostarters (MIT License) See LICENSE file for more info.

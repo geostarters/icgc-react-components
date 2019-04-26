@@ -38,7 +38,9 @@ export default class Map extends React.Component {
 
 		if (this.props.showAttribution) {
 
-			this.map.addControlMap(MapboxMap.ATTRIBUTION_CONTROL);
+			this.map.addControlMap(new mapboxgl.AttributionControl({
+				compact: true
+			}));
 
 		}
 
@@ -162,9 +164,9 @@ export default class Map extends React.Component {
 
 	updateLayerPaintProperties(layerId, paintProps: Object) {
 
-		for (const prop of paintProps) {
+		for (const  [key, value] of Object.entries(paintProps)) {
 
-			this.map.setPaintProperty(layerId, prop, paintProps[prop]);
+			this.map.setPaintProperty(layerId, key, value);
 
 		}
 
@@ -172,9 +174,9 @@ export default class Map extends React.Component {
 
 	updateLayerLayoutProperties(layerId, layoutProps: Object) {
 
-		for (const prop of layoutProps) {
+		for (const [key, value] of Object.entries(layoutProps)) {
 
-			this.map.setLayoutProperty(layerId, prop, layerId[prop]);
+			this.map.setLayoutProperty(layerId, key, value);
 
 		}
 
