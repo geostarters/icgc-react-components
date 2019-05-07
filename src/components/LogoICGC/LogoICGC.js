@@ -15,8 +15,6 @@ export default function LogoICGC(props) {
 		...props
 	};
 
-	console.log("logoProps", logoProps);
-
 	return (
 		<div className={logoProps.position} >
 			<a className={logoProps.logoType} target="_blank" rel="noopener noreferrer" href={logoProps.url} aria-label="Icgc" ></a>
