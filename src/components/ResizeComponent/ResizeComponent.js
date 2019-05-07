@@ -2,7 +2,7 @@
 // @flow
 
 import React from "react";
-import Utils from "@geostarters/common";
+import { Utils } from "@geostarters/common";
 
 const ResizeComponent = ComposedComponent =>
 
