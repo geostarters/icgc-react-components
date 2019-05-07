@@ -1,0 +1,21 @@
+//@flow
+
+import { shallow } from "enzyme";
+import React from "react";
+import ResizeComponent from "./ResizeComponent";
+import { Container } from "semantic-ui-react";
+
+describe("ResizeComponent", () => {
+
+	it("Expect to ", ()=> {
+
+		// eslint-disable-next-line new-cap
+		const ResizeContainer = ResizeComponent(Container);
+		const component = shallow(<ResizeContainer>Testin Resize Component</ResizeContainer>);
+		expect(component).toMatchSnapshot();
+		//expect(component.props("width")).toBeDefined();
+		console.log(component.props());
+
+	});
+
+});
