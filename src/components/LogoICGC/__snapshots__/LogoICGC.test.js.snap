@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LogoICGC component matches the snapshot  1`] = `
+<div
+  className="bottom-right"
+>
+  <a
+    aria-label="Icgc"
+    className="icgc-logo"
+    href="http://www.icgc.cat/"
+    rel="noopener noreferrer"
+    target="_blank"
+  />
+</div>
+`;

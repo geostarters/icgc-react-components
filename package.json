@@ -1,12 +1,13 @@
 {
   "name": "@geostarters/react-components",
   "version": "0.0.5",
-  "main": "dist/index.js",
+  "main": "dist/es/index.js",
   "module": "dist/index.js",
   "files": [
     "dist"
   ],
   "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.4.4",
     "@geostarters/eslint-config": "^0.0.1",
     "@storybook/addon-info": "^4.1.2",
     "@storybook/react": "^4.1.1",
@@ -28,23 +29,28 @@
   },
   "scripts": {
     "lint": "eslint --fix --cache --ignore-path .gitignore src",
-    "copy:dev": "set NODE_ENV=production&babel ./src --ignore ./src/stories/,./src/components/*/__snapshots__/,./src/components/*/*test.js,./src/setupTests.js  --out-dir dist --copy-files",
-    "copy": "NODE_ENV=production babel ./src --ignore ./src/stories/,./src/components/*/__snapshots__/,./src/components/*/*test.js,./src/setupTests.js  --out-dir dist --copy-files",
-    "build:dev": "run-s lint copy:dev",
+    "copy:dev": "set NODE_ENV=production&babel ./src --ignore ./src/stories/,./src/components/*/__snapshots__/,./src/components/*/*test.js,./src/setupTests.js  --out-dir dist/es/ --copy-files",
+    "copy": "NODE_ENV=production babel ./src --ignore ./src/stories/,./src/components/*/__snapshots__/,./src/components/*/*test.js,./src/setupTests.js  --out-dir dist/es/ --copy-files",
+    "build:modules-dev": "set NODE_ENV=production&babel --plugins @babel/plugin-transform-modules-commonjs dist/es/ --out-dir dist/commonjs/",
+    "build:dev": "run-s lint copy:dev build:modules-dev",
     "build": "run-s lint copy",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "deploy-storybook": "storybook-to-ghpages -o docs",
     "build-storybook": "build-storybook -s docs",
     "test-original": "node scripts/test.js --env=jsdom",
-    "test": "react-scripts test",
+    "test": "react-scripts test --env=jsdom",
     "precommit": "npm run lint"
   },
   "dependencies": {
-    "@geostarters/common": "^0.1.28",
+    "@geostarters/common": "^0.1.29",
     "babel-cli": "^6.26.0",
     "mapbox-gl": "^0.52.0-beta.1",
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^0.84.0"
   },
-  "jest": {}
+  "jest": {
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
+  }
 }
