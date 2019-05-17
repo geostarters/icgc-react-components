@@ -1,12 +1,14 @@
 {
   "name": "@geostarters/react-components",
   "version": "0.0.5",
-  "main": "dist/es/index.js",
-  "module": "dist/index.js",
+  "main": "dist/commonjs/index.js",
+  "module": "dist/es/index.js",
   "files": [
     "dist"
   ],
   "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.4",
     "@babel/plugin-transform-modules-commonjs": "^7.4.4",
     "@geostarters/eslint-config": "^0.0.1",
     "@storybook/addon-info": "^4.1.2",
@@ -21,7 +23,8 @@
     "mini-css-extract-plugin": "^0.5.0",
     "npm-run-all": "^4.1.5",
     "react-scripts": "1.1.4",
-    "react-test-renderer": "^16.3.2"
+    "react-test-renderer": "^16.3.2",
+    "rimraf": "^2.6.3"
   },
   "peerDependencies": {
     "react": "^16.3.2",
@@ -29,21 +32,24 @@
   },
   "scripts": {
     "lint": "eslint --fix --cache --ignore-path .gitignore src",
-    "copy:dev": "set NODE_ENV=production&babel ./src --ignore ./src/stories/,./src/components/*/__snapshots__/,./src/components/*/*test.js,./src/setupTests.js  --out-dir dist/es/ --copy-files",
-    "copy": "NODE_ENV=production babel ./src --ignore ./src/stories/,./src/components/*/__snapshots__/,./src/components/*/*test.js,./src/setupTests.js  --out-dir dist/es/ --copy-files",
-    "build:modules-dev": "set NODE_ENV=production&babel --plugins @babel/plugin-transform-modules-commonjs dist/es/ --out-dir dist/commonjs/",
-    "build:dev": "run-s lint copy:dev build:modules-dev",
-    "build": "run-s lint copy",
+    "build:es-dev": "set NODE_ENV=production&babel ./src --out-dir dist/es/ --copy-files",
+    "build:es": "NODE_ENV=production babel ./src --out-dir dist/es/ --copy-files",
+    "build:commonjs-dev": "set NODE_ENV=production&babel --plugins @babel/plugin-transform-modules-commonjs dist/es/ --out-dir dist/commonjs/ --copy-files",
+    "build:commonjs": "NODE_ENV=production babel --plugins @babel/plugin-transform-modules-commonjs dist/es/ --out-dir dist/commonjs/ --copy-files",
+    "build:dev": "run-s clean:dist lint build:es-dev clean:files build:commonjs-dev",
+    "build": "run-s clean:dist lint build:es clean:files build:commonjs",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "deploy-storybook": "storybook-to-ghpages -o docs",
     "build-storybook": "build-storybook -s docs",
     "test-original": "node scripts/test.js --env=jsdom",
     "test": "react-scripts test --env=jsdom",
-    "precommit": "npm run lint"
+    "precommit": "npm run lint",
+    "clean:files": "rimraf dist/es/setupTests.js dist/es/stories dist/es/components/*.test.js dist/es/components/*/*.test.* dist/es/components/*/__snapshots__ ",
+    "clean": "run-s clean:dist",
+    "clean:dist": "rimraf dist/*"
   },
   "dependencies": {
     "@geostarters/common": "^0.1.29",
-    "babel-cli": "^6.26.0",
     "mapbox-gl": "^0.52.0-beta.1",
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^0.84.0"
