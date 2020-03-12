@@ -11,6 +11,6 @@ export default function Button(props) {
 		...props
 	};
 
-	return (<ButtonSUI primary {...buttonProps}></ButtonSUI>);
+	return (<ButtonSUI {...buttonProps}></ButtonSUI>);
 
 }

@@ -17,19 +17,20 @@ npm install --save @geostarters/react-components
 
 **lint**: Checks the code linting
 
-**build:dev**: 
-
 **build**: Creates de dist file of each component
 
 **build:dev**: Creates de dist file of each component (using working windows commands)
 
 **storybook**: Run storybook locally
 
-**deploy-storybook**: Deploy torybook to github pages
+**deploy-storybook**: Deploy storybook to github pages
 
 **build-storybook**:
 
 **test**: Runs the static type checker and runs the tests
+
+## Para desplegar los cambios en el registro de npm
+
 
 
 ## Semantic UI React personalization
