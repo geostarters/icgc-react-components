@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.b7a7afa8.chunk.css",
+    "main.js": "/main.6f453ae316f02316b7aa.bundle.js",
+    "main.css.map": "/static/css/main.b7a7afa8.chunk.css.map",
+    "main.js.map": "/main.6f453ae316f02316b7aa.bundle.js.map",
+    "runtime~main.js": "/runtime~main.6f453ae316f02316b7aa.bundle.js",
+    "runtime~main.js.map": "/runtime~main.6f453ae316f02316b7aa.bundle.js.map",
+    "vendors~main.css": "/static/css/vendors~main.1dfc69dc.chunk.css",
+    "vendors~main.js": "/vendors~main.6f453ae316f02316b7aa.bundle.js",
+    "vendors~main.css.map": "/static/css/vendors~main.1dfc69dc.chunk.css.map",
+    "vendors~main.js.map": "/vendors~main.6f453ae316f02316b7aa.bundle.js.map",
+    "iframe.html": "/iframe.html",
+    "precache-manifest.0020a6aafd95ae69453ec1b86b75a5eb.js": "/precache-manifest.0020a6aafd95ae69453ec1b86b75a5eb.js",
+    "service-worker.js": "/service-worker.js",
+    "static/media/LogoICGC.css": "/static/media/ICGC_logo.afc110e9.svg",
+    "static/media/semantic.min.css": "/static/media/outline-icons.ef60a4f6.woff",
+    "vendors~main.6f453ae316f02316b7aa.bundle.js.LICENSE.txt": "/vendors~main.6f453ae316f02316b7aa.bundle.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "runtime~main.6f453ae316f02316b7aa.bundle.js",
+    "static/css/vendors~main.1dfc69dc.chunk.css",
+    "vendors~main.6f453ae316f02316b7aa.bundle.js",
+    "static/css/main.b7a7afa8.chunk.css",
+    "main.6f453ae316f02316b7aa.bundle.js"
+  ]
+}
