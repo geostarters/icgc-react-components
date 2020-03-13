@@ -7,7 +7,7 @@ import Button from "./Button";
 
 describe("Button component", () => {
 
-	it("to match the snapshot ", ()=> {
+	it("to match the snapshot ", () => {
 
 		const mockProps = {
 			color: "teal"
@@ -18,7 +18,7 @@ describe("Button component", () => {
 
 	});
 
-	it("has color prop = teal ", ()=> {
+	it("has color prop = teal ", () => {
 
 		const mockProps = {
 			color: "teal"
@@ -29,7 +29,7 @@ describe("Button component", () => {
 
 	});
 
-	it("has a prop function called on click", () =>{
+	it("has a prop function called on click", () => {
 
 		const mockProps = {
 			onClick: jest.fn()

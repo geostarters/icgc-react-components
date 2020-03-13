@@ -7,7 +7,7 @@ export default function Button(props) {
 
 	const buttonProps = {
 		color: "yellow",
-		onClick: ()=>console.log("click"),
+		onClick: () => console.log("click"),
 		...props
 	};
 

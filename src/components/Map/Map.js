@@ -7,10 +7,6 @@ import mapboxgl from "mapbox-gl";
 
 export default class Map extends React.Component {
 
-	// eslint-disable-next-line no-unused-vars
-	/* map: MapboxMap;
-	container: string; */
-
 	constructor(props) {
 
 		super(props);
@@ -128,7 +124,7 @@ export default class Map extends React.Component {
 		}
 
 		//updates
-		objLayers.layersToUpdate.forEach(layer => {
+		objLayers.layersToUpdate.forEach((layer) => {
 
 			if (layer.paint) {
 
@@ -148,7 +144,7 @@ export default class Map extends React.Component {
 
 	removeDataArray(arr, fn, idPropName = "") {
 
-		return new Promise((resolve) =>{
+		return new Promise((resolve) => {
 
 			for (const item of arr) {
 
@@ -207,7 +203,7 @@ export default class Map extends React.Component {
 
 		}
 
-		this.props.layerEvents.forEach((eventData) => this.map.subscribe(eventData.event, eventData.layerId, eventData.subscriber));
+		this.props.layerEvents.forEach(eventData => this.map.subscribe(eventData.event, eventData.layerId, eventData.subscriber));
 
 	}
 
@@ -224,7 +220,6 @@ export default class Map extends React.Component {
 	}
 
 }
-
 
 Map.propTypes = {
 	options: PropTypes.object, //Has to be MapOptions from flow-typed
