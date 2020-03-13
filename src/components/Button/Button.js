@@ -7,10 +7,10 @@ export default function Button(props) {
 
 	const buttonProps = {
 		color: "yellow",
-		onClick: ()=>console.log("click"),
+		onClick: () => console.log("click"),
 		...props
 	};
 
-	return (<ButtonSUI primary {...buttonProps}></ButtonSUI>);
+	return (<ButtonSUI {...buttonProps}></ButtonSUI>);
 
 }

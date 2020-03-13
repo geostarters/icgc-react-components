@@ -22,7 +22,6 @@ export default class NavButtons extends Component {
 
 }
 
-
 NavButtons.propTypes = {
 	goPrevStep: PropTypes.func,
 	goNextStep: PropTypes.func,

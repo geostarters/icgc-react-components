@@ -7,12 +7,15 @@ import Map from "./Map";
 /**
  * @jest-environment jsdom
  */
-
-it("Expect to ", ()=> {
-
-	expect(shallow(<Map></Map>)).toMatchSnapshot();
-
-});
-
 //Mocking Mapbox gl js needed
 //https://github.com/mapbox/mapbox-gl-js/issues/5026
+
+describe("Map", () => {
+
+	it("Expect to ", ()=> {
+
+		expect(shallow(<Map></Map>)).toMatchSnapshot();
+	
+	});
+
+});

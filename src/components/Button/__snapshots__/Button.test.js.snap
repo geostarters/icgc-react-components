@@ -5,7 +5,6 @@ exports[`Button component to match the snapshot  1`] = `
   as="button"
   color="teal"
   onClick={[Function]}
-  primary={true}
 >
   OK
 </Button>

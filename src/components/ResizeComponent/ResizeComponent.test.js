@@ -25,13 +25,13 @@ describe("ResizeComponent HOC Component", () => {
 
 	});
 
-	it("match the snapshot ", ()=> {
+	it("match the snapshot ", () => {
 
 		expect(toJSON(component)).toMatchSnapshot();
 
 	});
 
-	it("passes the width prop to composed component ", ()=> {
+	it("passes the width prop to composed component ", () => {
 
 		expect(component.find(MockComponent).props("width")).toBeDefined();
 
