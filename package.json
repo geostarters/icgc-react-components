@@ -1,6 +1,6 @@
 {
   "name": "@geostarters/react-components",
-  "version": "0.0.20",
+  "version": "0.0.21",
   "main": "dist/commonjs/index.js",
   "module": "dist/es/index.js",
   "files": [
@@ -16,6 +16,7 @@
     "@storybook/react": "^5.3.14",
     "@storybook/storybook-deployer": "^2.8.3",
     "babel-eslint": "10.0.3",
+    "cross-env": "^7.0.2",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.11.2",
     "enzyme-to-json": "^3.3.5",
@@ -36,10 +37,10 @@
   },
   "scripts": {
     "lint": "eslint --fix --cache --ignore-path .gitignore src",
-    "build:es-dev": "set NODE_ENV=production&babel ./src --out-dir dist/es/ --copy-files",
-    "build:es": "set NODE_ENV=production babel ./src --out-dir dist/es/ --copy-files",
-    "build:commonjs-dev": "set NODE_ENV=production&babel --plugins @babel/plugin-transform-modules-commonjs dist/es/ --out-dir dist/commonjs/ --copy-files",
-    "build:commonjs": "set NODE_ENV=production babel --plugins @babel/plugin-transform-modules-commonjs dist/es/ --out-dir dist/commonjs/ --copy-files",
+    "build:es-dev": "cross-env NODE_ENV=production&babel ./src --out-dir dist/es/ --copy-files",
+    "build:es": "cross-env NODE_ENV=production babel ./src --out-dir dist/es/ --copy-files",
+    "build:commonjs-dev": "cross-env NODE_ENV=production&babel --plugins @babel/plugin-transform-modules-commonjs dist/es/ --out-dir dist/commonjs/ --copy-files",
+    "build:commonjs": "cross-env NODE_ENV=production babel --plugins @babel/plugin-transform-modules-commonjs dist/es/ --out-dir dist/commonjs/ --copy-files",
     "build:dev": "run-s clean:dist lint build:es-dev clean:files build:commonjs-dev",
     "build": "run-s clean:dist lint build:es clean:files build:commonjs",
     "storybook": "start-storybook -p 9001 -c .storybook",
