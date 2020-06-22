@@ -1,24 +1,33 @@
 //@flow
 
-import React, { Component } from "react";
-import { Button as ButtonSUI } from "semantic-ui-react";
+import React from "react";
+import { Button } from "semantic-ui-react";
 import PropTypes from "prop-types";
 
-// eslint-disable-next-line no-unused-vars
-import styles from "./NavButtons.css";
+import styles from "./NavButtons.module.css";
 
-export default class NavButtons extends Component {
+export default function NavButtons({
+	goPrevStep,
+	goNextStep,
+	disabledPrev,
+	disabledNext,
+	color,
+	fullWidth,
+	prevText,
+	nextText}) {
 
-	render() {
-
-		return (
-			<ButtonSUI.Group className={this.props.fullWidth ? "full-width" : ""}>
-				<ButtonSUI basic color={this.props.color ? this.props.color : "yellow"} disabled={this.props.disabledPrev} floated='left' labelPosition='left' icon='left chevron' content='Anterior' onClick={this.props.goPrevStep}/>
-				<ButtonSUI color={this.props.color ? this.props.color : "yellow"} disabled={this.props.disabledNext} floated='right' labelPosition='right' icon='right chevron' content='Següent' onClick={this.props.goNextStep}/>
-			</ButtonSUI.Group>
-		);
-
-	}
+	return (
+		<Button.Group className={fullWidth ? styles.fullWidth : ""}>
+			<Button basic color={color} disabled={disabledPrev}
+				floated='left' labelPosition='left'
+				icon='left chevron' content={prevText}
+				onClick={goPrevStep}/>
+			<Button color={color} disabled={disabledNext}
+				floated='right' labelPosition='right'
+				icon='right chevron' content={nextText}
+				onClick={goNextStep}/>
+		</Button.Group>
+	);
 
 }
 
@@ -28,5 +37,18 @@ NavButtons.propTypes = {
 	disabledPrev: PropTypes.bool,
 	disabledNext: PropTypes.bool,
 	color: PropTypes.string,
-	fullWidth: PropTypes.bool
+	fullWidth: PropTypes.bool,
+	prevText: PropTypes.string,
+	nextText: PropTypes.string
+};
+
+NavButtons.defaultProps = {
+	goPrevStep: () => {},
+	goNextStep: () => {},
+	disabledPrev: false,
+	disabledNext: false,
+	color: "yellow",
+	fullWidth: false,
+	prevText: "Anterior",
+	nextText: "Següent"
 };

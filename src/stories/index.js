@@ -1,42 +1,52 @@
 //@flow
-// src/stories/index.js
 
-// eslint-disable-next-line no-unused-vars
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import { withInfo } from "@storybook/addon-info";
+import { action } from "@storybook/addon-actions";
 
 import * as CONSTANTS from "../constants";
-// eslint-disable-next-line no-unused-vars
+
 import Map from "../components/Map/Map";
 import Button from "../components/Button/Button";
-// eslint-disable-next-line no-unused-vars
 import NavButtons from "../components/NavButtons/NavButtons";
-// eslint-disable-next-line no-unused-vars
 import LogoICGC from "../components/LogoICGC/LogoICGC";
+import TreeView from "../components/TreeView/TreeView";
+import ButtonColorPicker from "../components/ButtonColorPicker/ButtonColorPicker";
+import ButtonOpacityPicker from "../components/ButtonOpacityPicker/ButtonOpacityPicker";
+import ButtonNipple from "../components/ButtonNipple/ButtonNipple";
+import SideBar from "../components/SideBar/SideBar";
+import Header from "../components/Header/Header";
+
 
 import mapDataRubi from "./mapDataRubi.json";
+import treeData from "./treeData.json";
 
 import "semantic-ui-css/semantic.min.css";
+
+const actionsData = {
+	onClick: action("onClick"),
+};
 
 storiesOf("Button", module)
 	.addDecorator(withInfo)
 	.add("Ok button", () => (<Button content="OK"/>))
-
 	.add("Icon button", () => (<Button icon="sign-in"/>))
 	.add("Basic button", () => (<Button basic={true} content="Basic"/>))
 	.add("Cancel button", () => (
-		<Button color={"red"} content="Cancel"/>
-	)
-	);
+		<Button color="red" content="Cancel" {...actionsData}/>
+	));
 
 storiesOf("NavButtons", module)
 	.addDecorator(withInfo)
 	.add("Anterior i Seguent", () => (
-		<NavButtons color="teal" goPrevStep={() => console.log("goPrevStep")} goNextStep={() => console.log("goPrevStep")} content="OK"/>
+		<NavButtons goPrevStep={() => console.log("goPrevStep")} goNextStep={() => console.log("goNextStep")}/>
 	))
 	.add("amb amplada 100%", () => (
-		<NavButtons color="teal" fullWidth={true} goPrevStep={() => console.log("goPrevStep")} goNextStep={() => console.log("goPrevStep")} content="OK"/>
+		<NavButtons color="teal" fullWidth={true} goPrevStep={actionsData.onClick} goNextStep={() => console.log("goNextStep")} prevText="Prev" nextText="Next"/>
+	))
+	.add("amb amplada 100% next disable", () => (
+		<NavButtons color="teal" disabledNext={true} fullWidth={true} goPrevStep={actionsData.onClick} goNextStep={() => console.log("goNextStep")} prevText="Prev" nextText="Next"/>
 	));
 
 storiesOf("Logo ICGC", module)
@@ -45,15 +55,28 @@ storiesOf("Logo ICGC", module)
 		<div style={{borderBottom: "2px solid gray", width: "100%", height: "200px"}}>
 			<LogoICGC/>
 		</div>
-	)).add("Logo ICGC versió amb text", () => (
+	))
+	.add("Logo ICGC versió amb text", () => (
 		<div style={{borderBottom: "2px solid gray", width: "100%", height: "200px"}}>
 			<LogoICGC logoType="icgc-logotxt"/>
 		</div>
-	)).add("Logo ICGC top left", () => (
+	))
+	.add("Logo ICGC versió 2 amb text", () => (
+		<div style={{borderBottom: "2px solid gray", width: "100%", height: "200px"}}>
+			<LogoICGC logoType="icgc-logo2-text"/>
+		</div>
+	))
+	.add("Logo ICGC versió 2 blanc amb text", () => (
+		<div style={{borderBottom: "2px solid gray", width: "100%", height: "200px", backgroundColor: "gray"}}>
+			<LogoICGC logoType="icgc-logo-white-text"/>
+		</div>
+	))
+	.add("Logo ICGC top left", () => (
 		<div style={{borderBottom: "2px solid gray", width: "100%", height: "200px"}}>
 			<LogoICGC position="top-left"/>
 		</div>
-	)).add("Logo ICGC amb text propi", () => (
+	))
+	.add("Logo ICGC amb text propi", () => (
 		<div style={{borderBottom: "2px solid gray", width: "100%", height: "200px"}}>
 			<LogoICGC addText="ICGC"/>
 		</div>
@@ -97,4 +120,98 @@ storiesOf("Map", module)
 			}
 
 		}
+	);
+
+storiesOf("Map", module).addDecorator(withInfo)
+	.add(
+	"Mapa Fosc",
+	() => <Map style={{"height": "100vh"}} ></Map>,
+	{
+		info:{
+			text: "Cal afegir l'import de mapbox-gl.css",
+		}
+
+	}
+	);
+
+storiesOf("TreeView", module)
+	.addDecorator(withInfo)
+	.add(
+		"TreeView",
+		() => <TreeView nodes={treeData} {...actionsData}></TreeView>
+	);
+
+storiesOf("ButtonColorPicker", module)
+	.addDecorator(withInfo)
+	.add(
+		"ButtonColorPicker",
+		() => <ButtonColorPicker></ButtonColorPicker>
+	)
+	.add(
+		"ButtonColorPicker color",
+		() => <ButtonColorPicker
+			color={{rgb: {r: 255, g:255, b: 0, a: 1} }}
+			handleChangeColor={ action("onChange") }
+		>
+		</ButtonColorPicker>
+	);
+
+
+storiesOf("ButtonOpacityPicker", module)
+	.addDecorator(withInfo)
+	.add(
+		"ButtonOpacityPicker",
+		() => <ButtonOpacityPicker></ButtonOpacityPicker>
+	).add(
+		"ButtonOpacityPicker opacity",
+		() => <ButtonOpacityPicker
+			opacity={0.5}
+			handleChangeOpacity={ action("onChange") }
+		></ButtonOpacityPicker>
+	).add(
+		"ButtonOpacityPicker imagen",
+		() => <ButtonOpacityPicker
+			opacity={0.5}
+			handleChangeOpacity={ action("onChange") }
+			image = {"https://www.instamaps.cat/static/img/map-backgrounds/orto.jpg"}
+		></ButtonOpacityPicker>
+	);
+
+storiesOf("ButtonNipple", module)
+	.addDecorator(withInfo)
+	.add(
+		"ButtonNipple",
+		() => <ButtonNipple></ButtonNipple>
+	)
+	.add(
+		"ButtonNipple angle",
+		() => <ButtonNipple angle={{degree: 150, exaggeration: 0.5}} handleChangeAngle={ action("onChange") }></ButtonNipple>
+	);
+
+storiesOf("SideBar", module)
+	.addDecorator(withInfo)
+	.add(
+		"SideBar",
+		() => <SideBar></SideBar>
+	).add(
+		"SideBar close",
+		() => <SideBar show={false}></SideBar>
+	).add(
+		"SideBar with treeview",
+		() => <SideBar><TreeView nodes={treeData} {...actionsData}></TreeView></SideBar>
+	);
+
+storiesOf("Header", module)
+	.addDecorator(withInfo)
+	.add(
+		"Header",
+		() => <Header></Header>
+	)
+	.add(
+		"Header 2 logos",
+		() => <Header title="VERSIÓ BETA" pathLogo="https://eines.icgc.cat/contextmaps/static/media/CONTEXTMAPS_LOGO_2019.dc127f4a.svg" logoSize="medium" customStyleBar={{backgroundColor: "#0064af", color: "#fff"}} showRightElements={true} customStyleLogo={{maxWidth: "15em"}}>
+			<div>
+				<LogoICGC position="top-right" />
+			</div>
+		</Header>
 	);

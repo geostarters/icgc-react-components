@@ -2,31 +2,32 @@
 
 import React from "react";
 import PropTypes from "prop-types";
-// eslint-disable-next-line no-unused-vars
-import styles from "./LogoICGC.css";
+import styles from "./LogoICGC.module.css";
 
-export default function LogoICGC(props) {
+export default function LogoICGC({position, logoType, url, addText}) {
 
-	const logoProps = {
-		addText: false,
-		position: "bottom-right",
-		url: "http://www.icgc.cat/",
-		logoType: "icgc-logo",
-		...props
-	};
+	const positionClassName = styles[position];
+	const logoTypeClassName = styles[logoType];
 
 	return (
-		<div className={logoProps.position} >
-			<a className={logoProps.logoType} target="_blank" rel="noopener noreferrer" href={logoProps.url} aria-label="Icgc" ></a>
-			{logoProps.addText &&  <div className="logo-text">{logoProps.addText}</div>}
+		<div className={positionClassName} >
+			<a className={logoTypeClassName} target="_blank" rel="noopener noreferrer" href={url} aria-label="Icgc" ></a>
+			{addText &&  <div className={styles.logoText}>{addText}</div>}
 		</div>
 	);
 
 }
 
 LogoICGC.propTypes = {
-	position: PropTypes.string,
+	position: PropTypes.oneOf(["bottom-right", "bottom-left", "top-right", "top-left"]),
 	addText: PropTypes.string,
 	url: PropTypes.string,
-	logoType: PropTypes.string
+	logoType: PropTypes.oneOf(["icgc-logo", "icgc-logotxt", "icgc-logo-white-text", "icgc-logo2-text"])
+};
+
+LogoICGC.defaultProps = {
+	addText: null,
+	position: "bottom-right",
+	url: "http://www.icgc.cat/",
+	logoType: "icgc-logo",
 };

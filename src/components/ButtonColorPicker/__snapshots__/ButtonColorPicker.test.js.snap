@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ButtonColorPicker Component renders correct properties 1`] = `
+<div
+  className="buttonContainer"
+>
+  <div
+    className="swatch"
+    onClick={[Function]}
+  >
+    <div
+      className="color"
+      style={
+        Object {
+          "background": "rgba(255, 255, 0, 1)",
+        }
+      }
+    />
+  </div>
+</div>
+`;

@@ -9,17 +9,21 @@ exports[`NavButtons match the snapshot  1`] = `
     basic={true}
     color="teal"
     content="Anterior"
+    disabled={false}
     floated="left"
     icon="left chevron"
     labelPosition="left"
+    onClick={[Function]}
   />
   <Button
     as="button"
     color="teal"
     content="Següent"
+    disabled={false}
     floated="right"
     icon="right chevron"
     labelPosition="right"
+    onClick={[Function]}
   />
 </ButtonGroup>
 `;

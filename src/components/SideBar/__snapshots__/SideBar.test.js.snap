@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SideBar Component renders correct properties 1`] = `
+<div
+  className="container movein"
+>
+  <Button
+    as="button"
+    className="toggleBtn"
+    icon={true}
+    onClick={[Function]}
+    primary={true}
+  >
+    <Icon
+      as="i"
+      name="chevron left"
+    />
+  </Button>
+  <div
+    className="content fadein"
+  />
+</div>
+`;

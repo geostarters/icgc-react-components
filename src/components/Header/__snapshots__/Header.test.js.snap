@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header Component renders correct properties 1`] = `
+<ResizeComponent
+  showRightElements={true}
+  title="Title"
+  width={1000}
+>
+  <Header
+    showRightElements={true}
+    title="Title"
+    width={1000}
+  >
+    <div
+      className="containerHeader"
+      style={Object {}}
+    >
+      <div
+        className="containerlogo"
+      >
+        <Image
+          as="img"
+          size="small"
+          src={
+            Object {
+              "ReactComponent": Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "render": [Function],
+              },
+              "__esModule": true,
+              "default": "ICGC.svg",
+            }
+          }
+          ui={true}
+        >
+          <img
+            className="ui small image"
+            src={
+              Object {
+                "ReactComponent": Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "render": [Function],
+                },
+                "__esModule": true,
+                "default": "ICGC.svg",
+              }
+            }
+          />
+        </Image>
+      </div>
+      <div
+        className="containertitle"
+      >
+        <h2>
+          Title
+        </h2>
+      </div>
+      <div
+        className="containeritemRight"
+      />
+    </div>
+  </Header>
+</ResizeComponent>
+`;

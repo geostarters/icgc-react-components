@@ -1,0 +1,50 @@
+.buttonContainer {
+    position: relative;
+}
+
+.color {
+    width: 36px;
+    height: 36px;
+}
+
+.swatch {
+    margin: 2px 5px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.popover {
+    position: absolute;
+    z-index: 2;
+    right: 50px;
+    top: 0px;
+}
+
+.alphaContainer {
+    border: 1px solid #cccccc;
+    background-color: #ffffff;
+    padding: 5px;
+}
+
+.nippleContainer > div > div > div:nth-child(1)  {
+
+    background: none !important;
+
+}
+
+.nippleContainer > div > div > div:nth-child(1)  {
+
+    background-size: contain !important;
+    background-position: center !important;
+    background-image: url(./images/round.png) !important;
+
+}
+
+.cover {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    width: 100vw;
+}

@@ -1,0 +1,3267 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TreeView Component renders correct properties 1`] = `
+<TreeView
+  activeColor="#266bc0"
+  collapsed={false}
+  collapsedWidth={39}
+  firstLevelBackgroundColor="#ffffff"
+  firstLevelFontColor="#000000"
+  fontSize={13}
+  nodes={
+    Array [
+      Object {
+        "checked": false,
+        "childs": Array [
+          Object {
+            "checked": false,
+            "id": 11,
+            "label": "Manzanas",
+          },
+          Object {
+            "checked": false,
+            "childs": Array [
+              Object {
+                "checked": false,
+                "id": 121,
+                "label": "Navelina",
+              },
+              Object {
+                "checked": false,
+                "id": 122,
+                "label": "Dulce",
+              },
+              Object {
+                "checked": false,
+                "id": 123,
+                "label": "Sanrgreta",
+              },
+            ],
+            "id": 12,
+            "indeterminate": false,
+            "label": "Naranjas",
+          },
+          Object {
+            "checked": true,
+            "id": 13,
+            "label": "Peras",
+          },
+        ],
+        "id": 1,
+        "indeterminate": true,
+        "label": "Frutas",
+      },
+      Object {
+        "checked": true,
+        "id": 2,
+        "label": "Verduras",
+      },
+      Object {
+        "checked": false,
+        "childs": Array [
+          Object {
+            "checked": true,
+            "id": 31,
+            "label": "Magnun",
+          },
+          Object {
+            "checked": false,
+            "id": 32,
+            "label": "Calipo",
+          },
+          Object {
+            "checked": true,
+            "id": 33,
+            "label": "Batibati",
+          },
+          Object {
+            "checked": false,
+            "id": 34,
+            "label": "chipichupi",
+          },
+        ],
+        "id": 3,
+        "indeterminate": true,
+        "label": "Helados",
+      },
+    ]
+  }
+  onClick={[MockFunction]}
+  separatorColor="#cccccc"
+  submenuBackgroundColor="#ffffff"
+  submenuFontColor="#000000"
+  width="100%"
+>
+  <div
+    className="accordion-menu"
+    style={
+      Object {
+        "fontSize": 13,
+        "width": "100%",
+      }
+    }
+  >
+    <Styled(Accordion)
+      panels={
+        Array [
+          Object {
+            "active": false,
+            "content": Object {
+              "content": <AccordionAccordion
+                exclusive={true}
+                panels={
+                  Array [
+                    Object {
+                      "active": false,
+                      "id": 11,
+                      "key": 11,
+                      "onTitleClick": [Function],
+                      "title": Object {
+                        "children": <div
+                          className="itemWrapper"
+                          style={
+                            Object {
+                              "display": "block",
+                              "margin": "-12px -16px",
+                              "position": "relative",
+                            }
+                          }
+                        >
+                          <Checkbox
+                            checked={false}
+                            id={11}
+                            label="Manzanas"
+                            onClick={[Function]}
+                            type="checkbox"
+                          />
+                        </div>,
+                      },
+                    },
+                    Object {
+                      "active": false,
+                      "content": Object {
+                        "content": <div
+                          className="contentWrapper"
+                          style={
+                            Object {
+                              "display": "block",
+                              "position": "relative",
+                            }
+                          }
+                        >
+                          <ListItem>
+                            <Checkbox
+                              checked={false}
+                              id={121}
+                              label="Navelina"
+                              onClick={[Function]}
+                              type="checkbox"
+                            />
+                          </ListItem>
+                          <ListItem>
+                            <Checkbox
+                              checked={false}
+                              id={122}
+                              label="Dulce"
+                              onClick={[Function]}
+                              type="checkbox"
+                            />
+                          </ListItem>
+                          <ListItem>
+                            <Checkbox
+                              checked={false}
+                              id={123}
+                              label="Sanrgreta"
+                              onClick={[Function]}
+                              type="checkbox"
+                            />
+                          </ListItem>
+                        </div>,
+                      },
+                      "id": 12,
+                      "key": 12,
+                      "onTitleClick": [Function],
+                      "title": Array [
+                        <Checkbox
+                          checked={false}
+                          id={12}
+                          indeterminate={false}
+                          label=""
+                          onClick={[Function]}
+                          type="checkbox"
+                        />,
+                        "Naranjas",
+                      ],
+                    },
+                    Object {
+                      "active": false,
+                      "id": 13,
+                      "key": 13,
+                      "onTitleClick": [Function],
+                      "title": Object {
+                        "children": <div
+                          className="itemWrapper"
+                          style={
+                            Object {
+                              "display": "block",
+                              "margin": "-12px -16px",
+                              "position": "relative",
+                            }
+                          }
+                        >
+                          <Checkbox
+                            checked={true}
+                            id={13}
+                            label="Peras"
+                            onClick={[Function]}
+                            type="checkbox"
+                          />
+                        </div>,
+                      },
+                    },
+                  ]
+                }
+              />,
+            },
+            "id": 1,
+            "key": 1,
+            "onTitleClick": [Function],
+            "title": Array [
+              <ForwardRef(styled.div)
+                className="titleTooltipWrapper"
+              >
+                <Checkbox
+                  checked={false}
+                  id={1}
+                  indeterminate={true}
+                  label=""
+                  onClick={[Function]}
+                  type="checkbox"
+                />
+              </ForwardRef(styled.div)>,
+              <div
+                className="titleWrapper"
+              >
+                <Checkbox
+                  checked={false}
+                  id={1}
+                  indeterminate={true}
+                  label=""
+                  onClick={[Function]}
+                  type="checkbox"
+                />
+                 
+                <span
+                  className="titleString"
+                >
+                  Frutas
+                </span>
+              </div>,
+            ],
+          },
+          Object {
+            "active": false,
+            "id": 2,
+            "key": 2,
+            "onTitleClick": [Function],
+            "title": Object {
+              "children": <div
+                className="itemWrapper"
+                style={
+                  Object {
+                    "display": "block",
+                    "margin": "-12px -16px",
+                    "position": "relative",
+                  }
+                }
+              >
+                <Checkbox
+                  checked={true}
+                  id={2}
+                  label="Verduras"
+                  onClick={[Function]}
+                  type="checkbox"
+                />
+              </div>,
+            },
+          },
+          Object {
+            "active": false,
+            "content": Object {
+              "content": <div
+                className="contentWrapper"
+                style={
+                  Object {
+                    "display": "block",
+                    "position": "relative",
+                  }
+                }
+              >
+                <ListItem>
+                  <Checkbox
+                    checked={true}
+                    id={31}
+                    label="Magnun"
+                    onClick={[Function]}
+                    type="checkbox"
+                  />
+                </ListItem>
+                <ListItem>
+                  <Checkbox
+                    checked={false}
+                    id={32}
+                    label="Calipo"
+                    onClick={[Function]}
+                    type="checkbox"
+                  />
+                </ListItem>
+                <ListItem>
+                  <Checkbox
+                    checked={true}
+                    id={33}
+                    label="Batibati"
+                    onClick={[Function]}
+                    type="checkbox"
+                  />
+                </ListItem>
+                <ListItem>
+                  <Checkbox
+                    checked={false}
+                    id={34}
+                    label="chipichupi"
+                    onClick={[Function]}
+                    type="checkbox"
+                  />
+                </ListItem>
+              </div>,
+            },
+            "id": 3,
+            "key": 3,
+            "onTitleClick": [Function],
+            "title": Array [
+              <ForwardRef(styled.div)
+                className="titleTooltipWrapper"
+              >
+                <Checkbox
+                  checked={false}
+                  id={3}
+                  indeterminate={true}
+                  label=""
+                  onClick={[Function]}
+                  type="checkbox"
+                />
+              </ForwardRef(styled.div)>,
+              <div
+                className="titleWrapper"
+              >
+                <Checkbox
+                  checked={false}
+                  id={3}
+                  indeterminate={true}
+                  label=""
+                  onClick={[Function]}
+                  type="checkbox"
+                />
+                 
+                <span
+                  className="titleString"
+                >
+                  Helados
+                </span>
+              </div>,
+            ],
+          },
+        ]
+      }
+      styled={true}
+    >
+      <Accordion
+        className="sc-AxirZ jqaANr"
+        panels={
+          Array [
+            Object {
+              "active": false,
+              "content": Object {
+                "content": <AccordionAccordion
+                  exclusive={true}
+                  panels={
+                    Array [
+                      Object {
+                        "active": false,
+                        "id": 11,
+                        "key": 11,
+                        "onTitleClick": [Function],
+                        "title": Object {
+                          "children": <div
+                            className="itemWrapper"
+                            style={
+                              Object {
+                                "display": "block",
+                                "margin": "-12px -16px",
+                                "position": "relative",
+                              }
+                            }
+                          >
+                            <Checkbox
+                              checked={false}
+                              id={11}
+                              label="Manzanas"
+                              onClick={[Function]}
+                              type="checkbox"
+                            />
+                          </div>,
+                        },
+                      },
+                      Object {
+                        "active": false,
+                        "content": Object {
+                          "content": <div
+                            className="contentWrapper"
+                            style={
+                              Object {
+                                "display": "block",
+                                "position": "relative",
+                              }
+                            }
+                          >
+                            <ListItem>
+                              <Checkbox
+                                checked={false}
+                                id={121}
+                                label="Navelina"
+                                onClick={[Function]}
+                                type="checkbox"
+                              />
+                            </ListItem>
+                            <ListItem>
+                              <Checkbox
+                                checked={false}
+                                id={122}
+                                label="Dulce"
+                                onClick={[Function]}
+                                type="checkbox"
+                              />
+                            </ListItem>
+                            <ListItem>
+                              <Checkbox
+                                checked={false}
+                                id={123}
+                                label="Sanrgreta"
+                                onClick={[Function]}
+                                type="checkbox"
+                              />
+                            </ListItem>
+                          </div>,
+                        },
+                        "id": 12,
+                        "key": 12,
+                        "onTitleClick": [Function],
+                        "title": Array [
+                          <Checkbox
+                            checked={false}
+                            id={12}
+                            indeterminate={false}
+                            label=""
+                            onClick={[Function]}
+                            type="checkbox"
+                          />,
+                          "Naranjas",
+                        ],
+                      },
+                      Object {
+                        "active": false,
+                        "id": 13,
+                        "key": 13,
+                        "onTitleClick": [Function],
+                        "title": Object {
+                          "children": <div
+                            className="itemWrapper"
+                            style={
+                              Object {
+                                "display": "block",
+                                "margin": "-12px -16px",
+                                "position": "relative",
+                              }
+                            }
+                          >
+                            <Checkbox
+                              checked={true}
+                              id={13}
+                              label="Peras"
+                              onClick={[Function]}
+                              type="checkbox"
+                            />
+                          </div>,
+                        },
+                      },
+                    ]
+                  }
+                />,
+              },
+              "id": 1,
+              "key": 1,
+              "onTitleClick": [Function],
+              "title": Array [
+                <ForwardRef(styled.div)
+                  className="titleTooltipWrapper"
+                >
+                  <Checkbox
+                    checked={false}
+                    id={1}
+                    indeterminate={true}
+                    label=""
+                    onClick={[Function]}
+                    type="checkbox"
+                  />
+                </ForwardRef(styled.div)>,
+                <div
+                  className="titleWrapper"
+                >
+                  <Checkbox
+                    checked={false}
+                    id={1}
+                    indeterminate={true}
+                    label=""
+                    onClick={[Function]}
+                    type="checkbox"
+                  />
+                   
+                  <span
+                    className="titleString"
+                  >
+                    Frutas
+                  </span>
+                </div>,
+              ],
+            },
+            Object {
+              "active": false,
+              "id": 2,
+              "key": 2,
+              "onTitleClick": [Function],
+              "title": Object {
+                "children": <div
+                  className="itemWrapper"
+                  style={
+                    Object {
+                      "display": "block",
+                      "margin": "-12px -16px",
+                      "position": "relative",
+                    }
+                  }
+                >
+                  <Checkbox
+                    checked={true}
+                    id={2}
+                    label="Verduras"
+                    onClick={[Function]}
+                    type="checkbox"
+                  />
+                </div>,
+              },
+            },
+            Object {
+              "active": false,
+              "content": Object {
+                "content": <div
+                  className="contentWrapper"
+                  style={
+                    Object {
+                      "display": "block",
+                      "position": "relative",
+                    }
+                  }
+                >
+                  <ListItem>
+                    <Checkbox
+                      checked={true}
+                      id={31}
+                      label="Magnun"
+                      onClick={[Function]}
+                      type="checkbox"
+                    />
+                  </ListItem>
+                  <ListItem>
+                    <Checkbox
+                      checked={false}
+                      id={32}
+                      label="Calipo"
+                      onClick={[Function]}
+                      type="checkbox"
+                    />
+                  </ListItem>
+                  <ListItem>
+                    <Checkbox
+                      checked={true}
+                      id={33}
+                      label="Batibati"
+                      onClick={[Function]}
+                      type="checkbox"
+                    />
+                  </ListItem>
+                  <ListItem>
+                    <Checkbox
+                      checked={false}
+                      id={34}
+                      label="chipichupi"
+                      onClick={[Function]}
+                      type="checkbox"
+                    />
+                  </ListItem>
+                </div>,
+              },
+              "id": 3,
+              "key": 3,
+              "onTitleClick": [Function],
+              "title": Array [
+                <ForwardRef(styled.div)
+                  className="titleTooltipWrapper"
+                >
+                  <Checkbox
+                    checked={false}
+                    id={3}
+                    indeterminate={true}
+                    label=""
+                    onClick={[Function]}
+                    type="checkbox"
+                  />
+                </ForwardRef(styled.div)>,
+                <div
+                  className="titleWrapper"
+                >
+                  <Checkbox
+                    checked={false}
+                    id={3}
+                    indeterminate={true}
+                    label=""
+                    onClick={[Function]}
+                    type="checkbox"
+                  />
+                   
+                  <span
+                    className="titleString"
+                  >
+                    Helados
+                  </span>
+                </div>,
+              ],
+            },
+          ]
+        }
+        styled={true}
+      >
+        <AccordionAccordion
+          className="ui styled sc-AxirZ jqaANr"
+          exclusive={true}
+          panels={
+            Array [
+              Object {
+                "active": false,
+                "content": Object {
+                  "content": <AccordionAccordion
+                    exclusive={true}
+                    panels={
+                      Array [
+                        Object {
+                          "active": false,
+                          "id": 11,
+                          "key": 11,
+                          "onTitleClick": [Function],
+                          "title": Object {
+                            "children": <div
+                              className="itemWrapper"
+                              style={
+                                Object {
+                                  "display": "block",
+                                  "margin": "-12px -16px",
+                                  "position": "relative",
+                                }
+                              }
+                            >
+                              <Checkbox
+                                checked={false}
+                                id={11}
+                                label="Manzanas"
+                                onClick={[Function]}
+                                type="checkbox"
+                              />
+                            </div>,
+                          },
+                        },
+                        Object {
+                          "active": false,
+                          "content": Object {
+                            "content": <div
+                              className="contentWrapper"
+                              style={
+                                Object {
+                                  "display": "block",
+                                  "position": "relative",
+                                }
+                              }
+                            >
+                              <ListItem>
+                                <Checkbox
+                                  checked={false}
+                                  id={121}
+                                  label="Navelina"
+                                  onClick={[Function]}
+                                  type="checkbox"
+                                />
+                              </ListItem>
+                              <ListItem>
+                                <Checkbox
+                                  checked={false}
+                                  id={122}
+                                  label="Dulce"
+                                  onClick={[Function]}
+                                  type="checkbox"
+                                />
+                              </ListItem>
+                              <ListItem>
+                                <Checkbox
+                                  checked={false}
+                                  id={123}
+                                  label="Sanrgreta"
+                                  onClick={[Function]}
+                                  type="checkbox"
+                                />
+                              </ListItem>
+                            </div>,
+                          },
+                          "id": 12,
+                          "key": 12,
+                          "onTitleClick": [Function],
+                          "title": Array [
+                            <Checkbox
+                              checked={false}
+                              id={12}
+                              indeterminate={false}
+                              label=""
+                              onClick={[Function]}
+                              type="checkbox"
+                            />,
+                            "Naranjas",
+                          ],
+                        },
+                        Object {
+                          "active": false,
+                          "id": 13,
+                          "key": 13,
+                          "onTitleClick": [Function],
+                          "title": Object {
+                            "children": <div
+                              className="itemWrapper"
+                              style={
+                                Object {
+                                  "display": "block",
+                                  "margin": "-12px -16px",
+                                  "position": "relative",
+                                }
+                              }
+                            >
+                              <Checkbox
+                                checked={true}
+                                id={13}
+                                label="Peras"
+                                onClick={[Function]}
+                                type="checkbox"
+                              />
+                            </div>,
+                          },
+                        },
+                      ]
+                    }
+                  />,
+                },
+                "id": 1,
+                "key": 1,
+                "onTitleClick": [Function],
+                "title": Array [
+                  <ForwardRef(styled.div)
+                    className="titleTooltipWrapper"
+                  >
+                    <Checkbox
+                      checked={false}
+                      id={1}
+                      indeterminate={true}
+                      label=""
+                      onClick={[Function]}
+                      type="checkbox"
+                    />
+                  </ForwardRef(styled.div)>,
+                  <div
+                    className="titleWrapper"
+                  >
+                    <Checkbox
+                      checked={false}
+                      id={1}
+                      indeterminate={true}
+                      label=""
+                      onClick={[Function]}
+                      type="checkbox"
+                    />
+                     
+                    <span
+                      className="titleString"
+                    >
+                      Frutas
+                    </span>
+                  </div>,
+                ],
+              },
+              Object {
+                "active": false,
+                "id": 2,
+                "key": 2,
+                "onTitleClick": [Function],
+                "title": Object {
+                  "children": <div
+                    className="itemWrapper"
+                    style={
+                      Object {
+                        "display": "block",
+                        "margin": "-12px -16px",
+                        "position": "relative",
+                      }
+                    }
+                  >
+                    <Checkbox
+                      checked={true}
+                      id={2}
+                      label="Verduras"
+                      onClick={[Function]}
+                      type="checkbox"
+                    />
+                  </div>,
+                },
+              },
+              Object {
+                "active": false,
+                "content": Object {
+                  "content": <div
+                    className="contentWrapper"
+                    style={
+                      Object {
+                        "display": "block",
+                        "position": "relative",
+                      }
+                    }
+                  >
+                    <ListItem>
+                      <Checkbox
+                        checked={true}
+                        id={31}
+                        label="Magnun"
+                        onClick={[Function]}
+                        type="checkbox"
+                      />
+                    </ListItem>
+                    <ListItem>
+                      <Checkbox
+                        checked={false}
+                        id={32}
+                        label="Calipo"
+                        onClick={[Function]}
+                        type="checkbox"
+                      />
+                    </ListItem>
+                    <ListItem>
+                      <Checkbox
+                        checked={true}
+                        id={33}
+                        label="Batibati"
+                        onClick={[Function]}
+                        type="checkbox"
+                      />
+                    </ListItem>
+                    <ListItem>
+                      <Checkbox
+                        checked={false}
+                        id={34}
+                        label="chipichupi"
+                        onClick={[Function]}
+                        type="checkbox"
+                      />
+                    </ListItem>
+                  </div>,
+                },
+                "id": 3,
+                "key": 3,
+                "onTitleClick": [Function],
+                "title": Array [
+                  <ForwardRef(styled.div)
+                    className="titleTooltipWrapper"
+                  >
+                    <Checkbox
+                      checked={false}
+                      id={3}
+                      indeterminate={true}
+                      label=""
+                      onClick={[Function]}
+                      type="checkbox"
+                    />
+                  </ForwardRef(styled.div)>,
+                  <div
+                    className="titleWrapper"
+                  >
+                    <Checkbox
+                      checked={false}
+                      id={3}
+                      indeterminate={true}
+                      label=""
+                      onClick={[Function]}
+                      type="checkbox"
+                    />
+                     
+                    <span
+                      className="titleString"
+                    >
+                      Helados
+                    </span>
+                  </div>,
+                ],
+              },
+            ]
+          }
+        >
+          <div
+            className="accordion ui styled sc-AxirZ jqaANr"
+          >
+            <AccordionPanel
+              active={false}
+              content={
+                Object {
+                  "content": <AccordionAccordion
+                    exclusive={true}
+                    panels={
+                      Array [
+                        Object {
+                          "active": false,
+                          "id": 11,
+                          "key": 11,
+                          "onTitleClick": [Function],
+                          "title": Object {
+                            "children": <div
+                              className="itemWrapper"
+                              style={
+                                Object {
+                                  "display": "block",
+                                  "margin": "-12px -16px",
+                                  "position": "relative",
+                                }
+                              }
+                            >
+                              <Checkbox
+                                checked={false}
+                                id={11}
+                                label="Manzanas"
+                                onClick={[Function]}
+                                type="checkbox"
+                              />
+                            </div>,
+                          },
+                        },
+                        Object {
+                          "active": false,
+                          "content": Object {
+                            "content": <div
+                              className="contentWrapper"
+                              style={
+                                Object {
+                                  "display": "block",
+                                  "position": "relative",
+                                }
+                              }
+                            >
+                              <ListItem>
+                                <Checkbox
+                                  checked={false}
+                                  id={121}
+                                  label="Navelina"
+                                  onClick={[Function]}
+                                  type="checkbox"
+                                />
+                              </ListItem>
+                              <ListItem>
+                                <Checkbox
+                                  checked={false}
+                                  id={122}
+                                  label="Dulce"
+                                  onClick={[Function]}
+                                  type="checkbox"
+                                />
+                              </ListItem>
+                              <ListItem>
+                                <Checkbox
+                                  checked={false}
+                                  id={123}
+                                  label="Sanrgreta"
+                                  onClick={[Function]}
+                                  type="checkbox"
+                                />
+                              </ListItem>
+                            </div>,
+                          },
+                          "id": 12,
+                          "key": 12,
+                          "onTitleClick": [Function],
+                          "title": Array [
+                            <Checkbox
+                              checked={false}
+                              id={12}
+                              indeterminate={false}
+                              label=""
+                              onClick={[Function]}
+                              type="checkbox"
+                            />,
+                            "Naranjas",
+                          ],
+                        },
+                        Object {
+                          "active": false,
+                          "id": 13,
+                          "key": 13,
+                          "onTitleClick": [Function],
+                          "title": Object {
+                            "children": <div
+                              className="itemWrapper"
+                              style={
+                                Object {
+                                  "display": "block",
+                                  "margin": "-12px -16px",
+                                  "position": "relative",
+                                }
+                              }
+                            >
+                              <Checkbox
+                                checked={true}
+                                id={13}
+                                label="Peras"
+                                onClick={[Function]}
+                                type="checkbox"
+                              />
+                            </div>,
+                          },
+                        },
+                      ]
+                    }
+                  />,
+                }
+              }
+              id={1}
+              index={0}
+              key="1"
+              onTitleClick={[Function]}
+              title={
+                Array [
+                  <ForwardRef(styled.div)
+                    className="titleTooltipWrapper"
+                  >
+                    <Checkbox
+                      checked={false}
+                      id={1}
+                      indeterminate={true}
+                      label=""
+                      onClick={[Function]}
+                      type="checkbox"
+                    />
+                  </ForwardRef(styled.div)>,
+                  <div
+                    className="titleWrapper"
+                  >
+                    <Checkbox
+                      checked={false}
+                      id={1}
+                      indeterminate={true}
+                      label=""
+                      onClick={[Function]}
+                      type="checkbox"
+                    />
+                     
+                    <span
+                      className="titleString"
+                    >
+                      Frutas
+                    </span>
+                  </div>,
+                ]
+              }
+            >
+              <AccordionTitle
+                active={false}
+                content={
+                  Array [
+                    <ForwardRef(styled.div)
+                      className="titleTooltipWrapper"
+                    >
+                      <Checkbox
+                        checked={false}
+                        id={1}
+                        indeterminate={true}
+                        label=""
+                        onClick={[Function]}
+                        type="checkbox"
+                      />
+                    </ForwardRef(styled.div)>,
+                    <div
+                      className="titleWrapper"
+                    >
+                      <Checkbox
+                        checked={false}
+                        id={1}
+                        indeterminate={true}
+                        label=""
+                        onClick={[Function]}
+                        type="checkbox"
+                      />
+                       
+                      <span
+                        className="titleString"
+                      >
+                        Frutas
+                      </span>
+                    </div>,
+                  ]
+                }
+                index={0}
+                onClick={[Function]}
+              >
+                <div
+                  className="title"
+                  onClick={[Function]}
+                >
+                  <Icon
+                    as="i"
+                    name="dropdown"
+                  >
+                    <i
+                      aria-hidden="true"
+                      className="dropdown icon"
+                      onClick={[Function]}
+                    />
+                  </Icon>
+                  <styled.div
+                    className="titleTooltipWrapper"
+                    key="1"
+                  >
+                    <div
+                      className="sc-AxjAm bdfwrw titleTooltipWrapper"
+                    >
+                      <Checkbox
+                        checked={false}
+                        id={1}
+                        indeterminate={true}
+                        key="1"
+                        label=""
+                        onClick={[Function]}
+                        type="checkbox"
+                      >
+                        <div
+                          className="ui indeterminate checkbox"
+                          onChange={[Function]}
+                          onClick={[Function]}
+                          onMouseDown={[Function]}
+                          onMouseUp={[Function]}
+                        >
+                          <Ref
+                            innerRef={
+                              Object {
+                                "current": <input
+                                  class="hidden"
+                                  id="1"
+                                  readonly=""
+                                  tabindex="0"
+                                  type="checkbox"
+                                  value=""
+                                />,
+                              }
+                            }
+                          >
+                            <RefFindNode
+                              innerRef={
+                                Object {
+                                  "current": <input
+                                    class="hidden"
+                                    id="1"
+                                    readonly=""
+                                    tabindex="0"
+                                    type="checkbox"
+                                    value=""
+                                  />,
+                                }
+                              }
+                            >
+                              <input
+                                checked={false}
+                                className="hidden"
+                                id={1}
+                                readOnly={true}
+                                tabIndex={0}
+                                type="checkbox"
+                              />
+                            </RefFindNode>
+                          </Ref>
+                          <Ref
+                            innerRef={
+                              Object {
+                                "current": <label
+                                  for="1"
+                                />,
+                              }
+                            }
+                          >
+                            <RefFindNode
+                              innerRef={
+                                Object {
+                                  "current": <label
+                                    for="1"
+                                  />,
+                                }
+                              }
+                            >
+                              <label
+                                htmlFor={1}
+                              />
+                            </RefFindNode>
+                          </Ref>
+                        </div>
+                      </Checkbox>
+                    </div>
+                  </styled.div>
+                  <div
+                    className="titleWrapper"
+                    key="wrapper"
+                  >
+                    <Checkbox
+                      checked={false}
+                      id={1}
+                      indeterminate={true}
+                      key="1"
+                      label=""
+                      onClick={[Function]}
+                      type="checkbox"
+                    >
+                      <div
+                        className="ui indeterminate checkbox"
+                        onChange={[Function]}
+                        onClick={[Function]}
+                        onMouseDown={[Function]}
+                        onMouseUp={[Function]}
+                      >
+                        <Ref
+                          innerRef={
+                            Object {
+                              "current": <input
+                                class="hidden"
+                                id="1"
+                                readonly=""
+                                tabindex="0"
+                                type="checkbox"
+                                value=""
+                              />,
+                            }
+                          }
+                        >
+                          <RefFindNode
+                            innerRef={
+                              Object {
+                                "current": <input
+                                  class="hidden"
+                                  id="1"
+                                  readonly=""
+                                  tabindex="0"
+                                  type="checkbox"
+                                  value=""
+                                />,
+                              }
+                            }
+                          >
+                            <input
+                              checked={false}
+                              className="hidden"
+                              id={1}
+                              readOnly={true}
+                              tabIndex={0}
+                              type="checkbox"
+                            />
+                          </RefFindNode>
+                        </Ref>
+                        <Ref
+                          innerRef={
+                            Object {
+                              "current": <label
+                                for="1"
+                              />,
+                            }
+                          }
+                        >
+                          <RefFindNode
+                            innerRef={
+                              Object {
+                                "current": <label
+                                  for="1"
+                                />,
+                              }
+                            }
+                          >
+                            <label
+                              htmlFor={1}
+                            />
+                          </RefFindNode>
+                        </Ref>
+                      </div>
+                    </Checkbox>
+                     
+                    <span
+                      className="titleString"
+                    >
+                      Frutas
+                    </span>
+                  </div>
+                </div>
+              </AccordionTitle>
+              <AccordionContent
+                active={false}
+                content={
+                  <AccordionAccordion
+                    exclusive={true}
+                    panels={
+                      Array [
+                        Object {
+                          "active": false,
+                          "id": 11,
+                          "key": 11,
+                          "onTitleClick": [Function],
+                          "title": Object {
+                            "children": <div
+                              className="itemWrapper"
+                              style={
+                                Object {
+                                  "display": "block",
+                                  "margin": "-12px -16px",
+                                  "position": "relative",
+                                }
+                              }
+                            >
+                              <Checkbox
+                                checked={false}
+                                id={11}
+                                label="Manzanas"
+                                onClick={[Function]}
+                                type="checkbox"
+                              />
+                            </div>,
+                          },
+                        },
+                        Object {
+                          "active": false,
+                          "content": Object {
+                            "content": <div
+                              className="contentWrapper"
+                              style={
+                                Object {
+                                  "display": "block",
+                                  "position": "relative",
+                                }
+                              }
+                            >
+                              <ListItem>
+                                <Checkbox
+                                  checked={false}
+                                  id={121}
+                                  label="Navelina"
+                                  onClick={[Function]}
+                                  type="checkbox"
+                                />
+                              </ListItem>
+                              <ListItem>
+                                <Checkbox
+                                  checked={false}
+                                  id={122}
+                                  label="Dulce"
+                                  onClick={[Function]}
+                                  type="checkbox"
+                                />
+                              </ListItem>
+                              <ListItem>
+                                <Checkbox
+                                  checked={false}
+                                  id={123}
+                                  label="Sanrgreta"
+                                  onClick={[Function]}
+                                  type="checkbox"
+                                />
+                              </ListItem>
+                            </div>,
+                          },
+                          "id": 12,
+                          "key": 12,
+                          "onTitleClick": [Function],
+                          "title": Array [
+                            <Checkbox
+                              checked={false}
+                              id={12}
+                              indeterminate={false}
+                              label=""
+                              onClick={[Function]}
+                              type="checkbox"
+                            />,
+                            "Naranjas",
+                          ],
+                        },
+                        Object {
+                          "active": false,
+                          "id": 13,
+                          "key": 13,
+                          "onTitleClick": [Function],
+                          "title": Object {
+                            "children": <div
+                              className="itemWrapper"
+                              style={
+                                Object {
+                                  "display": "block",
+                                  "margin": "-12px -16px",
+                                  "position": "relative",
+                                }
+                              }
+                            >
+                              <Checkbox
+                                checked={true}
+                                id={13}
+                                label="Peras"
+                                onClick={[Function]}
+                                type="checkbox"
+                              />
+                            </div>,
+                          },
+                        },
+                      ]
+                    }
+                  />
+                }
+              >
+                <div
+                  className="content"
+                >
+                  <AccordionAccordion
+                    exclusive={true}
+                    panels={
+                      Array [
+                        Object {
+                          "active": false,
+                          "id": 11,
+                          "key": 11,
+                          "onTitleClick": [Function],
+                          "title": Object {
+                            "children": <div
+                              className="itemWrapper"
+                              style={
+                                Object {
+                                  "display": "block",
+                                  "margin": "-12px -16px",
+                                  "position": "relative",
+                                }
+                              }
+                            >
+                              <Checkbox
+                                checked={false}
+                                id={11}
+                                label="Manzanas"
+                                onClick={[Function]}
+                                type="checkbox"
+                              />
+                            </div>,
+                          },
+                        },
+                        Object {
+                          "active": false,
+                          "content": Object {
+                            "content": <div
+                              className="contentWrapper"
+                              style={
+                                Object {
+                                  "display": "block",
+                                  "position": "relative",
+                                }
+                              }
+                            >
+                              <ListItem>
+                                <Checkbox
+                                  checked={false}
+                                  id={121}
+                                  label="Navelina"
+                                  onClick={[Function]}
+                                  type="checkbox"
+                                />
+                              </ListItem>
+                              <ListItem>
+                                <Checkbox
+                                  checked={false}
+                                  id={122}
+                                  label="Dulce"
+                                  onClick={[Function]}
+                                  type="checkbox"
+                                />
+                              </ListItem>
+                              <ListItem>
+                                <Checkbox
+                                  checked={false}
+                                  id={123}
+                                  label="Sanrgreta"
+                                  onClick={[Function]}
+                                  type="checkbox"
+                                />
+                              </ListItem>
+                            </div>,
+                          },
+                          "id": 12,
+                          "key": 12,
+                          "onTitleClick": [Function],
+                          "title": Array [
+                            <Checkbox
+                              checked={false}
+                              id={12}
+                              indeterminate={false}
+                              label=""
+                              onClick={[Function]}
+                              type="checkbox"
+                            />,
+                            "Naranjas",
+                          ],
+                        },
+                        Object {
+                          "active": false,
+                          "id": 13,
+                          "key": 13,
+                          "onTitleClick": [Function],
+                          "title": Object {
+                            "children": <div
+                              className="itemWrapper"
+                              style={
+                                Object {
+                                  "display": "block",
+                                  "margin": "-12px -16px",
+                                  "position": "relative",
+                                }
+                              }
+                            >
+                              <Checkbox
+                                checked={true}
+                                id={13}
+                                label="Peras"
+                                onClick={[Function]}
+                                type="checkbox"
+                              />
+                            </div>,
+                          },
+                        },
+                      ]
+                    }
+                  >
+                    <div
+                      className="accordion"
+                    >
+                      <AccordionPanel
+                        active={false}
+                        id={11}
+                        index={0}
+                        key="11"
+                        onTitleClick={[Function]}
+                        title={
+                          Object {
+                            "children": <div
+                              className="itemWrapper"
+                              style={
+                                Object {
+                                  "display": "block",
+                                  "margin": "-12px -16px",
+                                  "position": "relative",
+                                }
+                              }
+                            >
+                              <Checkbox
+                                checked={false}
+                                id={11}
+                                label="Manzanas"
+                                onClick={[Function]}
+                                type="checkbox"
+                              />
+                            </div>,
+                          }
+                        }
+                      >
+                        <AccordionTitle
+                          active={false}
+                          index={0}
+                          onClick={[Function]}
+                        >
+                          <div
+                            className="title"
+                            onClick={[Function]}
+                          >
+                            <div
+                              className="itemWrapper"
+                              style={
+                                Object {
+                                  "display": "block",
+                                  "margin": "-12px -16px",
+                                  "position": "relative",
+                                }
+                              }
+                            >
+                              <Checkbox
+                                checked={false}
+                                id={11}
+                                key="11"
+                                label="Manzanas"
+                                onClick={[Function]}
+                                type="checkbox"
+                              >
+                                <div
+                                  className="ui checkbox"
+                                  onChange={[Function]}
+                                  onClick={[Function]}
+                                  onMouseDown={[Function]}
+                                  onMouseUp={[Function]}
+                                >
+                                  <Ref
+                                    innerRef={
+                                      Object {
+                                        "current": <input
+                                          class="hidden"
+                                          id="11"
+                                          readonly=""
+                                          tabindex="0"
+                                          type="checkbox"
+                                          value=""
+                                        />,
+                                      }
+                                    }
+                                  >
+                                    <RefFindNode
+                                      innerRef={
+                                        Object {
+                                          "current": <input
+                                            class="hidden"
+                                            id="11"
+                                            readonly=""
+                                            tabindex="0"
+                                            type="checkbox"
+                                            value=""
+                                          />,
+                                        }
+                                      }
+                                    >
+                                      <input
+                                        checked={false}
+                                        className="hidden"
+                                        id={11}
+                                        readOnly={true}
+                                        tabIndex={0}
+                                        type="checkbox"
+                                      />
+                                    </RefFindNode>
+                                  </Ref>
+                                  <Ref
+                                    innerRef={
+                                      Object {
+                                        "current": <label
+                                          for="11"
+                                        >
+                                          Manzanas
+                                        </label>,
+                                      }
+                                    }
+                                  >
+                                    <RefFindNode
+                                      innerRef={
+                                        Object {
+                                          "current": <label
+                                            for="11"
+                                          >
+                                            Manzanas
+                                          </label>,
+                                        }
+                                      }
+                                    >
+                                      <label
+                                        htmlFor={11}
+                                      >
+                                        Manzanas
+                                      </label>
+                                    </RefFindNode>
+                                  </Ref>
+                                </div>
+                              </Checkbox>
+                            </div>
+                          </div>
+                        </AccordionTitle>
+                      </AccordionPanel>
+                      <AccordionPanel
+                        active={false}
+                        content={
+                          Object {
+                            "content": <div
+                              className="contentWrapper"
+                              style={
+                                Object {
+                                  "display": "block",
+                                  "position": "relative",
+                                }
+                              }
+                            >
+                              <ListItem>
+                                <Checkbox
+                                  checked={false}
+                                  id={121}
+                                  label="Navelina"
+                                  onClick={[Function]}
+                                  type="checkbox"
+                                />
+                              </ListItem>
+                              <ListItem>
+                                <Checkbox
+                                  checked={false}
+                                  id={122}
+                                  label="Dulce"
+                                  onClick={[Function]}
+                                  type="checkbox"
+                                />
+                              </ListItem>
+                              <ListItem>
+                                <Checkbox
+                                  checked={false}
+                                  id={123}
+                                  label="Sanrgreta"
+                                  onClick={[Function]}
+                                  type="checkbox"
+                                />
+                              </ListItem>
+                            </div>,
+                          }
+                        }
+                        id={12}
+                        index={1}
+                        key="12"
+                        onTitleClick={[Function]}
+                        title={
+                          Array [
+                            <Checkbox
+                              checked={false}
+                              id={12}
+                              indeterminate={false}
+                              label=""
+                              onClick={[Function]}
+                              type="checkbox"
+                            />,
+                            "Naranjas",
+                          ]
+                        }
+                      >
+                        <AccordionTitle
+                          active={false}
+                          content={
+                            Array [
+                              <Checkbox
+                                checked={false}
+                                id={12}
+                                indeterminate={false}
+                                label=""
+                                onClick={[Function]}
+                                type="checkbox"
+                              />,
+                              "Naranjas",
+                            ]
+                          }
+                          index={1}
+                          onClick={[Function]}
+                        >
+                          <div
+                            className="title"
+                            onClick={[Function]}
+                          >
+                            <Icon
+                              as="i"
+                              name="dropdown"
+                            >
+                              <i
+                                aria-hidden="true"
+                                className="dropdown icon"
+                                onClick={[Function]}
+                              />
+                            </Icon>
+                            <Checkbox
+                              checked={false}
+                              id={12}
+                              indeterminate={false}
+                              key="12"
+                              label=""
+                              onClick={[Function]}
+                              type="checkbox"
+                            >
+                              <div
+                                className="ui checkbox"
+                                onChange={[Function]}
+                                onClick={[Function]}
+                                onMouseDown={[Function]}
+                                onMouseUp={[Function]}
+                              >
+                                <Ref
+                                  innerRef={
+                                    Object {
+                                      "current": <input
+                                        class="hidden"
+                                        id="12"
+                                        readonly=""
+                                        tabindex="0"
+                                        type="checkbox"
+                                        value=""
+                                      />,
+                                    }
+                                  }
+                                >
+                                  <RefFindNode
+                                    innerRef={
+                                      Object {
+                                        "current": <input
+                                          class="hidden"
+                                          id="12"
+                                          readonly=""
+                                          tabindex="0"
+                                          type="checkbox"
+                                          value=""
+                                        />,
+                                      }
+                                    }
+                                  >
+                                    <input
+                                      checked={false}
+                                      className="hidden"
+                                      id={12}
+                                      readOnly={true}
+                                      tabIndex={0}
+                                      type="checkbox"
+                                    />
+                                  </RefFindNode>
+                                </Ref>
+                                <Ref
+                                  innerRef={
+                                    Object {
+                                      "current": <label
+                                        for="12"
+                                      />,
+                                    }
+                                  }
+                                >
+                                  <RefFindNode
+                                    innerRef={
+                                      Object {
+                                        "current": <label
+                                          for="12"
+                                        />,
+                                      }
+                                    }
+                                  >
+                                    <label
+                                      htmlFor={12}
+                                    />
+                                  </RefFindNode>
+                                </Ref>
+                              </div>
+                            </Checkbox>
+                            Naranjas
+                          </div>
+                        </AccordionTitle>
+                        <AccordionContent
+                          active={false}
+                          content={
+                            <div
+                              className="contentWrapper"
+                              style={
+                                Object {
+                                  "display": "block",
+                                  "position": "relative",
+                                }
+                              }
+                            >
+                              <ListItem>
+                                <Checkbox
+                                  checked={false}
+                                  id={121}
+                                  label="Navelina"
+                                  onClick={[Function]}
+                                  type="checkbox"
+                                />
+                              </ListItem>
+                              <ListItem>
+                                <Checkbox
+                                  checked={false}
+                                  id={122}
+                                  label="Dulce"
+                                  onClick={[Function]}
+                                  type="checkbox"
+                                />
+                              </ListItem>
+                              <ListItem>
+                                <Checkbox
+                                  checked={false}
+                                  id={123}
+                                  label="Sanrgreta"
+                                  onClick={[Function]}
+                                  type="checkbox"
+                                />
+                              </ListItem>
+                            </div>
+                          }
+                        >
+                          <div
+                            className="content"
+                          >
+                            <div
+                              className="contentWrapper"
+                              style={
+                                Object {
+                                  "display": "block",
+                                  "position": "relative",
+                                }
+                              }
+                            >
+                              <ListItem
+                                key="121"
+                              >
+                                <div
+                                  className="item"
+                                  onClick={[Function]}
+                                  role="listitem"
+                                >
+                                  <Checkbox
+                                    checked={false}
+                                    id={121}
+                                    label="Navelina"
+                                    onClick={[Function]}
+                                    type="checkbox"
+                                  >
+                                    <div
+                                      className="ui checkbox"
+                                      onChange={[Function]}
+                                      onClick={[Function]}
+                                      onMouseDown={[Function]}
+                                      onMouseUp={[Function]}
+                                    >
+                                      <Ref
+                                        innerRef={
+                                          Object {
+                                            "current": <input
+                                              class="hidden"
+                                              id="121"
+                                              readonly=""
+                                              tabindex="0"
+                                              type="checkbox"
+                                              value=""
+                                            />,
+                                          }
+                                        }
+                                      >
+                                        <RefFindNode
+                                          innerRef={
+                                            Object {
+                                              "current": <input
+                                                class="hidden"
+                                                id="121"
+                                                readonly=""
+                                                tabindex="0"
+                                                type="checkbox"
+                                                value=""
+                                              />,
+                                            }
+                                          }
+                                        >
+                                          <input
+                                            checked={false}
+                                            className="hidden"
+                                            id={121}
+                                            readOnly={true}
+                                            tabIndex={0}
+                                            type="checkbox"
+                                          />
+                                        </RefFindNode>
+                                      </Ref>
+                                      <Ref
+                                        innerRef={
+                                          Object {
+                                            "current": <label
+                                              for="121"
+                                            >
+                                              Navelina
+                                            </label>,
+                                          }
+                                        }
+                                      >
+                                        <RefFindNode
+                                          innerRef={
+                                            Object {
+                                              "current": <label
+                                                for="121"
+                                              >
+                                                Navelina
+                                              </label>,
+                                            }
+                                          }
+                                        >
+                                          <label
+                                            htmlFor={121}
+                                          >
+                                            Navelina
+                                          </label>
+                                        </RefFindNode>
+                                      </Ref>
+                                    </div>
+                                  </Checkbox>
+                                </div>
+                              </ListItem>
+                              <ListItem
+                                key="122"
+                              >
+                                <div
+                                  className="item"
+                                  onClick={[Function]}
+                                  role="listitem"
+                                >
+                                  <Checkbox
+                                    checked={false}
+                                    id={122}
+                                    label="Dulce"
+                                    onClick={[Function]}
+                                    type="checkbox"
+                                  >
+                                    <div
+                                      className="ui checkbox"
+                                      onChange={[Function]}
+                                      onClick={[Function]}
+                                      onMouseDown={[Function]}
+                                      onMouseUp={[Function]}
+                                    >
+                                      <Ref
+                                        innerRef={
+                                          Object {
+                                            "current": <input
+                                              class="hidden"
+                                              id="122"
+                                              readonly=""
+                                              tabindex="0"
+                                              type="checkbox"
+                                              value=""
+                                            />,
+                                          }
+                                        }
+                                      >
+                                        <RefFindNode
+                                          innerRef={
+                                            Object {
+                                              "current": <input
+                                                class="hidden"
+                                                id="122"
+                                                readonly=""
+                                                tabindex="0"
+                                                type="checkbox"
+                                                value=""
+                                              />,
+                                            }
+                                          }
+                                        >
+                                          <input
+                                            checked={false}
+                                            className="hidden"
+                                            id={122}
+                                            readOnly={true}
+                                            tabIndex={0}
+                                            type="checkbox"
+                                          />
+                                        </RefFindNode>
+                                      </Ref>
+                                      <Ref
+                                        innerRef={
+                                          Object {
+                                            "current": <label
+                                              for="122"
+                                            >
+                                              Dulce
+                                            </label>,
+                                          }
+                                        }
+                                      >
+                                        <RefFindNode
+                                          innerRef={
+                                            Object {
+                                              "current": <label
+                                                for="122"
+                                              >
+                                                Dulce
+                                              </label>,
+                                            }
+                                          }
+                                        >
+                                          <label
+                                            htmlFor={122}
+                                          >
+                                            Dulce
+                                          </label>
+                                        </RefFindNode>
+                                      </Ref>
+                                    </div>
+                                  </Checkbox>
+                                </div>
+                              </ListItem>
+                              <ListItem
+                                key="123"
+                              >
+                                <div
+                                  className="item"
+                                  onClick={[Function]}
+                                  role="listitem"
+                                >
+                                  <Checkbox
+                                    checked={false}
+                                    id={123}
+                                    label="Sanrgreta"
+                                    onClick={[Function]}
+                                    type="checkbox"
+                                  >
+                                    <div
+                                      className="ui checkbox"
+                                      onChange={[Function]}
+                                      onClick={[Function]}
+                                      onMouseDown={[Function]}
+                                      onMouseUp={[Function]}
+                                    >
+                                      <Ref
+                                        innerRef={
+                                          Object {
+                                            "current": <input
+                                              class="hidden"
+                                              id="123"
+                                              readonly=""
+                                              tabindex="0"
+                                              type="checkbox"
+                                              value=""
+                                            />,
+                                          }
+                                        }
+                                      >
+                                        <RefFindNode
+                                          innerRef={
+                                            Object {
+                                              "current": <input
+                                                class="hidden"
+                                                id="123"
+                                                readonly=""
+                                                tabindex="0"
+                                                type="checkbox"
+                                                value=""
+                                              />,
+                                            }
+                                          }
+                                        >
+                                          <input
+                                            checked={false}
+                                            className="hidden"
+                                            id={123}
+                                            readOnly={true}
+                                            tabIndex={0}
+                                            type="checkbox"
+                                          />
+                                        </RefFindNode>
+                                      </Ref>
+                                      <Ref
+                                        innerRef={
+                                          Object {
+                                            "current": <label
+                                              for="123"
+                                            >
+                                              Sanrgreta
+                                            </label>,
+                                          }
+                                        }
+                                      >
+                                        <RefFindNode
+                                          innerRef={
+                                            Object {
+                                              "current": <label
+                                                for="123"
+                                              >
+                                                Sanrgreta
+                                              </label>,
+                                            }
+                                          }
+                                        >
+                                          <label
+                                            htmlFor={123}
+                                          >
+                                            Sanrgreta
+                                          </label>
+                                        </RefFindNode>
+                                      </Ref>
+                                    </div>
+                                  </Checkbox>
+                                </div>
+                              </ListItem>
+                            </div>
+                          </div>
+                        </AccordionContent>
+                      </AccordionPanel>
+                      <AccordionPanel
+                        active={false}
+                        id={13}
+                        index={2}
+                        key="13"
+                        onTitleClick={[Function]}
+                        title={
+                          Object {
+                            "children": <div
+                              className="itemWrapper"
+                              style={
+                                Object {
+                                  "display": "block",
+                                  "margin": "-12px -16px",
+                                  "position": "relative",
+                                }
+                              }
+                            >
+                              <Checkbox
+                                checked={true}
+                                id={13}
+                                label="Peras"
+                                onClick={[Function]}
+                                type="checkbox"
+                              />
+                            </div>,
+                          }
+                        }
+                      >
+                        <AccordionTitle
+                          active={false}
+                          index={2}
+                          onClick={[Function]}
+                        >
+                          <div
+                            className="title"
+                            onClick={[Function]}
+                          >
+                            <div
+                              className="itemWrapper"
+                              style={
+                                Object {
+                                  "display": "block",
+                                  "margin": "-12px -16px",
+                                  "position": "relative",
+                                }
+                              }
+                            >
+                              <Checkbox
+                                checked={true}
+                                id={13}
+                                key="13"
+                                label="Peras"
+                                onClick={[Function]}
+                                type="checkbox"
+                              >
+                                <div
+                                  className="ui checked checkbox"
+                                  onChange={[Function]}
+                                  onClick={[Function]}
+                                  onMouseDown={[Function]}
+                                  onMouseUp={[Function]}
+                                >
+                                  <Ref
+                                    innerRef={
+                                      Object {
+                                        "current": <input
+                                          checked=""
+                                          class="hidden"
+                                          id="13"
+                                          readonly=""
+                                          tabindex="0"
+                                          type="checkbox"
+                                          value=""
+                                        />,
+                                      }
+                                    }
+                                  >
+                                    <RefFindNode
+                                      innerRef={
+                                        Object {
+                                          "current": <input
+                                            checked=""
+                                            class="hidden"
+                                            id="13"
+                                            readonly=""
+                                            tabindex="0"
+                                            type="checkbox"
+                                            value=""
+                                          />,
+                                        }
+                                      }
+                                    >
+                                      <input
+                                        checked={true}
+                                        className="hidden"
+                                        id={13}
+                                        readOnly={true}
+                                        tabIndex={0}
+                                        type="checkbox"
+                                      />
+                                    </RefFindNode>
+                                  </Ref>
+                                  <Ref
+                                    innerRef={
+                                      Object {
+                                        "current": <label
+                                          for="13"
+                                        >
+                                          Peras
+                                        </label>,
+                                      }
+                                    }
+                                  >
+                                    <RefFindNode
+                                      innerRef={
+                                        Object {
+                                          "current": <label
+                                            for="13"
+                                          >
+                                            Peras
+                                          </label>,
+                                        }
+                                      }
+                                    >
+                                      <label
+                                        htmlFor={13}
+                                      >
+                                        Peras
+                                      </label>
+                                    </RefFindNode>
+                                  </Ref>
+                                </div>
+                              </Checkbox>
+                            </div>
+                          </div>
+                        </AccordionTitle>
+                      </AccordionPanel>
+                    </div>
+                  </AccordionAccordion>
+                </div>
+              </AccordionContent>
+            </AccordionPanel>
+            <AccordionPanel
+              active={false}
+              id={2}
+              index={1}
+              key="2"
+              onTitleClick={[Function]}
+              title={
+                Object {
+                  "children": <div
+                    className="itemWrapper"
+                    style={
+                      Object {
+                        "display": "block",
+                        "margin": "-12px -16px",
+                        "position": "relative",
+                      }
+                    }
+                  >
+                    <Checkbox
+                      checked={true}
+                      id={2}
+                      label="Verduras"
+                      onClick={[Function]}
+                      type="checkbox"
+                    />
+                  </div>,
+                }
+              }
+            >
+              <AccordionTitle
+                active={false}
+                index={1}
+                onClick={[Function]}
+              >
+                <div
+                  className="title"
+                  onClick={[Function]}
+                >
+                  <div
+                    className="itemWrapper"
+                    style={
+                      Object {
+                        "display": "block",
+                        "margin": "-12px -16px",
+                        "position": "relative",
+                      }
+                    }
+                  >
+                    <Checkbox
+                      checked={true}
+                      id={2}
+                      key="2"
+                      label="Verduras"
+                      onClick={[Function]}
+                      type="checkbox"
+                    >
+                      <div
+                        className="ui checked checkbox"
+                        onChange={[Function]}
+                        onClick={[Function]}
+                        onMouseDown={[Function]}
+                        onMouseUp={[Function]}
+                      >
+                        <Ref
+                          innerRef={
+                            Object {
+                              "current": <input
+                                checked=""
+                                class="hidden"
+                                id="2"
+                                readonly=""
+                                tabindex="0"
+                                type="checkbox"
+                                value=""
+                              />,
+                            }
+                          }
+                        >
+                          <RefFindNode
+                            innerRef={
+                              Object {
+                                "current": <input
+                                  checked=""
+                                  class="hidden"
+                                  id="2"
+                                  readonly=""
+                                  tabindex="0"
+                                  type="checkbox"
+                                  value=""
+                                />,
+                              }
+                            }
+                          >
+                            <input
+                              checked={true}
+                              className="hidden"
+                              id={2}
+                              readOnly={true}
+                              tabIndex={0}
+                              type="checkbox"
+                            />
+                          </RefFindNode>
+                        </Ref>
+                        <Ref
+                          innerRef={
+                            Object {
+                              "current": <label
+                                for="2"
+                              >
+                                Verduras
+                              </label>,
+                            }
+                          }
+                        >
+                          <RefFindNode
+                            innerRef={
+                              Object {
+                                "current": <label
+                                  for="2"
+                                >
+                                  Verduras
+                                </label>,
+                              }
+                            }
+                          >
+                            <label
+                              htmlFor={2}
+                            >
+                              Verduras
+                            </label>
+                          </RefFindNode>
+                        </Ref>
+                      </div>
+                    </Checkbox>
+                  </div>
+                </div>
+              </AccordionTitle>
+            </AccordionPanel>
+            <AccordionPanel
+              active={false}
+              content={
+                Object {
+                  "content": <div
+                    className="contentWrapper"
+                    style={
+                      Object {
+                        "display": "block",
+                        "position": "relative",
+                      }
+                    }
+                  >
+                    <ListItem>
+                      <Checkbox
+                        checked={true}
+                        id={31}
+                        label="Magnun"
+                        onClick={[Function]}
+                        type="checkbox"
+                      />
+                    </ListItem>
+                    <ListItem>
+                      <Checkbox
+                        checked={false}
+                        id={32}
+                        label="Calipo"
+                        onClick={[Function]}
+                        type="checkbox"
+                      />
+                    </ListItem>
+                    <ListItem>
+                      <Checkbox
+                        checked={true}
+                        id={33}
+                        label="Batibati"
+                        onClick={[Function]}
+                        type="checkbox"
+                      />
+                    </ListItem>
+                    <ListItem>
+                      <Checkbox
+                        checked={false}
+                        id={34}
+                        label="chipichupi"
+                        onClick={[Function]}
+                        type="checkbox"
+                      />
+                    </ListItem>
+                  </div>,
+                }
+              }
+              id={3}
+              index={2}
+              key="3"
+              onTitleClick={[Function]}
+              title={
+                Array [
+                  <ForwardRef(styled.div)
+                    className="titleTooltipWrapper"
+                  >
+                    <Checkbox
+                      checked={false}
+                      id={3}
+                      indeterminate={true}
+                      label=""
+                      onClick={[Function]}
+                      type="checkbox"
+                    />
+                  </ForwardRef(styled.div)>,
+                  <div
+                    className="titleWrapper"
+                  >
+                    <Checkbox
+                      checked={false}
+                      id={3}
+                      indeterminate={true}
+                      label=""
+                      onClick={[Function]}
+                      type="checkbox"
+                    />
+                     
+                    <span
+                      className="titleString"
+                    >
+                      Helados
+                    </span>
+                  </div>,
+                ]
+              }
+            >
+              <AccordionTitle
+                active={false}
+                content={
+                  Array [
+                    <ForwardRef(styled.div)
+                      className="titleTooltipWrapper"
+                    >
+                      <Checkbox
+                        checked={false}
+                        id={3}
+                        indeterminate={true}
+                        label=""
+                        onClick={[Function]}
+                        type="checkbox"
+                      />
+                    </ForwardRef(styled.div)>,
+                    <div
+                      className="titleWrapper"
+                    >
+                      <Checkbox
+                        checked={false}
+                        id={3}
+                        indeterminate={true}
+                        label=""
+                        onClick={[Function]}
+                        type="checkbox"
+                      />
+                       
+                      <span
+                        className="titleString"
+                      >
+                        Helados
+                      </span>
+                    </div>,
+                  ]
+                }
+                index={2}
+                onClick={[Function]}
+              >
+                <div
+                  className="title"
+                  onClick={[Function]}
+                >
+                  <Icon
+                    as="i"
+                    name="dropdown"
+                  >
+                    <i
+                      aria-hidden="true"
+                      className="dropdown icon"
+                      onClick={[Function]}
+                    />
+                  </Icon>
+                  <styled.div
+                    className="titleTooltipWrapper"
+                    key="3"
+                  >
+                    <div
+                      className="sc-AxjAm bdfwrw titleTooltipWrapper"
+                    >
+                      <Checkbox
+                        checked={false}
+                        id={3}
+                        indeterminate={true}
+                        key="3"
+                        label=""
+                        onClick={[Function]}
+                        type="checkbox"
+                      >
+                        <div
+                          className="ui indeterminate checkbox"
+                          onChange={[Function]}
+                          onClick={[Function]}
+                          onMouseDown={[Function]}
+                          onMouseUp={[Function]}
+                        >
+                          <Ref
+                            innerRef={
+                              Object {
+                                "current": <input
+                                  class="hidden"
+                                  id="3"
+                                  readonly=""
+                                  tabindex="0"
+                                  type="checkbox"
+                                  value=""
+                                />,
+                              }
+                            }
+                          >
+                            <RefFindNode
+                              innerRef={
+                                Object {
+                                  "current": <input
+                                    class="hidden"
+                                    id="3"
+                                    readonly=""
+                                    tabindex="0"
+                                    type="checkbox"
+                                    value=""
+                                  />,
+                                }
+                              }
+                            >
+                              <input
+                                checked={false}
+                                className="hidden"
+                                id={3}
+                                readOnly={true}
+                                tabIndex={0}
+                                type="checkbox"
+                              />
+                            </RefFindNode>
+                          </Ref>
+                          <Ref
+                            innerRef={
+                              Object {
+                                "current": <label
+                                  for="3"
+                                />,
+                              }
+                            }
+                          >
+                            <RefFindNode
+                              innerRef={
+                                Object {
+                                  "current": <label
+                                    for="3"
+                                  />,
+                                }
+                              }
+                            >
+                              <label
+                                htmlFor={3}
+                              />
+                            </RefFindNode>
+                          </Ref>
+                        </div>
+                      </Checkbox>
+                    </div>
+                  </styled.div>
+                  <div
+                    className="titleWrapper"
+                    key="wrapper"
+                  >
+                    <Checkbox
+                      checked={false}
+                      id={3}
+                      indeterminate={true}
+                      key="3"
+                      label=""
+                      onClick={[Function]}
+                      type="checkbox"
+                    >
+                      <div
+                        className="ui indeterminate checkbox"
+                        onChange={[Function]}
+                        onClick={[Function]}
+                        onMouseDown={[Function]}
+                        onMouseUp={[Function]}
+                      >
+                        <Ref
+                          innerRef={
+                            Object {
+                              "current": <input
+                                class="hidden"
+                                id="3"
+                                readonly=""
+                                tabindex="0"
+                                type="checkbox"
+                                value=""
+                              />,
+                            }
+                          }
+                        >
+                          <RefFindNode
+                            innerRef={
+                              Object {
+                                "current": <input
+                                  class="hidden"
+                                  id="3"
+                                  readonly=""
+                                  tabindex="0"
+                                  type="checkbox"
+                                  value=""
+                                />,
+                              }
+                            }
+                          >
+                            <input
+                              checked={false}
+                              className="hidden"
+                              id={3}
+                              readOnly={true}
+                              tabIndex={0}
+                              type="checkbox"
+                            />
+                          </RefFindNode>
+                        </Ref>
+                        <Ref
+                          innerRef={
+                            Object {
+                              "current": <label
+                                for="3"
+                              />,
+                            }
+                          }
+                        >
+                          <RefFindNode
+                            innerRef={
+                              Object {
+                                "current": <label
+                                  for="3"
+                                />,
+                              }
+                            }
+                          >
+                            <label
+                              htmlFor={3}
+                            />
+                          </RefFindNode>
+                        </Ref>
+                      </div>
+                    </Checkbox>
+                     
+                    <span
+                      className="titleString"
+                    >
+                      Helados
+                    </span>
+                  </div>
+                </div>
+              </AccordionTitle>
+              <AccordionContent
+                active={false}
+                content={
+                  <div
+                    className="contentWrapper"
+                    style={
+                      Object {
+                        "display": "block",
+                        "position": "relative",
+                      }
+                    }
+                  >
+                    <ListItem>
+                      <Checkbox
+                        checked={true}
+                        id={31}
+                        label="Magnun"
+                        onClick={[Function]}
+                        type="checkbox"
+                      />
+                    </ListItem>
+                    <ListItem>
+                      <Checkbox
+                        checked={false}
+                        id={32}
+                        label="Calipo"
+                        onClick={[Function]}
+                        type="checkbox"
+                      />
+                    </ListItem>
+                    <ListItem>
+                      <Checkbox
+                        checked={true}
+                        id={33}
+                        label="Batibati"
+                        onClick={[Function]}
+                        type="checkbox"
+                      />
+                    </ListItem>
+                    <ListItem>
+                      <Checkbox
+                        checked={false}
+                        id={34}
+                        label="chipichupi"
+                        onClick={[Function]}
+                        type="checkbox"
+                      />
+                    </ListItem>
+                  </div>
+                }
+              >
+                <div
+                  className="content"
+                >
+                  <div
+                    className="contentWrapper"
+                    style={
+                      Object {
+                        "display": "block",
+                        "position": "relative",
+                      }
+                    }
+                  >
+                    <ListItem
+                      key="31"
+                    >
+                      <div
+                        className="item"
+                        onClick={[Function]}
+                        role="listitem"
+                      >
+                        <Checkbox
+                          checked={true}
+                          id={31}
+                          label="Magnun"
+                          onClick={[Function]}
+                          type="checkbox"
+                        >
+                          <div
+                            className="ui checked checkbox"
+                            onChange={[Function]}
+                            onClick={[Function]}
+                            onMouseDown={[Function]}
+                            onMouseUp={[Function]}
+                          >
+                            <Ref
+                              innerRef={
+                                Object {
+                                  "current": <input
+                                    checked=""
+                                    class="hidden"
+                                    id="31"
+                                    readonly=""
+                                    tabindex="0"
+                                    type="checkbox"
+                                    value=""
+                                  />,
+                                }
+                              }
+                            >
+                              <RefFindNode
+                                innerRef={
+                                  Object {
+                                    "current": <input
+                                      checked=""
+                                      class="hidden"
+                                      id="31"
+                                      readonly=""
+                                      tabindex="0"
+                                      type="checkbox"
+                                      value=""
+                                    />,
+                                  }
+                                }
+                              >
+                                <input
+                                  checked={true}
+                                  className="hidden"
+                                  id={31}
+                                  readOnly={true}
+                                  tabIndex={0}
+                                  type="checkbox"
+                                />
+                              </RefFindNode>
+                            </Ref>
+                            <Ref
+                              innerRef={
+                                Object {
+                                  "current": <label
+                                    for="31"
+                                  >
+                                    Magnun
+                                  </label>,
+                                }
+                              }
+                            >
+                              <RefFindNode
+                                innerRef={
+                                  Object {
+                                    "current": <label
+                                      for="31"
+                                    >
+                                      Magnun
+                                    </label>,
+                                  }
+                                }
+                              >
+                                <label
+                                  htmlFor={31}
+                                >
+                                  Magnun
+                                </label>
+                              </RefFindNode>
+                            </Ref>
+                          </div>
+                        </Checkbox>
+                      </div>
+                    </ListItem>
+                    <ListItem
+                      key="32"
+                    >
+                      <div
+                        className="item"
+                        onClick={[Function]}
+                        role="listitem"
+                      >
+                        <Checkbox
+                          checked={false}
+                          id={32}
+                          label="Calipo"
+                          onClick={[Function]}
+                          type="checkbox"
+                        >
+                          <div
+                            className="ui checkbox"
+                            onChange={[Function]}
+                            onClick={[Function]}
+                            onMouseDown={[Function]}
+                            onMouseUp={[Function]}
+                          >
+                            <Ref
+                              innerRef={
+                                Object {
+                                  "current": <input
+                                    class="hidden"
+                                    id="32"
+                                    readonly=""
+                                    tabindex="0"
+                                    type="checkbox"
+                                    value=""
+                                  />,
+                                }
+                              }
+                            >
+                              <RefFindNode
+                                innerRef={
+                                  Object {
+                                    "current": <input
+                                      class="hidden"
+                                      id="32"
+                                      readonly=""
+                                      tabindex="0"
+                                      type="checkbox"
+                                      value=""
+                                    />,
+                                  }
+                                }
+                              >
+                                <input
+                                  checked={false}
+                                  className="hidden"
+                                  id={32}
+                                  readOnly={true}
+                                  tabIndex={0}
+                                  type="checkbox"
+                                />
+                              </RefFindNode>
+                            </Ref>
+                            <Ref
+                              innerRef={
+                                Object {
+                                  "current": <label
+                                    for="32"
+                                  >
+                                    Calipo
+                                  </label>,
+                                }
+                              }
+                            >
+                              <RefFindNode
+                                innerRef={
+                                  Object {
+                                    "current": <label
+                                      for="32"
+                                    >
+                                      Calipo
+                                    </label>,
+                                  }
+                                }
+                              >
+                                <label
+                                  htmlFor={32}
+                                >
+                                  Calipo
+                                </label>
+                              </RefFindNode>
+                            </Ref>
+                          </div>
+                        </Checkbox>
+                      </div>
+                    </ListItem>
+                    <ListItem
+                      key="33"
+                    >
+                      <div
+                        className="item"
+                        onClick={[Function]}
+                        role="listitem"
+                      >
+                        <Checkbox
+                          checked={true}
+                          id={33}
+                          label="Batibati"
+                          onClick={[Function]}
+                          type="checkbox"
+                        >
+                          <div
+                            className="ui checked checkbox"
+                            onChange={[Function]}
+                            onClick={[Function]}
+                            onMouseDown={[Function]}
+                            onMouseUp={[Function]}
+                          >
+                            <Ref
+                              innerRef={
+                                Object {
+                                  "current": <input
+                                    checked=""
+                                    class="hidden"
+                                    id="33"
+                                    readonly=""
+                                    tabindex="0"
+                                    type="checkbox"
+                                    value=""
+                                  />,
+                                }
+                              }
+                            >
+                              <RefFindNode
+                                innerRef={
+                                  Object {
+                                    "current": <input
+                                      checked=""
+                                      class="hidden"
+                                      id="33"
+                                      readonly=""
+                                      tabindex="0"
+                                      type="checkbox"
+                                      value=""
+                                    />,
+                                  }
+                                }
+                              >
+                                <input
+                                  checked={true}
+                                  className="hidden"
+                                  id={33}
+                                  readOnly={true}
+                                  tabIndex={0}
+                                  type="checkbox"
+                                />
+                              </RefFindNode>
+                            </Ref>
+                            <Ref
+                              innerRef={
+                                Object {
+                                  "current": <label
+                                    for="33"
+                                  >
+                                    Batibati
+                                  </label>,
+                                }
+                              }
+                            >
+                              <RefFindNode
+                                innerRef={
+                                  Object {
+                                    "current": <label
+                                      for="33"
+                                    >
+                                      Batibati
+                                    </label>,
+                                  }
+                                }
+                              >
+                                <label
+                                  htmlFor={33}
+                                >
+                                  Batibati
+                                </label>
+                              </RefFindNode>
+                            </Ref>
+                          </div>
+                        </Checkbox>
+                      </div>
+                    </ListItem>
+                    <ListItem
+                      key="34"
+                    >
+                      <div
+                        className="item"
+                        onClick={[Function]}
+                        role="listitem"
+                      >
+                        <Checkbox
+                          checked={false}
+                          id={34}
+                          label="chipichupi"
+                          onClick={[Function]}
+                          type="checkbox"
+                        >
+                          <div
+                            className="ui checkbox"
+                            onChange={[Function]}
+                            onClick={[Function]}
+                            onMouseDown={[Function]}
+                            onMouseUp={[Function]}
+                          >
+                            <Ref
+                              innerRef={
+                                Object {
+                                  "current": <input
+                                    class="hidden"
+                                    id="34"
+                                    readonly=""
+                                    tabindex="0"
+                                    type="checkbox"
+                                    value=""
+                                  />,
+                                }
+                              }
+                            >
+                              <RefFindNode
+                                innerRef={
+                                  Object {
+                                    "current": <input
+                                      class="hidden"
+                                      id="34"
+                                      readonly=""
+                                      tabindex="0"
+                                      type="checkbox"
+                                      value=""
+                                    />,
+                                  }
+                                }
+                              >
+                                <input
+                                  checked={false}
+                                  className="hidden"
+                                  id={34}
+                                  readOnly={true}
+                                  tabIndex={0}
+                                  type="checkbox"
+                                />
+                              </RefFindNode>
+                            </Ref>
+                            <Ref
+                              innerRef={
+                                Object {
+                                  "current": <label
+                                    for="34"
+                                  >
+                                    chipichupi
+                                  </label>,
+                                }
+                              }
+                            >
+                              <RefFindNode
+                                innerRef={
+                                  Object {
+                                    "current": <label
+                                      for="34"
+                                    >
+                                      chipichupi
+                                    </label>,
+                                  }
+                                }
+                              >
+                                <label
+                                  htmlFor={34}
+                                >
+                                  chipichupi
+                                </label>
+                              </RefFindNode>
+                            </Ref>
+                          </div>
+                        </Checkbox>
+                      </div>
+                    </ListItem>
+                  </div>
+                </div>
+              </AccordionContent>
+            </AccordionPanel>
+          </div>
+        </AccordionAccordion>
+      </Accordion>
+    </Styled(Accordion)>
+  </div>
+</TreeView>
+`;
