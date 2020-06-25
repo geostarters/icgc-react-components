@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Modal Component renders correct properties 1`] = `
+<Modal
+  actionbuttons={
+    Array [
+      Object {
+        "color": "red",
+        "handler": [MockFunction],
+        "icon": "remove",
+        "label": "No",
+      },
+      Object {
+        "color": "green",
+        "handler": [MockFunction],
+        "icon": "check",
+        "label": "Sí",
+      },
+    ]
+  }
+  centered={true}
+  closeIcon={true}
+  closeOnDimmerClick={true}
+  closeOnDocumentClick={false}
+  dimmer={true}
+  eventPool="Modal"
+  headertitle="Hola"
+  open={true}
+  trigger={null}
+>
+  <ModalHeader
+    content="Hola"
+  />
+  <ModalContent />
+  <ModalActions>
+    <Button
+      as="button"
+      color="red"
+      key="0"
+      onClick={[MockFunction]}
+      primary={false}
+    >
+      <Icon
+        as="i"
+        name="remove"
+      />
+       
+      No
+    </Button>
+    <Button
+      as="button"
+      color="green"
+      key="1"
+      onClick={[MockFunction]}
+      primary={false}
+    >
+      <Icon
+        as="i"
+        name="check"
+      />
+       
+      Sí
+    </Button>
+  </ModalActions>
+</Modal>
+`;

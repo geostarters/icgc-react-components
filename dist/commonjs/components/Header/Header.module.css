@@ -1,0 +1,23 @@
+.containerHeader{
+	width: 100%;
+	height: 48px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	background-color:#fff;
+	color: #000;
+}
+
+.containerlogo {
+	max-width: 10em;
+	padding: 0.5rem;
+}
+
+.containertitle{
+	padding: 1em;
+}
+
+.containeritemRight{
+    padding: 0.8em;
+}

@@ -1,3 +1,4 @@
+/* eslint-disable no-invalid-this */
 // @flow
 
 import React from "react";

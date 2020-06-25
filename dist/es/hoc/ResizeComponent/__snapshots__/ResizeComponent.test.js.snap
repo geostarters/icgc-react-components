@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ResizeComponent HOC Component match the snapshot  1`] = `
+<ResizeComponent>
+  <MockComponent
+    width={1024}
+  >
+    <div>
+      Mock Component
+    </div>
+  </MockComponent>
+</ResizeComponent>
+`;

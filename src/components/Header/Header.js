@@ -16,7 +16,7 @@ const Header = ({title = "Nou prototip", customStyleBar = {}, pathLogo = IMAGES.
 	return (
 		<div className={styles.containerHeader} style={customStyleBar}>
 
-			{ !isMobile && 
+			{ !isMobile &&
 				<div className={styles.containerlogo} style={customStyleLogo}>
 					<Image src={pathLogo} size={logoSize}/>
 				</div>

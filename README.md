@@ -39,6 +39,12 @@ npm install --save @geostarters/react-components
 
 ## Para desplegar los cambios en el registro de npm
 
+	npm login
+	Username: icgcgeostarters
+	Password: XXXXXXXX
+	Email: (this IS public): geostarters [at] gmail [dot] com
+	npm version <update_type> //<update_type> patch, major, or minor
+	npm publish --access public 
 
 
 ## Semantic UI React personalization

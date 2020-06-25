@@ -9,35 +9,40 @@ var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _LogoICGC = _interopRequireDefault(require("./LogoICGC.css"));
+var _LogoICGCModule = _interopRequireDefault(require("./LogoICGC.module.css"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// eslint-disable-next-line no-unused-vars
-function LogoICGC(props) {
-  const logoProps = {
-    addText: false,
-    position: "bottom-right",
-    url: "http://www.icgc.cat/",
-    logoType: "icgc-logo",
-    ...props
-  };
+function LogoICGC({
+  position,
+  logoType,
+  url,
+  addText
+}) {
+  const positionClassName = _LogoICGCModule.default[position];
+  const logoTypeClassName = _LogoICGCModule.default[logoType];
   return _react.default.createElement("div", {
-    className: logoProps.position
+    className: positionClassName
   }, _react.default.createElement("a", {
-    className: logoProps.logoType,
+    className: logoTypeClassName,
     target: "_blank",
     rel: "noopener noreferrer",
-    href: logoProps.url,
+    href: url,
     "aria-label": "Icgc"
-  }), logoProps.addText && _react.default.createElement("div", {
-    className: "logo-text"
-  }, logoProps.addText));
+  }), addText && _react.default.createElement("div", {
+    className: _LogoICGCModule.default.logoText
+  }, addText));
 }
 
 LogoICGC.propTypes = {
-  position: _propTypes.default.string,
+  position: _propTypes.default.oneOf(["bottom-right", "bottom-left", "top-right", "top-left"]),
   addText: _propTypes.default.string,
   url: _propTypes.default.string,
-  logoType: _propTypes.default.string
+  logoType: _propTypes.default.oneOf(["icgc-logo", "icgc-logotxt", "icgc-logo-white-text", "icgc-logo2-text"])
+};
+LogoICGC.defaultProps = {
+  addText: null,
+  position: "bottom-right",
+  url: "http://www.icgc.cat/",
+  logoType: "icgc-logo"
 };

@@ -34,7 +34,7 @@
     display: block;
     background-size: contain;
     background-position: center;
-    background-image: url("./ICGC_logo.svg");
+    background-image: url("../../resources/images/ICGC_logo.svg");
 }
 
 .icgc-logotxt {    
@@ -44,10 +44,30 @@
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url("./ICGC.svg");
+    background-image: url("../../resources/images/ICGC.svg");
 }
 
-.logo-text {
+.icgc-logo-white-text {    
+    width: 150px;
+    height: 50px;
+    display: block;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../../resources/images/ICGC_white.svg");
+}
+
+.icgc-logo2-text {    
+    width: 150px;
+    height: 50px;
+    display: block;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../../resources/images/ICGC2.svg");
+}
+
+.logoText {
     font-weight: bold;
     text-align: center;
     font-size: 1rem;

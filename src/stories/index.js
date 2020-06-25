@@ -17,7 +17,7 @@ import ButtonOpacityPicker from "../components/ButtonOpacityPicker/ButtonOpacity
 import ButtonNipple from "../components/ButtonNipple/ButtonNipple";
 import SideBar from "../components/SideBar/SideBar";
 import Header from "../components/Header/Header";
-
+import Modal from "../components/Modal/Modal";
 
 import mapDataRubi from "./mapDataRubi.json";
 import treeData from "./treeData.json";
@@ -214,4 +214,32 @@ storiesOf("Header", module)
 				<LogoICGC position="top-right" />
 			</div>
 		</Header>
+	);
+
+storiesOf("Modal", module)
+	.addDecorator(withInfo)
+	.add(
+		"Modal",
+		() => <Modal trigger={<Button>Show Modal</Button>}>text content</Modal>
+	).add(
+		"Modal with header",
+		() => <Modal
+			trigger={<Button>Show Modal</Button>}
+			headertitle="text header"
+		>text content</Modal>
+	).add(
+		"Modal with buttons",
+		() => <Modal
+			headertitle="Avís"
+			trigger={<Button>Show Modal</Button>}
+			actionbuttons={[
+				{label: "Carregar", color: "green", handler: action("onClick"), icon: "check" },
+				{label: "Cancel·lar", color: "grey", handler: action("onClick"), icon: "remove"}
+			]}
+		>
+			<div>
+				<p>Aquest estil no ha estat generat a Contextmaps i per tant no es podrà editar.</p>
+				<p>Vols continuar amb la càrrega?</p>
+			</div>
+		</Modal>
 	);
