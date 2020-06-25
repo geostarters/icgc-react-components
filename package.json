@@ -37,11 +37,6 @@
     "react": "^16.8.0",
     "react-dom": "^16.8.0"
   },
-  "storybook-deployer": {
-    "gitUsername": "bolollo",
-    "gitEmail": "bolollo@gmail.com",
-    "commitMessage": "Deploy Storybook [skip ci]"
-  },
   "scripts": {
     "lint": "eslint --fix --cache --ignore-path .gitignore src",
     "build:es-dev": "cross-env NODE_ENV=production&babel ./src --out-dir dist/es/ --copy-files",

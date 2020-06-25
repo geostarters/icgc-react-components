@@ -33,6 +33,12 @@ npm install --save @geostarters/react-components
 	git commit -m "Deploy Storybook to GitHub Pages"
 	git push --force --quiet git@github.com:geostarters/icgc-react-components.git master:gh-pages
 
+	/*otra forma*/
+	npm run build-storybook
+	git subtree split --prefix docs -b gh-pages
+	git push -f origin gh-pages:gh-pages
+	git branch -D gh-pages
+
 **build-storybook**:
 
 **test**: Runs the static type checker and runs the tests
