@@ -13,6 +13,11 @@ A lib of React Components
 npm install --save @geostarters/react-components
 ```
 
+## Development
+```
+npm install or yarn
+```
+
 ## Provided scripts
 
 **lint**: Checks the code linting

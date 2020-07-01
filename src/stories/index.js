@@ -122,18 +122,6 @@ storiesOf("Map", module)
 		}
 	);
 
-storiesOf("Map", module).addDecorator(withInfo)
-	.add(
-	"Mapa Fosc",
-	() => <Map style={{"height": "100vh"}} ></Map>,
-	{
-		info:{
-			text: "Cal afegir l'import de mapbox-gl.css",
-		}
-
-	}
-	);
-
 storiesOf("TreeView", module)
 	.addDecorator(withInfo)
 	.add(
