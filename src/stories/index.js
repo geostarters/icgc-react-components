@@ -2,7 +2,6 @@
 
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import { withInfo } from "@storybook/addon-info";
 import { action } from "@storybook/addon-actions";
 
 import * as CONSTANTS from "../constants";
@@ -29,7 +28,6 @@ const actionsData = {
 };
 
 storiesOf("Button", module)
-	.addDecorator(withInfo)
 	.add("Ok button", () => (<Button content="OK"/>))
 	.add("Icon button", () => (<Button icon="sign-in"/>))
 	.add("Basic button", () => (<Button basic={true} content="Basic"/>))
@@ -38,7 +36,6 @@ storiesOf("Button", module)
 	));
 
 storiesOf("NavButtons", module)
-	.addDecorator(withInfo)
 	.add("Anterior i Seguent", () => (
 		<NavButtons goPrevStep={() => console.log("goPrevStep")} goNextStep={() => console.log("goNextStep")}/>
 	))
@@ -50,7 +47,6 @@ storiesOf("NavButtons", module)
 	));
 
 storiesOf("Logo ICGC", module)
-	.addDecorator(withInfo)
 	.add("Logo ICGC", () => (
 		<div style={{borderBottom: "2px solid gray", width: "100%", height: "200px"}}>
 			<LogoICGC/>
@@ -83,7 +79,6 @@ storiesOf("Logo ICGC", module)
 	));
 
 storiesOf("Map", module)
-	.addDecorator(withInfo)
 	.add(
 		"Mapa Fosc",
 		() => <Map style={{"height": "100vh"}} ></Map>,
@@ -123,14 +118,12 @@ storiesOf("Map", module)
 	);
 
 storiesOf("TreeView", module)
-	.addDecorator(withInfo)
 	.add(
 		"TreeView",
 		() => <TreeView nodes={treeData} {...actionsData}></TreeView>
 	);
 
 storiesOf("ButtonColorPicker", module)
-	.addDecorator(withInfo)
 	.add(
 		"ButtonColorPicker",
 		() => <ButtonColorPicker></ButtonColorPicker>
@@ -146,7 +139,6 @@ storiesOf("ButtonColorPicker", module)
 
 
 storiesOf("ButtonOpacityPicker", module)
-	.addDecorator(withInfo)
 	.add(
 		"ButtonOpacityPicker",
 		() => <ButtonOpacityPicker></ButtonOpacityPicker>
@@ -166,7 +158,6 @@ storiesOf("ButtonOpacityPicker", module)
 	);
 
 storiesOf("ButtonNipple", module)
-	.addDecorator(withInfo)
 	.add(
 		"ButtonNipple",
 		() => <ButtonNipple></ButtonNipple>
@@ -177,7 +168,6 @@ storiesOf("ButtonNipple", module)
 	);
 
 storiesOf("SideBar", module)
-	.addDecorator(withInfo)
 	.add(
 		"SideBar",
 		() => <SideBar></SideBar>
@@ -190,7 +180,6 @@ storiesOf("SideBar", module)
 	);
 
 storiesOf("Header", module)
-	.addDecorator(withInfo)
 	.add(
 		"Header",
 		() => <Header></Header>
@@ -205,7 +194,6 @@ storiesOf("Header", module)
 	);
 
 storiesOf("Modal", module)
-	.addDecorator(withInfo)
 	.add(
 		"Modal",
 		() => <Modal trigger={<Button>Show Modal</Button>}>text content</Modal>
