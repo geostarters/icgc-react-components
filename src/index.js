@@ -11,6 +11,7 @@ import Header from "./components/Header/Header";
 import Modal from "./components/Modal/Modal";
 import SideBar from "./components/SideBar/SideBar";
 import TreeView from "./components/TreeView/TreeView";
+import Footer from "./components/Footer/Footer";
 
 
 export {
@@ -25,5 +26,6 @@ export {
 	Header,
 	Modal,
 	SideBar,
-	TreeView
+	TreeView,
+	Footer
 };
