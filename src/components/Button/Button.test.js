@@ -9,9 +9,10 @@ describe("Button component", () => {
 
 	const mockProps = {
 		color: "teal",
+		content: "OK",
 		onClick: jest.fn()
 	};
-	const component = shallow(<Button {...mockProps}>OK</Button>);
+	const component = shallow(<Button {...mockProps}></Button>);
 
 	it("to match the snapshot ", () => {
 

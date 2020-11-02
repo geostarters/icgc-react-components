@@ -29,11 +29,11 @@ const actionsData = {
 };
 
 storiesOf("Button", module)
-	.add("Ok button", () => (<Button content="OK"/>))
+	.add("Ok button", () => (<Button label="OK"/>))
 	.add("Icon button", () => (<Button icon="sign-in"/>))
-	.add("Basic button", () => (<Button basic={true} content="Basic"/>))
+	.add("Basic button", () => (<Button basic={true} label="Basic"/>))
 	.add("Cancel button", () => (
-		<Button color="red" content="Cancel" {...actionsData}/>
+		<Button color="red" label="Cancel" {...actionsData}/>
 	));
 
 storiesOf("NavButtons", module)

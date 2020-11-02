@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer Component renders correct properties 1`] = `
+<ResizeComponent
+  showRightElements={true}
+  title="Title"
+  width={1000}
+>
+  <Footer
+    showRightElements={true}
+    title="Title"
+    width={1000}
+  >
+    <div
+      className="containerFooter"
+      style={Object {}}
+    >
+      <div
+        className="containertitle"
+      >
+        Title
+      </div>
+      <div
+        className="containeritemRight"
+      />
+    </div>
+  </Footer>
+</ResizeComponent>
+`;
