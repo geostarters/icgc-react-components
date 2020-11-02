@@ -17,6 +17,7 @@ import ButtonNipple from "../components/ButtonNipple/ButtonNipple";
 import SideBar from "../components/SideBar/SideBar";
 import Header from "../components/Header/Header";
 import Modal from "../components/Modal/Modal";
+import Footer from "../components/Footer/Footer";
 
 import mapDataRubi from "./mapDataRubi.json";
 import treeData from "./treeData.json";
@@ -218,4 +219,27 @@ storiesOf("Modal", module)
 				<p>Vols continuar amb la càrrega?</p>
 			</div>
 		</Modal>
+	);
+
+storiesOf("Footer", module)
+	.add("Footer", () => (<Footer/>))
+	.add(
+		"Footer logo",
+		() => <Footer title="VERSIÓ BETA" pathLogo="https://bolollo.github.io/MapaRegEscPNMM/logo_generalitat_gris.dca7d39f.png" logoSize="small" customStyleBar={{backgroundColor: "#ccc", color: "#999"}} customStyleLogo={{maxWidth: "7em"}}>
+		</Footer>
+	)
+	.add(
+		"Footer logo 2 columns",
+		() => <Footer title="VERSIÓ BETA" pathLogo="https://bolollo.github.io/MapaRegEscPNMM/logo_generalitat_gris.dca7d39f.png" logoSize="small" customStyleBar={{backgroundColor: "#ccc", color: "#999"}} customStyleLogo={{maxWidth: "7em"}} showRightElements={true}>
+			<div>
+				Test footer
+			</div>
+		</Footer>
+	).add(
+		"Footer 2 columns",
+		() => <Footer title="VERSIÓ BETA" showRightElements={true}>
+			<div>
+				Test footer
+			</div>
+		</Footer>
 	);

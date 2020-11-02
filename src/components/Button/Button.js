@@ -1,16 +1,21 @@
 //@flow
 
 import React from "react";
+import PropTypes from "prop-types";
 import { Button as ButtonSUI } from "semantic-ui-react";
 
-export default function Button(props) {
+export const Button = props => (<ButtonSUI {...props}></ButtonSUI>);
 
-	const buttonProps = {
-		color: "yellow",
-		onClick: () => console.log("click"),
-		...props
-	};
+export default Button;
 
-	return (<ButtonSUI {...buttonProps}></ButtonSUI>);
+Button.propTypes = {
+	color: PropTypes.string,
+	content: PropTypes.string,
+	onClick: PropTypes.func,
+};
 
-}
+Button.defaultProps = {
+	color: "yellow",
+	content: "",
+	onClick: () => console.log("click")
+};
