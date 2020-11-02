@@ -1,0 +1,404 @@
+.NavButtons_fullWidth__dLe-0{
+	width: 100%;
+}
+
+.LogoICGC_bottom-right__1m2zw{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index:100;
+    margin: 0.5rem;
+}
+.LogoICGC_bottom-left__3uEM0{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index:100;
+    margin: 0.5rem;
+}
+.LogoICGC_top-right__4cQkh{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index:100;
+    margin: 0.5rem;
+}
+.LogoICGC_top-left__1dJnt{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index:100;
+    margin: 0.5rem;
+}
+
+.LogoICGC_icgc-logo__1s17E {    
+    width: 30px;
+    height: 30px;
+    display: block;
+    background-size: contain;
+    background-position: center;
+    background-image: url(../../static/media/ICGC_logo.afc110e9.svg);
+}
+
+.LogoICGC_icgc-logotxt__3ZKT_ {    
+    width: 100px;
+    height: 50px;
+    display: block;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(../../static/media/ICGC.9d2135a4.svg);
+}
+
+.LogoICGC_icgc-logo-white-text__24vYl {    
+    width: 150px;
+    height: 50px;
+    display: block;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(../../static/media/ICGC_white.cee8b66f.svg);
+}
+
+.LogoICGC_icgc-logo2-text__1xM2f {    
+    width: 150px;
+    height: 50px;
+    display: block;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(../../static/media/ICGC2.eb3d6648.svg);
+}
+
+.LogoICGC_logoText__3QPZ- {
+    font-weight: bold;
+    text-align: center;
+    font-size: 1rem;
+}
+.accordion-menu * {
+    font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+    font-weight: bold;
+}
+
+.accordion-menu a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.accordion-menu .accordion.ui.styled,
+.accordion-menu .accordion.ui.styled .accordion,
+.accordion-menu .accordion.ui.styled .title,
+.accordion-menu .accordion.ui.styled .accordion .title {
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.accordion-menu .accordion.ui.styled .title {
+    position: relative;
+}
+
+.accordion-menu .accordion.ui.styled .content.active,
+.accordion-menu .accordion.ui.styled .content {
+    margin-top: 0px!important;    
+}
+
+.accordion-menu .accordion.ui.styled div.content.active .accordion,
+.accordion-menu .accordion.ui.styled div.content .accordion,
+.accordion-menu .accordion.ui.styled div.content.active,
+.accordion-menu .accordion.ui.styled div.content
+{
+    margin-top: 0px!important;
+    padding-top: 0px!important;
+    padding-bottom: 0px!important;
+}
+
+.accordion-menu .accordion.ui.styled .content,
+.accordion-menu .accordion.ui.styled .accordion .content
+{
+    padding-right: 0;
+}
+
+.accordion-menu .accordion.ui.styled .title {
+    font-size: 1rem;
+}
+
+.accordion-menu.collapsed  .accordion.ui.styled div.content.active .accordion {
+    display: none!important;
+}
+
+.accordion-menu.collapsed  .accordion.ui.styled .title > * {
+    display: none;
+}
+
+.accordion-menu.collapsed .accordion.ui.styled .title {
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.accordion-menu.collapsed  .accordion.ui.styled .title .dropdown.icon{
+    display: none;
+}
+
+.accordion-menu.collapsed  .accordion.ui.styled .title .icon{
+    display: inline-block;
+}
+
+.accordion-menu.collapsed  .accordion.ui.styled .title > .itemWrapper{
+    display: inline-block;
+}
+
+.accordion-menu.collapsed  .accordion.ui.styled .title > .titleTooltipWrapper, 
+.accordion-menu.collapsed  .accordion.ui.styled .title > .titleWrapper
+{
+    display: block!important;
+}
+
+.accordion-menu.collapsed  .accordion.ui.styled .title > .titleWrapper i
+{
+    display: none!important;
+}
+
+.accordion-menu.collapsed  .accordion.ui.styled .title > .titleWrapper .titleString {
+    visibility: hidden;
+}
+
+.accordion-menu .accordion.ui.styled .title > .titleTooltipWrapper {
+    display: none!important;
+}
+
+.itemWrapper {
+    padding: 10px 12px 10px 16px;
+    display: block;
+    margin-right: 3px;
+    margin-top: 2px;
+}
+
+.contentWrapper {
+    padding: 10px;
+    padding-left: 10px;
+    display: block;
+}
+
+.contentWrapper > .item {
+    padding: 5px 12px 5px 16px;
+    display: block;
+    margin-right: 3px;
+    margin-top: 2px;
+}
+
+.contentWrapper > .item:first-child {
+    padding-top: 0px;
+}
+
+.contentWrapper > .item:last-child {
+    padding-bottom: 0px;
+}
+.ButtonColorPicker_buttonContainer__2KlfU {
+    position: relative;
+}
+
+.ButtonColorPicker_color__2uq4T {
+    width: 36px;
+    height: 36px;
+}
+
+.ButtonColorPicker_swatch__2RVj2 {
+    margin: 2px 5px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.ButtonColorPicker_popover__3ANf0 {
+    position: absolute;
+    z-index: 2;
+    right: 50px;
+    top: 0px;
+}
+
+.ButtonColorPicker_cover__GHmn7 {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    width: 100vw;
+}
+.ButtonOpacityPicker_buttonContainer__3J0ao {
+    position: relative;
+}
+
+.ButtonOpacityPicker_color__2TXMU {
+    width: 36px;
+    height: 36px;
+}
+
+.ButtonOpacityPicker_swatch__5a9UD {
+    margin: 2px 5px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.ButtonOpacityPicker_popover__yMraQ {
+    position: absolute;
+    z-index: 2;
+    right: 50px;
+    top: 0px;
+}
+
+.ButtonOpacityPicker_alphaContainer__pdkTp {
+    border: 1px solid #cccccc;
+    background-color: #ffffff;
+    padding: 5px;
+}
+
+.ButtonOpacityPicker_cover__2LoRx {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    width: 100vw;
+}
+.ButtonNipple_buttonContainer__2Hv5a {
+    position: relative;
+}
+
+.ButtonNipple_color__2Dzom {
+    width: 36px;
+    height: 36px;
+}
+
+.ButtonNipple_swatch__X2rwj {
+    margin: 2px 5px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.ButtonNipple_popover__2PBte {
+    position: absolute;
+    z-index: 2;
+    right: 50px;
+    top: 0px;
+}
+
+.ButtonNipple_alphaContainer__2yvJ4 {
+    border: 1px solid #cccccc;
+    background-color: #ffffff;
+    padding: 5px;
+}
+
+.ButtonNipple_nippleContainer__1eYwA > div > div > div:nth-child(1)  {
+
+    background: none !important;
+
+}
+
+.ButtonNipple_nippleContainer__1eYwA > div > div > div:nth-child(1)  {
+
+    background-size: contain !important;
+    background-position: center !important;
+    background-image: url(../../static/media/round.dc3d5fc6.png) !important;
+
+}
+
+.ButtonNipple_cover__23R7g {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    width: 100vw;
+}
+.SideBar_container__32XgA {
+    left: 0;
+    top: 48px;
+    z-index: 1000;
+    position: fixed;
+    height: calc(100vh - 48px);
+    width: 450px;
+}
+
+.SideBar_fadein__29Zao {
+    opacity: 1;
+}
+
+.SideBar_fadeout__2TK-t {
+    transition: all .75s;
+    opacity: 0;
+}
+
+.SideBar_moveout__1f6PI {
+    transition: all .75s;
+    transform: translateX(-400px);
+}
+
+.SideBar_movein__2uO4j {
+    transform: translateX(0px);
+}
+
+.SideBar_content__2gt0u {
+    background-color: #ffffff;
+    height: 100%;
+    width: 400px;
+}
+
+.SideBar_toggleBtn__2YWn5 {
+    position: absolute;
+    right: 0px;
+    top: 10px;
+}
+.Header_containerHeader__3vVO8{
+	width: 100%;
+	height: 48px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	background-color:#fff;
+	color: #000;
+}
+
+.Header_containerlogo__3zhZS {
+	max-width: 10em;
+	padding: 0.5rem;
+}
+
+.Header_containertitle__2gCcu{
+	padding: 1em;
+}
+
+.Header_containeritemRight__2FktZ{
+    padding: 0.8em;
+}
+.Footer_containerFooter__3nrSj{
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #f5f5f5;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-top: 2px solid #ccc;
+    display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.Footer_containerlogo__e6r3D {
+	max-width: 10em;
+	padding: 0 0.5rem;
+}
+
+.Footer_containertitle__1GBQp{
+    font-size: 0.788em;
+    padding: 0 0.5rem;
+}
+
+.Footer_containeritemRight__3ggcV{
+    font-size: 0.788em;
+    padding: 0 0.5rem;
+}
+
+
+/*# sourceMappingURL=main.cc1b757a.chunk.css.map*/
