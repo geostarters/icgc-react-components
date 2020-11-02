@@ -75,6 +75,12 @@ Object.defineProperty(exports, "TreeView", {
     return _TreeView.default;
   }
 });
+Object.defineProperty(exports, "Footer", {
+  enumerable: true,
+  get: function () {
+    return _Footer.default;
+  }
+});
 
 var _Map = _interopRequireDefault(require("./components/Map/Map"));
 
@@ -99,5 +105,7 @@ var _Modal = _interopRequireDefault(require("./components/Modal/Modal"));
 var _SideBar = _interopRequireDefault(require("./components/SideBar/SideBar"));
 
 var _TreeView = _interopRequireDefault(require("./components/TreeView/TreeView"));
+
+var _Footer = _interopRequireDefault(require("./components/Footer/Footer"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }

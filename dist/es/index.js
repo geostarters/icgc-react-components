@@ -10,4 +10,5 @@ import Header from "./components/Header/Header";
 import Modal from "./components/Modal/Modal";
 import SideBar from "./components/SideBar/SideBar";
 import TreeView from "./components/TreeView/TreeView";
-export { Map, Button, NavButtons, LogoICGC, ResizeComponent, ButtonColorPicker, ButtonNipple, ButtonOpacityPicker, Header, Modal, SideBar, TreeView };
+import Footer from "./components/Footer/Footer";
+export { Map, Button, NavButtons, LogoICGC, ResizeComponent, ButtonColorPicker, ButtonNipple, ButtonOpacityPicker, Header, Modal, SideBar, TreeView, Footer };
