@@ -13,7 +13,7 @@ const Footer = ({title = "Nou prototip", customStyleBar = {}, pathLogo = null, w
 	const isMobile = width <= 500;
 
 	return (
-		<div className={styles.containerFooter} style={customStyleBar}>
+		<footer className={styles.containerFooter} style={customStyleBar}>
 
 			{ !isMobile && pathLogo &&
 				<div className={styles.containerlogo} style={customStyleLogo}>
@@ -31,7 +31,7 @@ const Footer = ({title = "Nou prototip", customStyleBar = {}, pathLogo = null, w
 				</div>
 			}
 
-		</div>
+		</footer>
 	);
 
 };

@@ -223,6 +223,7 @@ storiesOf("Modal", module)
 
 storiesOf("Footer", module)
 	.add("Footer", () => (<Footer/>))
+	.add("Footer custom style", () => (<Footer title="Styled" customStyleBar={{backgroundColor: "#ccc", color: "#999", position: "relative"}}/>))
 	.add(
 		"Footer logo",
 		() => <Footer title="VERSIÓ BETA" pathLogo="https://bolollo.github.io/MapaRegEscPNMM/logo_generalitat_gris.dca7d39f.png" logoSize="small" customStyleBar={{backgroundColor: "#ccc", color: "#999"}} customStyleLogo={{maxWidth: "7em"}}>
