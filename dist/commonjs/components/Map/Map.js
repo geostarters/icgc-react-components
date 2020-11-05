@@ -13,6 +13,8 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _mapboxGl = _interopRequireDefault(require("mapbox-gl"));
 
+require("mapbox-gl/dist/mapbox-gl.css");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 class Map extends _react.default.Component {

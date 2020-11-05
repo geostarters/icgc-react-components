@@ -2,6 +2,7 @@ import React from "react";
 import { Utils as IcgcUtils, MapboxMap } from "@geostarters/common";
 import PropTypes from "prop-types";
 import mapboxgl from "mapbox-gl";
+import "mapbox-gl/dist/mapbox-gl.css";
 export default class Map extends React.Component {
   constructor(props) {
     super(props);
