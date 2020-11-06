@@ -11,7 +11,7 @@ class SideBar extends React.PureComponent {
     super(...args);
 
     _defineProperty(this, "state", {
-      show: this.props.show
+      show: this.props.showInitial
     });
 
     _defineProperty(this, "handleClick", () => {
@@ -47,9 +47,9 @@ class SideBar extends React.PureComponent {
 export default SideBar;
 SideBar.propTypes = {
   children: PropTypes.object,
-  show: PropTypes.bool
+  showInitial: PropTypes.bool
 };
 SideBar.defaultProps = {
   children: null,
-  show: true
+  showInitial: true
 };

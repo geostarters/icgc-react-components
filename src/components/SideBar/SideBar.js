@@ -10,7 +10,7 @@ import { Icon, Button } from "semantic-ui-react";
 class SideBar extends React.PureComponent {
 
 	state = {
-		show: this.props.show
+		show: this.props.showInitial
 	};
 
 	handleClick = () => {
@@ -46,10 +46,10 @@ export default SideBar;
 
 SideBar.propTypes = {
 	children: PropTypes.object,
-	show: PropTypes.bool
+	showInitial: PropTypes.bool
 };
 
 SideBar.defaultProps = {
 	children: null,
-	show: true
+	showInitial: true
 };

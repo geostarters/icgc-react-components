@@ -174,7 +174,7 @@ storiesOf("SideBar", module)
 		() => <SideBar></SideBar>
 	).add(
 		"SideBar close",
-		() => <SideBar show={false}></SideBar>
+		() => <SideBar showInitial={false}></SideBar>
 	).add(
 		"SideBar with treeview",
 		() => <SideBar><TreeView nodes={treeData} {...actionsData}></TreeView></SideBar>

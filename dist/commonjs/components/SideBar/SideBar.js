@@ -37,7 +37,7 @@ class SideBar extends _react.default.PureComponent {
     super(...args);
 
     _defineProperty(this, "state", {
-      show: this.props.show
+      show: this.props.showInitial
     });
 
     _defineProperty(this, "handleClick", () => {
@@ -74,9 +74,9 @@ var _default = SideBar;
 exports.default = _default;
 SideBar.propTypes = {
   children: _propTypes.default.object,
-  show: _propTypes.default.bool
+  showInitial: _propTypes.default.bool
 };
 SideBar.defaultProps = {
   children: null,
-  show: true
+  showInitial: true
 };
