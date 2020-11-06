@@ -9,6 +9,10 @@ var _react = _interopRequireDefault(require("react"));
 
 var _common = require("@geostarters/common");
 
+var _pitchControl = _interopRequireDefault(require("./pitchControl"));
+
+var _logoControl = _interopRequireDefault(require("./logoControl"));
+
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _mapboxGl = _interopRequireDefault(require("mapbox-gl"));
@@ -35,12 +39,24 @@ class Map extends _react.default.Component {
       this.setData(this.props.mapData);
     }
 
+    if (this.props.showNavControl) {
+      this.map.addControlMap(new _mapboxGl.default.NavigationControl({
+        visualizePitch: true
+      }));
+      this.map.addControlMap(new _pitchControl.default());
+    }
+
+    if (this.props.showLogoControl) {
+      this.map.addControlMap(new _logoControl.default());
+    }
+
     if (this.props.showAttribution) {
-      console.log("showAttribution");
       this.map.addControlMap(new _mapboxGl.default.AttributionControl({
         compact: true
       }));
     }
+
+    this.addMapEvents();
   }
 
   componentWillUnmount() {
@@ -155,6 +171,14 @@ class Map extends _react.default.Component {
     this.props.layerEvents.forEach(eventData => this.map.subscribe(eventData.event, eventData.layerId, eventData.subscriber));
   }
 
+  addMapEvents() {
+    if (!this.props.mapEvents) {
+      return;
+    }
+
+    this.props.mapEvents.forEach(eventData => this.map.subscribe(eventData.event, "", eventData.subscriber));
+  }
+
   render() {
     const style = {
       width: "100%",
@@ -164,7 +188,7 @@ class Map extends _react.default.Component {
     return /*#__PURE__*/_react.default.createElement("div", {
       id: this.container,
       style: style
-    });
+    }, this.props.children);
   }
 
 }
@@ -179,5 +203,10 @@ Map.propTypes = {
   showAttribution: _propTypes.default.bool,
   layerEvents: _propTypes.default.array,
   //Has to be Array<EventData> from flow-typed
-  style: _propTypes.default.object
+  mapEvents: _propTypes.default.array,
+  //Has to be Array<EventData> from flow-typed
+  style: _propTypes.default.object,
+  showNavControl: _propTypes.default.bool,
+  showLogoControl: _propTypes.default.bool,
+  children: _propTypes.default.any
 };

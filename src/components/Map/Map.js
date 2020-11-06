@@ -2,6 +2,8 @@
 
 import React from "react";
 import { Utils as IcgcUtils, MapboxMap } from "@geostarters/common";
+import PitchControl from "./pitchControl";
+import LogoControl from "./logoControl";
 import PropTypes from "prop-types";
 import mapboxgl from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
@@ -33,14 +35,28 @@ export default class Map extends React.Component {
 
 		}
 
+		if (this.props.showNavControl) {
+
+			this.map.addControlMap(new mapboxgl.NavigationControl({visualizePitch: true}));
+			this.map.addControlMap(new PitchControl());
+
+		}
+
+		if (this.props.showLogoControl) {
+
+			this.map.addControlMap(new LogoControl());
+
+		}
+
 		if (this.props.showAttribution) {
 
-			console.log("showAttribution");
 			this.map.addControlMap(new mapboxgl.AttributionControl({
 				compact: true
 			}));
 
 		}
+
+		this.addMapEvents();
 
 	}
 
@@ -208,6 +224,18 @@ export default class Map extends React.Component {
 
 	}
 
+	addMapEvents() {
+
+		if (!this.props.mapEvents) {
+
+			return;
+
+		}
+
+		this.props.mapEvents.forEach(eventData => this.map.subscribe(eventData.event, "", eventData.subscriber));
+
+	}
+
 
 	render() {
 
@@ -216,7 +244,7 @@ export default class Map extends React.Component {
 			height: "100%",
 			...this.props.style
 		};
-		return (<div id={this.container} style={style}/>);
+		return (<div id={this.container} style={style}>{this.props.children}</div>);
 
 	}
 
@@ -229,5 +257,9 @@ Map.propTypes = {
 	mapData: PropTypes.object,
 	showAttribution: PropTypes.bool,
 	layerEvents: PropTypes.array, //Has to be Array<EventData> from flow-typed
-	style: PropTypes.object
+	mapEvents: PropTypes.array, //Has to be Array<EventData> from flow-typed
+	style: PropTypes.object,
+	showNavControl: PropTypes.bool,
+	showLogoControl: PropTypes.bool,
+	children: PropTypes.any
 };

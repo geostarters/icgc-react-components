@@ -65,7 +65,7 @@ storiesOf("Logo ICGC", module)
 	))
 	.add("Logo ICGC versió 2 blanc amb text", () => (
 		<div style={{borderBottom: "2px solid gray", width: "100%", height: "200px", backgroundColor: "gray"}}>
-			<LogoICGC logoType="icgc-logo-white-text"/>
+			<LogoICGC logoType="icgc-logo-white-text" position="top-left"/>
 		</div>
 	))
 	.add("Logo ICGC top left", () => (
@@ -91,7 +91,7 @@ storiesOf("Map", module)
 		}
 	).add(
 		"Mapa Clar",
-		() => <Map style={{"height": "100vh"}} options={{"style": CONSTANTS.DEFAULT_ICGC_BACKGROUNDS[0].style}}></Map>,
+		() => <Map style={{"height": "100vh"}} showNavControl={true} options={{"style": CONSTANTS.DEFAULT_ICGC_BACKGROUNDS[0].style}}></Map>,
 		{
 			info:{
 				text: "Cal afegir l'import de mapbox-gl.css",
@@ -100,7 +100,7 @@ storiesOf("Map", module)
 		}
 	).add(
 		"Mapa Orto",
-		() => <Map showAttribution={true} style={{"height": "100vh"}} options={{"style": CONSTANTS.DEFAULT_ICGC_BACKGROUNDS[1].style}}></Map>,
+		() => <Map showLogoControl={true} style={{"height": "100vh"}} options={{"style": CONSTANTS.DEFAULT_ICGC_BACKGROUNDS[1].style}}></Map>,
 		{
 			info:{
 				text: "Cal afegir l'import de mapbox-gl.css",
