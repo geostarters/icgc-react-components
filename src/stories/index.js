@@ -18,9 +18,11 @@ import SideBar from "../components/SideBar/SideBar";
 import Header from "../components/Header/Header";
 import Modal from "../components/Modal/Modal";
 import Footer from "../components/Footer/Footer";
+import ChooseStyle from "../components/ChooseStyle/ChooseStyle";
 
 import mapDataRubi from "./mapDataRubi.json";
 import treeData from "./treeData.json";
+import styleList from "./styleList.json";
 
 import "semantic-ui-css/semantic.min.css";
 
@@ -244,3 +246,11 @@ storiesOf("Footer", module)
 			</div>
 		</Footer>
 	);
+
+storiesOf("ChooseStyle", module)
+	.add("ChooseStyle",
+		() => (<ChooseStyle stylesList={styleList}></ChooseStyle>))
+	.add("ChooseStyle selected",
+		() => (<ChooseStyle stylesList={styleList} currentStyleId={0}></ChooseStyle>))
+	.add("ChooseStyle selected 1 and action",
+		() => (<ChooseStyle stylesList={styleList} currentStyleId={1} handleClickStyle={action("handleClickStyle")}></ChooseStyle>));

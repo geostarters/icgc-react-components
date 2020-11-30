@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ContainerChooseStyle Component renders correct properties 1`] = `
+<div
+  className="styleContainer"
+>
+  <ul>
+    <li
+      key="0"
+      onClick={[Function]}
+    >
+      <div
+        className="imageContainer"
+      >
+        <Image
+          as="img"
+          className="selected"
+          size="large"
+          src="https://openicgc.github.io/img/positron.png"
+          style={
+            Object {
+              "borderColor": "#FF0000",
+            }
+          }
+          ui={true}
+        />
+        <div
+          className="imageLabel"
+          style={
+            Object {
+              "color": "#333",
+            }
+          }
+        >
+          Clar
+        </div>
+      </div>
+    </li>
+    <li
+      key="1"
+      onClick={[Function]}
+    >
+      <div
+        className="imageContainer"
+      >
+        <Image
+          as="img"
+          className=""
+          size="large"
+          src="https://openicgc.github.io/img/orto.png"
+          style={
+            Object {
+              "borderColor": "#FF0000",
+            }
+          }
+          ui={true}
+        />
+        <div
+          className="imageLabel"
+          style={
+            Object {
+              "color": "#333",
+            }
+          }
+        >
+          Orto
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+`;

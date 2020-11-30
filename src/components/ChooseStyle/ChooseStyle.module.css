@@ -1,0 +1,38 @@
+.styleContainer {
+    max-height: 422px;
+    overflow: auto;
+}
+
+ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0.15em 0;
+}
+img.selected { 
+    border: 0.2em solid;
+    padding: 0;
+}
+
+img {
+    cursor: pointer;
+    padding: 0.15em;
+    height: 40px !important;
+}
+
+li {
+    position: relative;
+}
+
+.imageContainer {
+    position: relative;
+    width: max-content;
+}
+
+.imageLabel {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translate(0%, -50%);
+    font-weight: bold;
+    text-shadow: 1.5px 1.5px 0 #ffffff, 1.5px -1.5px 0 #ffffff, -1.5px 1.5px 0 #ffffff, -1.5px -1.5px 0 #ffffff, 1.5px 0px 0 #ffffff, 0px 1.5px 0 #ffffff, -1.5px 0px 0 #ffffff, 0px -1.5px 0 #ffffff;
+}
