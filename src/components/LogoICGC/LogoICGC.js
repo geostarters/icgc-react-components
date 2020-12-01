@@ -11,7 +11,7 @@ export default function LogoICGC({position, logoType, url, addText}) {
 
 	return (
 		<div className={positionClassName} >
-			<a className={logoTypeClassName} target="_blank" rel="noopener noreferrer" href={url} aria-label="Icgc" ></a>
+			<a className={logoTypeClassName} target="_blank" rel="noopener noreferrer" href={url} aria-label="Icgc" >{null}</a>
 			{addText &&  <div className={styles.logoText}>{addText}</div>}
 		</div>
 	);

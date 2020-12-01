@@ -17,7 +17,7 @@ export default function LogoICGC({
     rel: "noopener noreferrer",
     href: url,
     "aria-label": "Icgc"
-  }), addText && /*#__PURE__*/React.createElement("div", {
+  }, null), addText && /*#__PURE__*/React.createElement("div", {
     className: styles.logoText
   }, addText));
 }

@@ -29,7 +29,7 @@ function LogoICGC({
     rel: "noopener noreferrer",
     href: url,
     "aria-label": "Icgc"
-  }), addText && /*#__PURE__*/_react.default.createElement("div", {
+  }, null), addText && /*#__PURE__*/_react.default.createElement("div", {
     className: _LogoICGCModule.default.logoText
   }, addText));
 }

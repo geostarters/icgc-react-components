@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "./static/css/main.fdfef17f.chunk.css",
-    "main.js": "./main.b426e4b415ef8e7cdfbd.bundle.js",
-    "main.css.map": "./static/css/main.fdfef17f.chunk.css.map",
-    "main.js.map": "./main.b426e4b415ef8e7cdfbd.bundle.js.map",
-    "runtime~main.js": "./runtime~main.b426e4b415ef8e7cdfbd.bundle.js",
-    "runtime~main.js.map": "./runtime~main.b426e4b415ef8e7cdfbd.bundle.js.map",
-    "vendors~main.css": "./static/css/vendors~main.0afc83b0.chunk.css",
-    "vendors~main.js": "./vendors~main.b426e4b415ef8e7cdfbd.bundle.js",
-    "vendors~main.css.map": "./static/css/vendors~main.0afc83b0.chunk.css.map",
-    "vendors~main.js.map": "./vendors~main.b426e4b415ef8e7cdfbd.bundle.js.map",
+    "main.css": "./static/css/main.e697c327.chunk.css",
+    "main.js": "./main.16dd9b8c823276fef093.bundle.js",
+    "main.css.map": "./static/css/main.e697c327.chunk.css.map",
+    "main.js.map": "./main.16dd9b8c823276fef093.bundle.js.map",
+    "runtime~main.js": "./runtime~main.16dd9b8c823276fef093.bundle.js",
+    "runtime~main.js.map": "./runtime~main.16dd9b8c823276fef093.bundle.js.map",
+    "vendors~main.css": "./static/css/vendors~main.76a2545c.chunk.css",
+    "vendors~main.js": "./vendors~main.16dd9b8c823276fef093.bundle.js",
+    "vendors~main.css.map": "./static/css/vendors~main.76a2545c.chunk.css.map",
+    "vendors~main.js.map": "./vendors~main.16dd9b8c823276fef093.bundle.js.map",
     "iframe.html": "./iframe.html",
-    "precache-manifest.d93c0dd002538424598edcbc66bf8bd5.js": "./precache-manifest.d93c0dd002538424598edcbc66bf8bd5.js",
+    "precache-manifest.1a8e51b70cd6d670a401be543a31bb11.js": "./precache-manifest.1a8e51b70cd6d670a401be543a31bb11.js",
     "service-worker.js": "./service-worker.js",
     "static/media/ICGC.svg": "./static/media/ICGC.9d2135a4.svg",
     "static/media/LogoICGC.module.css": "./static/media/ICGC2.eb3d6648.svg",
@@ -19,13 +19,13 @@
     "static/media/ICGC_white.svg": "./static/media/ICGC_white.cee8b66f.svg",
     "static/media/semantic.min.css": "./static/media/outline-icons.ef60a4f6.woff",
     "static/media/ButtonNipple.module.css": "./static/media/round.dc3d5fc6.png",
-    "vendors~main.b426e4b415ef8e7cdfbd.bundle.js.LICENSE.txt": "./vendors~main.b426e4b415ef8e7cdfbd.bundle.js.LICENSE.txt"
+    "vendors~main.16dd9b8c823276fef093.bundle.js.LICENSE.txt": "./vendors~main.16dd9b8c823276fef093.bundle.js.LICENSE.txt"
   },
   "entrypoints": [
-    "runtime~main.b426e4b415ef8e7cdfbd.bundle.js",
-    "static/css/vendors~main.0afc83b0.chunk.css",
-    "vendors~main.b426e4b415ef8e7cdfbd.bundle.js",
-    "static/css/main.fdfef17f.chunk.css",
-    "main.b426e4b415ef8e7cdfbd.bundle.js"
+    "runtime~main.16dd9b8c823276fef093.bundle.js",
+    "static/css/vendors~main.76a2545c.chunk.css",
+    "vendors~main.16dd9b8c823276fef093.bundle.js",
+    "static/css/main.e697c327.chunk.css",
+    "main.16dd9b8c823276fef093.bundle.js"
   ]
 }

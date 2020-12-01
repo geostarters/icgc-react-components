@@ -19,6 +19,7 @@ import Header from "../components/Header/Header";
 import Modal from "../components/Modal/Modal";
 import Footer from "../components/Footer/Footer";
 import ChooseStyle from "../components/ChooseStyle/ChooseStyle";
+import Geocoder from "../components/Geocoder/Geocoder";
 
 import mapDataRubi from "./mapDataRubi.json";
 import treeData from "./treeData.json";
@@ -252,5 +253,21 @@ storiesOf("ChooseStyle", module)
 		() => (<ChooseStyle stylesList={styleList}></ChooseStyle>))
 	.add("ChooseStyle selected",
 		() => (<ChooseStyle stylesList={styleList} currentStyleId={0}></ChooseStyle>))
-	.add("ChooseStyle selected 1 and action",
-		() => (<ChooseStyle stylesList={styleList} currentStyleId={1} handleClickStyle={action("handleClickStyle")}></ChooseStyle>));
+	.add("ChooseStyle with style and action",
+		() => (<ChooseStyle stylesList={styleList} selectedColor={"#ff0000"} labelColor={"#0000ff"} currentStyleId={1} handleClickStyle={action("handleClickStyle")}></ChooseStyle>));
+
+storiesOf("Geocoder", module)
+	.add("Geocoder",
+	() => (<Geocoder></Geocoder>))
+	.add("Geocoder no layer",
+	() => (<Geocoder showLayer={false}></Geocoder>))
+	.add("Geocoder layers mun y com",
+	() => (<Geocoder layers={["mun", "com"]}></Geocoder>))
+	.add("Geocoder maxresults 3",
+	() => (<Geocoder maxResults={3}></Geocoder>))
+	.add("Geocoder select result action",
+	() => (<Geocoder handleResultSelect={action("handleResultSelect")}></Geocoder>))
+	.add("Geocoder autocomplete false",
+	() => (<Geocoder autocomplete={false}></Geocoder>))
+	.add("Geocoder custom style",
+	() => (<Geocoder resultTextStyle={{color: "#c00000", fontSize: 13}} resultLayerTextStyle={{color: "#666666", fontSize: 11, fontWeight: 100, fontStyle: "italic"}}></Geocoder>));
