@@ -8,7 +8,7 @@ import { Search } from "semantic-ui-react";
 
 import styles from "./Geocoder.module.css";
 
-const peliasUrl = "https://betaserver2.icgc.cat/cerca_pelias/";
+const peliasUrl = "https://aws.icgc.cat/cerca_pelias/";
 
 const initialState = {
 	loading: false,
@@ -41,7 +41,7 @@ function Geocoder({showLayer, maxResults, layers, autocomplete, handleResultSele
 	const { loading, results, value } = state;
 
 	const timeoutRef = React.useRef();
-	const handleSearchChange = React.useCallback((e, data) => {
+	const handleSearchChange = React.useCallback((e, data, url) => {
 
 		clearTimeout(timeoutRef.current);
 		dispatch({ type: "START_SEARCH", query: data.value });
@@ -55,7 +55,7 @@ function Geocoder({showLayer, maxResults, layers, autocomplete, handleResultSele
 
 			}
 
-			const response = await Axios.get(`${peliasUrl}${autocomplete ? "autocomplete" : "cerca"}?text=${data.value}&size=${maxResults}&layers=${layers.join(",")}`);
+			const response = await Axios.get(`${url}${data.value}`);
 
 			dispatch({
 				type: "FINISH_SEARCH",
@@ -85,7 +85,12 @@ function Geocoder({showLayer, maxResults, layers, autocomplete, handleResultSele
 				dispatch({ type: "UPDATE_SELECTION", selection: data.result });
 
 			}}
-			onSearchChange={handleSearchChange}
+			onSearchChange={(e, data) => {
+
+				const url = `${peliasUrl}${autocomplete ? "autocomplete" : "cerca"}?size=${maxResults}&layers=${layers.join(",")}&text=`;
+				handleSearchChange(e, data, url);
+
+			}}
 			resultRenderer={resultRenderer}
 			results={results}
 			noResultsMessage={"Sense resultats."}

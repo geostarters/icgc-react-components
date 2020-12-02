@@ -16,6 +16,5 @@ Button.propTypes = {
 
 Button.defaultProps = {
 	color: "yellow",
-	content: "",
-	onClick: () => console.log("click")
+	content: ""
 };

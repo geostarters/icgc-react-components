@@ -11,7 +11,7 @@ export default class ButtonColorPicker extends React.PureComponent {
 
 	state = {
 		displayColorPicker: false,
-		color: this.props.color
+		color: this.props.initialColor || {"rgb": {"r": 255, "g": 0, "b": 0, "a": 1}}
 	};
 
 	handleClick = () => this.setState({ displayColorPicker: !this.state.displayColorPicker });
@@ -51,12 +51,11 @@ export default class ButtonColorPicker extends React.PureComponent {
 
 ButtonColorPicker.propTypes = {
 	handleChangeColor: PropTypes.func,
-	color: PropTypes.object,
+	initialColor: PropTypes.object,
 	index: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
 };
 
 ButtonColorPicker.defaultProps = {
 	handleChangeColor: () => {},
-	color: {rgb: {r: 255, g:0, b: 0, a: 1} },
 	index: 0
 };
