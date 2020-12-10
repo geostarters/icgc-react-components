@@ -19,7 +19,7 @@ export default function LogoICGC({position, logoType, url, addText}) {
 }
 
 LogoICGC.propTypes = {
-	position: PropTypes.oneOf(["bottom-right", "bottom-left", "top-right", "top-left"]),
+	position: PropTypes.oneOf(["bottom-right", "bottom-left", "top-right", "top-left", "relative"]),
 	addText: PropTypes.string,
 	url: PropTypes.string,
 	logoType: PropTypes.oneOf(["icgc-logo", "icgc-logotxt", "icgc-logo-white-text", "icgc-logo2-text"])
@@ -27,7 +27,7 @@ LogoICGC.propTypes = {
 
 LogoICGC.defaultProps = {
 	addText: null,
-	position: "bottom-right",
+	position: "relative",
 	url: "http://www.icgc.cat/",
 	logoType: "icgc-logo",
 };

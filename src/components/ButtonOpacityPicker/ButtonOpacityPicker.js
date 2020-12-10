@@ -13,7 +13,7 @@ export default class ButtonOpacityPicker extends React.PureComponent {
 	state = {
 
 		displayAlphaPicker: false,
-		opacity: this.props.opacity
+		opacity: this.props.initialOpacity
 
 	};
 
@@ -43,7 +43,7 @@ export default class ButtonOpacityPicker extends React.PureComponent {
 		return (
 			<div className={ styles.buttonContainer }>
 				<div className={ styles.swatch } onClick={ this.handleClick }>
-					<div className={ styles.color } style={{backgroundImage: `url(${this.props.image})`}}>
+					<div className={ styles.color } style={{backgroundImage: `url(${this.props.image}), url(${IMAGES.opacity})`}}>
 						<div className={ styles.color } style={{background: `rgba(255, 255, 255, ${1 - opacity})`}} />
 					</div>
 				</div>
@@ -64,14 +64,13 @@ export default class ButtonOpacityPicker extends React.PureComponent {
 
 ButtonOpacityPicker.propTypes = {
 	handleChangeOpacity: PropTypes.func,
-	opacity: PropTypes.number,
+	initialOpacity: PropTypes.number,
 	index: PropTypes.number,
 	image: PropTypes.string
 };
 
 ButtonOpacityPicker.defaultProps = {
 	handleChangeOpacity: () => {},
-	opacity: 1,
-	index: 0,
-	image: `${IMAGES.opacity}`
+	initialOpacity: 1,
+	index: 0
 };

@@ -21,7 +21,8 @@ const ChooseStyle = ({currentStyleId, stylesList, handleClickStyle, selectedColo
 
 ChooseStyle.defaultProps = {
 	selectedColor: "#333",
-	labelColor: "#333"
+	labelColor: "#333",
+	handleClickStyle: () => {}
 };
 
 export default React.memo(ChooseStyle);

@@ -376,7 +376,7 @@ exports[`TreeView Component renders correct properties 1`] = `
       styled={true}
     >
       <Accordion
-        className="sc-gtssRu cUNBpk"
+        className="sc-gsTCUz bWoXQN"
         panels={
           Array [
             Object {
@@ -651,7 +651,7 @@ exports[`TreeView Component renders correct properties 1`] = `
         styled={true}
       >
         <AccordionAccordion
-          className="ui styled sc-gtssRu cUNBpk"
+          className="ui styled sc-gsTCUz bWoXQN"
           exclusive={true}
           panels={
             Array [
@@ -926,7 +926,7 @@ exports[`TreeView Component renders correct properties 1`] = `
           }
         >
           <div
-            className="accordion ui styled sc-gtssRu cUNBpk"
+            className="accordion ui styled sc-gsTCUz bWoXQN"
           >
             <AccordionPanel
               active={false}
@@ -1146,7 +1146,7 @@ exports[`TreeView Component renders correct properties 1`] = `
                     key="1"
                   >
                     <div
-                      className="sc-bdnylx hXUGCx titleTooltipWrapper"
+                      className="sc-bdfBwQ cocQyh titleTooltipWrapper"
                     >
                       <Checkbox
                         checked={false}
@@ -2640,7 +2640,7 @@ exports[`TreeView Component renders correct properties 1`] = `
                     key="3"
                   >
                     <div
-                      className="sc-bdnylx hXUGCx titleTooltipWrapper"
+                      className="sc-bdfBwQ cocQyh titleTooltipWrapper"
                     >
                       <Checkbox
                         checked={false}

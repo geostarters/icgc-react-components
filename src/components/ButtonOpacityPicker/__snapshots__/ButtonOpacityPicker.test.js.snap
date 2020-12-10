@@ -12,7 +12,7 @@ exports[`ButtonOpacityPicker Component renders correct properties 1`] = `
       className="color"
       style={
         Object {
-          "backgroundImage": "url(opacity.jpg)",
+          "backgroundImage": "url(undefined), url(opacity.jpg)",
         }
       }
     >

@@ -1,0 +1,49 @@
+{
+    "sources": [{
+            "id": "WMSSostenibilitatIrradiacio",        
+            "tiles": ["http://geoserveis.icgc.cat/sostenibilitat/rubi/wms?layers=rad_global_roofs&bbox={bbox-epsg-3857}&format=image/png&service=WMS&version=1.1.1&request=GetMap&srs=EPSG:3857&transparent=true&width=256&height=256&"],
+            "maxzoom": 20,
+            "type": "raster"
+       
+    }, {
+           "id": "WMSSostenibilitatIdoneitatFV",         
+            "tiles": ["http://geoserveis.icgc.cat/sostenibilitat/rubi/wms?layers=idoFV_RGB&bbox={bbox-epsg-3857}&format=image/png&service=WMS&version=1.1.1&request=GetMap&srs=EPSG:3857&transparent=true&width=256&height=256&"],
+            "maxzoom": 20,
+            "type": "raster"
+      
+    }, {
+           "id": "WMSSostenibilitatIdoneitatSTA",          
+            "tiles": ["http://geoserveis.icgc.cat/sostenibilitat/rubi/wms?layers=idoTS_RGB&bbox={bbox-epsg-3857}&format=image/png&service=WMS&version=1.1.1&request=GetMap&srs=EPSG:3857&transparent=true&width=256&height=256&"],
+            "maxzoom": 20,
+            "type": "raster"
+        
+    }],
+    "layers": [{
+        "id": "WMSSostenibilitatIrradiacio",
+        "type": "raster",
+        "source": "WMSSostenibilitatIrradiacio",
+        "minzoom": 12,
+        "maxzoom": 20,
+        "layout": {
+            "visibility": "visible"
+        }
+    }, {
+        "id": "WMSSostenibilitatIdoneitatFV",
+        "type": "raster",
+        "source": "WMSSostenibilitatIdoneitatFV",
+        "minzoom": 12,
+        "maxzoom": 20,
+        "layout": {
+            "visibility": "none"
+        }
+    }, {
+        "id": "WMSSostenibilitatIdoneitatSTA",
+        "type": "raster",
+        "source": "WMSSostenibilitatIdoneitatSTA",
+        "minzoom": 12,
+        "maxzoom": 20,
+        "layout": {
+            "visibility": "none"
+        }
+    }]
+}

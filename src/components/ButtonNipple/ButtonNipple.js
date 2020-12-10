@@ -56,7 +56,6 @@ export default class ButtonNipple extends React.PureComponent {
 	render() {
 
 		const { angle } = this.props;
-
 		const distance = 50 * angle.exaggeration;
 		const degree = angle.degree + 90;
 
@@ -109,16 +108,16 @@ export default class ButtonNipple extends React.PureComponent {
 ButtonNipple.propTypes = {
 	handleChangeAngle: PropTypes.func,
 	handleChangeAngleDef: PropTypes.func,
-	angle: PropTypes.object,
+	angle: PropTypes.shape({
+		degree: PropTypes.number,
+		exaggeration: PropTypes.number
+	}),
 	index: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
 };
 
 ButtonNipple.defaultProps = {
 	handleChangeAngle: () => {},
 	handleChangeAngleDef: () => {},
-	angle: {
-		degree: 315,
-		exaggeration: 1
-	},
+	angle: {degree: 315, exaggeration: 1},
 	index: 0
 };

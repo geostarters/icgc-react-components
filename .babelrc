@@ -3,6 +3,7 @@
   "plugins": [ "@babel/plugin-proposal-class-properties", "@babel/transform-flow-strip-types"],
   "ignore": [
     "src/**/*.test.js",
+    "src/**/*.stories.js",
     "src/stories/*",
     "src/stories/*.js","src/components/*/__snapshots__/*","src/components/*/*test.js","src/setupTests.js"
   ]

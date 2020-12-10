@@ -9,7 +9,7 @@ import { ChromePicker } from "react-color";
 describe("ButtonColorPicker Component", () => {
 
 	const buttonColorPickerProps = {
-		color: {rgb: {r: 255, g:255, b: 0, a: 1} },
+		initialColor: {rgb: {r: 255, g:255, b: 0, a: 1} },
 		index: 0,
 		handleChangeColor: jest.fn()
 	};
@@ -29,7 +29,7 @@ describe("ButtonColorPicker Component", () => {
 
 	it("has the correct color in the element", () => {
 
-		const { color } = buttonColorPickerProps;
+		const { initialColor: color } = buttonColorPickerProps;
 		expect(component.find(".swatch").find(".color").get(0).props.style).toHaveProperty("background", `rgba(${color.rgb.r}, ${color.rgb.g}, ${color.rgb.b}, ${color.rgb.a})`);
 
 	});

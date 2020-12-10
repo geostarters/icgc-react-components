@@ -11,7 +11,7 @@ exports[`Footer Component renders correct properties 1`] = `
     title="Title"
     width={1000}
   >
-    <div
+    <footer
       className="containerFooter"
       style={Object {}}
     >
@@ -23,7 +23,7 @@ exports[`Footer Component renders correct properties 1`] = `
       <div
         className="containeritemRight"
       />
-    </div>
+    </footer>
   </Footer>
 </ResizeComponent>
 `;

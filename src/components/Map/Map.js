@@ -21,6 +21,12 @@ export default class Map extends React.Component {
 			...this.props.options
 		};
 
+		if (this.props.showAttribution) {
+
+			options.attributionControl = false;
+
+		}
+
 		this.map = new MapboxMap(mapboxgl, this.props.mapboxToken || "", options);
 
 	}
@@ -30,6 +36,8 @@ export default class Map extends React.Component {
 		await this.map.create();
 
 		if (this.props.mapData) {
+
+			console.log(this.props.mapData);
 
 			this.setData(this.props.mapData);
 
@@ -195,7 +203,6 @@ export default class Map extends React.Component {
 		}
 
 	}
-
 
 	async refreshStyleMap() {
 
