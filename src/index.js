@@ -12,7 +12,8 @@ import Modal from "./components/Modal/Modal";
 import SideBar from "./components/SideBar/SideBar";
 import TreeView from "./components/TreeView/TreeView";
 import Footer from "./components/Footer/Footer";
-
+import Geocoder from "./components/Geocoder/Geocoder";
+import ChooseStyle from "./components/ChooseStyle/ChooseStyle";
 
 export {
 	Map,
@@ -27,5 +28,7 @@ export {
 	Modal,
 	SideBar,
 	TreeView,
-	Footer
+	Footer,
+	Geocoder,
+	ChooseStyle
 };

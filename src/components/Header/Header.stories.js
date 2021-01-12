@@ -5,6 +5,8 @@ import LogoICGC from "../LogoICGC/LogoICGC";
 
 import Header from "./Header";
 
+import IMAGES from "../../resources/images";
+
 import "semantic-ui-css/semantic.min.css";
 
 export default {
@@ -16,6 +18,14 @@ const Template = args => (<Header {...args}/>);
 
 export const _Header = Template.bind({});
 _Header.storyName = "Header";
+
+export const HeaderIcgc = Template.bind({});
+HeaderIcgc.storyName = "Header logo ICGC white";
+HeaderIcgc.args = {
+	logoSize: "medium",
+	customStyleBar: {backgroundColor: "#0064af", color: "#fff"},
+	pathLogo: IMAGES.ICGC_white
+};
 
 export const Header2Logos = args => (<Header {...args}>
 	<div>
