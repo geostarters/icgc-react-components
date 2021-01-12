@@ -8,8 +8,6 @@ import { Search } from "semantic-ui-react";
 
 import styles from "./Geocoder.module.css";
 
-const peliasUrl = "https://aws.icgc.cat/cerca_pelias/";
-
 const initialState = {
 	loading: false,
 	results: [],
@@ -35,7 +33,7 @@ function exampleReducer(state, action) {
 
 }
 
-function Geocoder({showLayer, maxResults, layers, autocomplete, handleResultSelect, resultTextStyle, resultLayerTextStyle}) {
+function Geocoder({showLayer, maxResults, layers, autocomplete, handleResultSelect, resultTextStyle, resultLayerTextStyle, geocoderUrl}) {
 
 	const [state, dispatch] = React.useReducer(exampleReducer, initialState);
 	const { loading, results, value } = state;
@@ -87,7 +85,7 @@ function Geocoder({showLayer, maxResults, layers, autocomplete, handleResultSele
 			}}
 			onSearchChange={(e, data) => {
 
-				const url = `${peliasUrl}${autocomplete ? "autocomplete" : "cerca"}?size=${maxResults}&layers=${layers.join(",")}&text=`;
+				const url = `${geocoderUrl}${autocomplete ? "autocompletar" : "cerca"}?size=${maxResults}&layers=${layers.join(",")}&text=`;
 				handleSearchChange(e, data, url);
 
 			}}
@@ -107,7 +105,8 @@ Geocoder.defaultProps = {
 	showLayer: true,
 	layers: [],
 	maxResults: 10,
-	autocomplete: true
+	autocomplete: true,
+	geocoderUrl: "https://aws.icgc.cat/geocodificador/"
 };
 
 Geocoder.propTypes = {
@@ -117,5 +116,6 @@ Geocoder.propTypes = {
 	autocomplete: PropTypes.bool,
 	handleResultSelect: PropTypes.func,
 	resultTextStyle: PropTypes.object,
-	resultLayerTextStyle: PropTypes.object
+	resultLayerTextStyle: PropTypes.object,
+	geocoderUrl: PropTypes.string
 };
