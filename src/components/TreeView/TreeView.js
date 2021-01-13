@@ -38,6 +38,7 @@ export default class TreeView extends React.PureComponent {
 	flatterNodes = {
 		checked: [],
 		indeterminate: [],
+		clicked: [],
 	}
 
 	flatNodes = {};
@@ -50,17 +51,19 @@ export default class TreeView extends React.PureComponent {
 
 	componentDidMount() {
 
+		console.log("componentDidMount");
 		// Typical usage (don't forget to compare props):
 		if (this.props.nodes) {
 
-			const {checked, indeterminate} = this.createFlatterNodes(this.props.nodes);
+			const {checked, indeterminate, clicked} = this.createFlatterNodes(this.props.nodes);
 
 			const tree = this.createTreeConfig(null, this.props.nodes, checked, indeterminate);
 
 			this.setState({
 				tree: this.decorateTitles(tree),
 				checked,
-				indeterminate
+				indeterminate,
+				clicked
 			});
 
 		}
@@ -83,7 +86,7 @@ export default class TreeView extends React.PureComponent {
 
 		}
 
-		const {checked, indeterminate} = this.flatterNodes;
+		const {checked, indeterminate, clicked} = this.flatterNodes;
 
 		items.forEach((item, index) => {
 
@@ -111,11 +114,16 @@ export default class TreeView extends React.PureComponent {
 				indeterminate.push(item.id);
 
 			}
+			if (item.active) {
+
+				clicked.push(item.id);
+
+			}
 			this.createFlatterNodes(item.childs, item, depth + 1);
 
 		});
 
-		return {checked, indeterminate};
+		return {checked, indeterminate, clicked};
 
 	}
 
@@ -485,6 +493,8 @@ export default class TreeView extends React.PureComponent {
 	* Panel generator
 	*/
 	getPanels = objs => objs.map((obj) => {
+
+		console.log("getPanels");
 
 		const panel = {
 			key: obj.id,
