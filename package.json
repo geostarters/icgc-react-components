@@ -1,6 +1,6 @@
 {
   "name": "@geostarters/react-components",
-  "version": "0.3.9",
+  "version": "0.3.10",
   "main": "dist/commonjs/index.js",
   "module": "dist/es/index.js",
   "files": [
