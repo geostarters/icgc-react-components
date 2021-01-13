@@ -200,7 +200,7 @@ export default class TreeView extends React.PureComponent {
 	ItemStyle = {
 		display: "block",
 		position: "relative",
-		margin: "-10px -16px",
+		margin: "-10px 0px -10px -14px",
 	};
 
 	/**
