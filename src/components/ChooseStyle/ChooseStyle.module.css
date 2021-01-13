@@ -3,32 +3,33 @@
     overflow: auto;
 }
 
-ul {
+.styleContainer ul {
     list-style: none;
     padding: 0px;
     margin: 0.15em 0;
 }
-img.selected { 
+
+.styleContainer img.selected { 
     border: 0.2em solid;
     padding: 0;
 }
 
-img {
+.styleContainer img {
     cursor: pointer;
     padding: 0.15em;
     height: 40px !important;
 }
 
-li {
+.styleContainer li {
     position: relative;
 }
 
-.imageContainer {
+.styleContainer .imageContainer {
     position: relative;
     width: max-content;
 }
 
-.imageLabel {
+.styleContainer .imageLabel {
     position: absolute;
     top: 50%;
     right: 10px;

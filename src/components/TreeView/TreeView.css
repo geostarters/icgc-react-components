@@ -89,30 +89,29 @@
     display: none!important;
 }
 
-.itemWrapper {
+.accordion-menu .itemWrapper {
     padding: 10px 12px 10px 16px;
     display: block;
     margin-right: 3px;
     margin-top: 2px;
 }
 
-.contentWrapper {
+.accordion-menu .contentWrapper {
     padding: 10px;
     padding-left: 10px;
     display: block;
 }
 
-.contentWrapper > .item {
+.accordion-menu .contentWrapper > .item {
     padding: 5px 12px 5px 16px;
     display: block;
     margin-right: 3px;
     margin-top: 2px;
 }
 
-.contentWrapper > .item:first-child {
+.accordion-menu  .contentWrapper > .item:first-child {
     padding-top: 0px;
 }
-
-.contentWrapper > .item:last-child {
+.accordion-menu  .contentWrapper > .item:last-child {
     padding-bottom: 0px;
 }
