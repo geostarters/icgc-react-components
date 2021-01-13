@@ -8,6 +8,8 @@ import PropTypes from "prop-types";
 import mapboxgl from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 
+import "./Map.css";
+
 export default class Map extends React.Component {
 
 	constructor(props) {
@@ -52,7 +54,7 @@ export default class Map extends React.Component {
 
 		if (this.props.showLogoControl) {
 
-			this.map.addControlMap(new LogoControl());
+			this.map.addControlMap(new LogoControl(this.props.logo));
 
 		}
 
@@ -268,5 +270,6 @@ Map.propTypes = {
 	style: PropTypes.object,
 	showNavControl: PropTypes.bool,
 	showLogoControl: PropTypes.bool,
-	children: PropTypes.any
+	children: PropTypes.any,
+	logo: PropTypes.string
 };

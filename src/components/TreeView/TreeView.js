@@ -162,7 +162,15 @@ export default class TreeView extends React.PureComponent {
     .accordion .title .dropdown.icon,
     .title .dropdown.icon {
       float: right!important;
-    }
+	}
+
+	.contentWrapper, .itemWrapper {
+		background-color: ${this.props.leafLevelBackgroundColor}
+	}
+	
+	.contentWrapper label, .itemWrapper label {
+		color: ${this.props.leafLevelFontColor}
+	}
 
     .itemWrapper a {
       padding: 10px 12px 10px 16px;
@@ -601,6 +609,10 @@ TreeView.propTypes = {
 	firstLevelBackgroundColor: PropTypes.string,
 	/** First level font color */
 	firstLevelFontColor: PropTypes.string,
+	/** Leaf level color */
+	leafLevelBackgroundColor: PropTypes.string,
+	/** Leaf level font color */
+	leafLevelFontColor: PropTypes.string,
 	/** Collapsed menu */
 	collapsed: PropTypes.bool,
 	/** Collapsed menu width, default 39  */
@@ -619,6 +631,8 @@ TreeView.defaultProps = {
 	activeColor: "#266bc0",
 	firstLevelBackgroundColor: "#ffffff",
 	firstLevelFontColor: "#000000",
+	leafLevelBackgroundColor: "#ffffff",
+	leafLevelFontColor: "#000000",
 	collapsed: false,
 	collapsedWidth: 39,
 	onClick: () => {}

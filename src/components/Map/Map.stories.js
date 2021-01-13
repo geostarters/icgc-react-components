@@ -6,6 +6,8 @@ import Map from "./Map";
 
 import * as CONSTANTS from "../../constants";
 
+import IMAGES from "../../resources/images";
+
 import "semantic-ui-css/semantic.min.css";
 
 import mapDataRubi from "../../stories/mapDataRubi2.json";
@@ -38,6 +40,16 @@ MapaOrto.args = {
 	showNavControl: true,
 	showLogoControl: true,
 	showAttribution: true,
+	options: {"style": CONSTANTS.DEFAULT_ICGC_BACKGROUNDS[1].style}
+};
+
+export const MapaOrtoLogoColor = Template.bind({});
+MapaOrtoLogoColor.storyName = "Mapa Orto with logo color";
+MapaOrtoLogoColor.args = {
+	showNavControl: true,
+	showLogoControl: true,
+	showAttribution: true,
+	logo: {"image": IMAGES.ICGC_ribete, "imageHeight": "55px", "imageWidth": "120px"},
 	options: {"style": CONSTANTS.DEFAULT_ICGC_BACKGROUNDS[1].style}
 };
 

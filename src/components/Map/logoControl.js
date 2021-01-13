@@ -10,7 +10,7 @@ export default class LogoControl {
 	constructor({
 		image = IMAGES.ICGC_white,
 		url = "https://icgc.cat",
-		imageWidth = "120px",
+		imageWidth = "140px",
 		imageHeight = "40px",
 		compact = true,
 		compactWidth = "40px",
