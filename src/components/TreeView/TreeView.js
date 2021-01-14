@@ -51,7 +51,6 @@ export default class TreeView extends React.PureComponent {
 
 	componentDidMount() {
 
-		console.log("componentDidMount");
 		// Typical usage (don't forget to compare props):
 		if (this.props.nodes) {
 
@@ -493,8 +492,6 @@ export default class TreeView extends React.PureComponent {
 	* Panel generator
 	*/
 	getPanels = objs => objs.map((obj) => {
-
-		console.log("getPanels");
 
 		const panel = {
 			key: obj.id,

@@ -39,8 +39,6 @@ export default class Map extends React.Component {
 
 		if (this.props.mapData) {
 
-			console.log(this.props.mapData);
-
 			this.setData(this.props.mapData);
 
 		}
@@ -271,5 +269,5 @@ Map.propTypes = {
 	showNavControl: PropTypes.bool,
 	showLogoControl: PropTypes.bool,
 	children: PropTypes.any,
-	logo: PropTypes.string
+	logo: PropTypes.object
 };
