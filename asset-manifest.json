@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "./static/css/main.ec6a5ccd.chunk.css",
+    "main.js": "./main.bd12a9819e74e4fa032b.bundle.js",
+    "main.css.map": "./static/css/main.ec6a5ccd.chunk.css.map",
+    "main.js.map": "./main.bd12a9819e74e4fa032b.bundle.js.map",
+    "runtime~main.js": "./runtime~main.bd12a9819e74e4fa032b.bundle.js",
+    "runtime~main.js.map": "./runtime~main.bd12a9819e74e4fa032b.bundle.js.map",
+    "vendors~main.css": "./static/css/vendors~main.fd26d98e.chunk.css",
+    "vendors~main.js": "./vendors~main.bd12a9819e74e4fa032b.bundle.js",
+    "vendors~main.css.map": "./static/css/vendors~main.fd26d98e.chunk.css.map",
+    "vendors~main.js.map": "./vendors~main.bd12a9819e74e4fa032b.bundle.js.map",
+    "iframe.html": "./iframe.html",
+    "precache-manifest.20e397770d878488be87b071acda7f2f.js": "./precache-manifest.20e397770d878488be87b071acda7f2f.js",
+    "service-worker.js": "./service-worker.js",
+    "static/media/ICGC.svg": "./static/media/ICGC.9d2135a4.svg",
+    "static/media/LogoICGC.module.css": "./static/media/ICGC2.eb3d6648.svg",
+    "static/media/ICGC_logo.svg": "./static/media/ICGC_logo.afc110e9.svg",
+    "static/media/ICGC_white.svg": "./static/media/ICGC_white.cee8b66f.svg",
+    "static/media/semantic.min.css": "./static/media/outline-icons.ef60a4f6.woff",
+    "static/media/ButtonNipple.module.css": "./static/media/round.dc3d5fc6.png",
+    "vendors~main.bd12a9819e74e4fa032b.bundle.js.LICENSE.txt": "./vendors~main.bd12a9819e74e4fa032b.bundle.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "runtime~main.bd12a9819e74e4fa032b.bundle.js",
+    "static/css/vendors~main.fd26d98e.chunk.css",
+    "vendors~main.bd12a9819e74e4fa032b.bundle.js",
+    "static/css/main.ec6a5ccd.chunk.css",
+    "main.bd12a9819e74e4fa032b.bundle.js"
+  ]
+}
