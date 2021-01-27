@@ -9,6 +9,7 @@ import TreeView from "./TreeView";
 import "semantic-ui-css/semantic.min.css";
 
 import treeData from "../../stories/treeData.json";
+import treePlainData from "../../stories/treePlainData.json";
 
 export default {
 	title: "TreeView",
@@ -32,4 +33,11 @@ TreeStyled.args = {
 	firstLevelFontColor: "#ff0000",
 	leafLevelFontColor: "#00ff00",
 	onClick: action("onClick")
+};
+
+export const TreePlain = Template.bind({});
+TreePlain.storyName = "TreeView plain";
+TreePlain.args = {
+	nodes: treePlainData,
+	onClick: action("onClick 2")
 };

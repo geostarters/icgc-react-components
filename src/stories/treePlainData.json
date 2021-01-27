@@ -1,0 +1,5 @@
+[
+	{"id": 1, "label": "Frutas", "checked": false, "active": true},
+	{"id": 2, "label": "Verduras", "checked": true},
+	{"id": 3, "label": "Helados", "checked": false, "active": false}
+]
