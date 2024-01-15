@@ -61,7 +61,7 @@
     "clean:dist": "rimraf dist/*"
   },
   "dependencies": {
-    "@geostarters/common": "^0.3.2",
+    "@geostarters/common": "^0.3.7",
     "@geostarters/react-nipple": "^1.0.4",
     "axios": "^1.6.0",
     "mapbox-gl": "^1.12.0",
